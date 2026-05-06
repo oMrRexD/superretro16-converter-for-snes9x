@@ -1,0 +1,10905 @@
+{
+ "c01": [
+  {
+   "idx": 0,
+   "name": "Registers.DB",
+   "struct_off": 0,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 0
+  },
+  {
+   "idx": 1,
+   "name": "Registers.P",
+   "struct_off": 4,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 1
+  },
+  {
+   "idx": 2,
+   "name": "Registers.A",
+   "struct_off": 8,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 5
+  },
+  {
+   "idx": 3,
+   "name": "Registers.D",
+   "struct_off": 12,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 9
+  },
+  {
+   "idx": 4,
+   "name": "Registers.S",
+   "struct_off": 16,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 13
+  },
+  {
+   "idx": 5,
+   "name": "Registers.X",
+   "struct_off": 20,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 17
+  },
+  {
+   "idx": 6,
+   "name": "Registers.Y",
+   "struct_off": 24,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 21
+  },
+  {
+   "idx": 7,
+   "name": "Registers.PC",
+   "struct_off": 28,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 25
+  },
+  {
+   "idx": 8,
+   "name": "NotUsed1",
+   "struct_off": 40,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 29
+  },
+  {
+   "idx": 9,
+   "name": "Cycles",
+   "struct_off": 36,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 33
+  },
+  {
+   "idx": 10,
+   "name": "NotUsed1",
+   "struct_off": 40,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 37
+  },
+  {
+   "idx": 11,
+   "name": "NotUsed2",
+   "struct_off": 44,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 41
+  },
+  {
+   "idx": 12,
+   "name": "Flags",
+   "struct_off": 48,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 45
+  },
+  {
+   "idx": 13,
+   "name": "BranchSkip",
+   "struct_off": 52,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 49
+  },
+  {
+   "idx": 14,
+   "name": "NMIActive",
+   "struct_off": 53,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 50
+  },
+  {
+   "idx": 15,
+   "name": "IRQActive",
+   "struct_off": 54,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 51
+  },
+  {
+   "idx": 16,
+   "name": "WaitingForInterrupt",
+   "struct_off": 55,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 52
+  },
+  {
+   "idx": 17,
+   "name": "InDMAorHDMA",
+   "struct_off": 56,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 53
+  },
+  {
+   "idx": 18,
+   "name": "InWRAMDMAorHDMA",
+   "struct_off": 57,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 54
+  },
+  {
+   "idx": 19,
+   "name": "WhichEvent",
+   "struct_off": 58,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 55
+  },
+  {
+   "idx": 20,
+   "name": "PBPCAtOpcodeStart",
+   "struct_off": 60,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 56
+  },
+  {
+   "idx": 21,
+   "name": "WaitAddress",
+   "struct_off": 64,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 60
+  },
+  {
+   "idx": 22,
+   "name": "WaitCounter",
+   "struct_off": 68,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 64
+  },
+  {
+   "idx": 23,
+   "name": "NextEvent",
+   "struct_off": 72,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 68
+  },
+  {
+   "idx": 24,
+   "name": "V_Counter",
+   "struct_off": 76,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 72
+  },
+  {
+   "idx": 25,
+   "name": "MemSpeed",
+   "struct_off": 80,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 76
+  },
+  {
+   "idx": 26,
+   "name": "MemSpeedx2",
+   "struct_off": 84,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 80
+  },
+  {
+   "idx": 27,
+   "name": "FastROMSpeed",
+   "struct_off": 88,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 84
+  },
+  {
+   "idx": 28,
+   "name": "AutoSaveTimer",
+   "struct_off": 92,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 88
+  },
+  {
+   "idx": 29,
+   "name": "SRAMModified",
+   "struct_off": 96,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 92
+  },
+  {
+   "idx": 30,
+   "name": "IRQPending",
+   "struct_off": 100,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 93
+  },
+  {
+   "idx": 31,
+   "name": "InDMA",
+   "struct_off": 104,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 97
+  },
+  {
+   "idx": 32,
+   "name": "InHDMA",
+   "struct_off": 105,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 98
+  },
+  {
+   "idx": 33,
+   "name": "HDMARanInDMA",
+   "struct_off": 106,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 99
+  },
+  {
+   "idx": 34,
+   "name": "PrevCycles",
+   "struct_off": 108,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 100
+  },
+  {
+   "idx": 35,
+   "name": "OpenBus",
+   "struct_off": 112,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 104
+  },
+  {
+   "idx": 36,
+   "name": "Opcodes",
+   "struct_off": 116,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 105
+  },
+  {
+   "idx": 37,
+   "name": "_Carry",
+   "struct_off": 120,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 109
+  },
+  {
+   "idx": 38,
+   "name": "_Zero",
+   "struct_off": 121,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 110
+  },
+  {
+   "idx": 39,
+   "name": "_Negative",
+   "struct_off": 122,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 111
+  },
+  {
+   "idx": 40,
+   "name": "_Overflow",
+   "struct_off": 123,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 112
+  },
+  {
+   "idx": 41,
+   "name": "CPUExecuting",
+   "struct_off": 124,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 113
+  },
+  {
+   "idx": 42,
+   "name": "Timings.H_Max",
+   "struct_off": 128,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 114
+  },
+  {
+   "idx": 43,
+   "name": "Timings.V_Max_Master",
+   "struct_off": 132,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 118
+  },
+  {
+   "idx": 44,
+   "name": "Timings.V_Max",
+   "struct_off": 136,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 122
+  },
+  {
+   "idx": 45,
+   "name": "Timings.NMITriggerPos",
+   "struct_off": 140,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 126
+  },
+  {
+   "idx": 46,
+   "name": "Timings.WRAMRefreshPos",
+   "struct_off": 144,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 130
+  },
+  {
+   "idx": 47,
+   "name": "Timings.InterlaceField",
+   "struct_off": 148,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 134
+  },
+  {
+   "idx": 48,
+   "name": "Timings.InterlaceField",
+   "struct_off": 148,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 135
+  },
+  {
+   "idx": 49,
+   "name": "CurrentDMAorHDMAChannel",
+   "struct_off": 184,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 136
+  },
+  {
+   "idx": 50,
+   "name": "LoadCount",
+   "struct_off": 188,
+   "size": 4,
+   "type": 1,
+   "serial_size": 4,
+   "serial_off": 140
+  },
+  {
+   "idx": 51,
+   "name": "Timestamp",
+   "struct_off": 192,
+   "size": 4,
+   "type": 1,
+   "serial_size": 4,
+   "serial_off": 144
+  },
+  {
+   "idx": 52,
+   "name": "Scratch3",
+   "struct_off": 196,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 148
+  },
+  {
+   "idx": 53,
+   "name": "intInstCount",
+   "struct_off": 200,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 152
+  },
+  {
+   "idx": 54,
+   "name": "Debug_P",
+   "struct_off": 204,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 156
+  },
+  {
+   "idx": 55,
+   "name": "HighRegASave",
+   "struct_off": 208,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 160
+  }
+ ],
+ "p01": [
+  {
+   "idx": 56,
+   "name": "BGMode",
+   "struct_off": 580,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 0
+  },
+  {
+   "idx": 57,
+   "name": "BG3Priority",
+   "struct_off": 581,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1
+  },
+  {
+   "idx": 58,
+   "name": "Brightness",
+   "struct_off": 582,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 2
+  },
+  {
+   "idx": 59,
+   "name": "VMA_High",
+   "struct_off": 584,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 4
+  },
+  {
+   "idx": 60,
+   "name": "VMA_Increment",
+   "struct_off": 585,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 5
+  },
+  {
+   "idx": 61,
+   "name": "VMA_Address",
+   "struct_off": 586,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 6
+  },
+  {
+   "idx": 62,
+   "name": "VMA_Mask1",
+   "struct_off": 588,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 8
+  },
+  {
+   "idx": 63,
+   "name": "VMA_FullGraphicCount",
+   "struct_off": 590,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 10
+  },
+  {
+   "idx": 64,
+   "name": "VMA_Shift",
+   "struct_off": 592,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 12
+  },
+  {
+   "idx": 65,
+   "name": "BG[0].SCBase",
+   "struct_off": 2012,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 14
+  },
+  {
+   "idx": 66,
+   "name": "BG[0].VOffset",
+   "struct_off": 2014,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 16
+  },
+  {
+   "idx": 67,
+   "name": "BG[0].HOffset",
+   "struct_off": 2016,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 18
+  },
+  {
+   "idx": 68,
+   "name": "BG[0].BGSize",
+   "struct_off": 2018,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 20
+  },
+  {
+   "idx": 69,
+   "name": "BG[0].NameBase",
+   "struct_off": 2020,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 21
+  },
+  {
+   "idx": 70,
+   "name": "BG[0].SCSize",
+   "struct_off": 2022,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 23
+  },
+  {
+   "idx": 71,
+   "name": "BG[1].SCBase",
+   "struct_off": 2024,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 25
+  },
+  {
+   "idx": 72,
+   "name": "BG[1].VOffset",
+   "struct_off": 2026,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 27
+  },
+  {
+   "idx": 73,
+   "name": "BG[1].HOffset",
+   "struct_off": 2028,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 29
+  },
+  {
+   "idx": 74,
+   "name": "BG[1].BGSize",
+   "struct_off": 2030,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 31
+  },
+  {
+   "idx": 75,
+   "name": "BG[1].NameBase",
+   "struct_off": 2032,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 32
+  },
+  {
+   "idx": 76,
+   "name": "BG[1].SCSize",
+   "struct_off": 2034,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 34
+  },
+  {
+   "idx": 77,
+   "name": "BG[2].SCBase",
+   "struct_off": 2036,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 36
+  },
+  {
+   "idx": 78,
+   "name": "BG[2].VOffset",
+   "struct_off": 2038,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 38
+  },
+  {
+   "idx": 79,
+   "name": "BG[2].HOffset",
+   "struct_off": 2040,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 40
+  },
+  {
+   "idx": 80,
+   "name": "BG[2].BGSize",
+   "struct_off": 2042,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 42
+  },
+  {
+   "idx": 81,
+   "name": "BG[2].NameBase",
+   "struct_off": 2044,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 43
+  },
+  {
+   "idx": 82,
+   "name": "BG[2].SCSize",
+   "struct_off": 2046,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 45
+  },
+  {
+   "idx": 83,
+   "name": "BG[3].SCBase",
+   "struct_off": 2048,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 47
+  },
+  {
+   "idx": 84,
+   "name": "BG[3].VOffset",
+   "struct_off": 2050,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 49
+  },
+  {
+   "idx": 85,
+   "name": "BG[3].HOffset",
+   "struct_off": 2052,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 51
+  },
+  {
+   "idx": 86,
+   "name": "BG[3].BGSize",
+   "struct_off": 2054,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 53
+  },
+  {
+   "idx": 87,
+   "name": "BG[3].NameBase",
+   "struct_off": 2056,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 54
+  },
+  {
+   "idx": 88,
+   "name": "BG[3].SCSize",
+   "struct_off": 2058,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 56
+  },
+  {
+   "idx": 89,
+   "name": "CGFLIP",
+   "struct_off": 414,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 58
+  },
+  {
+   "idx": 90,
+   "name": "CGDATA",
+   "struct_off": 1106,
+   "size": 256,
+   "type": 2,
+   "serial_size": 512,
+   "serial_off": 59
+  },
+  {
+   "idx": 91,
+   "name": "FirstSprite",
+   "struct_off": 415,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 571
+  },
+  {
+   "idx": 92,
+   "name": "LastSprite",
+   "struct_off": 416,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 572
+  },
+  {
+   "idx": 93,
+   "name": "OBJ[0].HPos",
+   "struct_off": 2604,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 573
+  },
+  {
+   "idx": 94,
+   "name": "OBJ[0].VPos",
+   "struct_off": 2606,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 575
+  },
+  {
+   "idx": 95,
+   "name": "OBJ[0].Name",
+   "struct_off": 2608,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 577
+  },
+  {
+   "idx": 96,
+   "name": "OBJ[0].VFlip",
+   "struct_off": 2610,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 579
+  },
+  {
+   "idx": 97,
+   "name": "OBJ[0].HFlip",
+   "struct_off": 2611,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 580
+  },
+  {
+   "idx": 98,
+   "name": "OBJ[0].Priority",
+   "struct_off": 2612,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 581
+  },
+  {
+   "idx": 99,
+   "name": "OBJ[0].Palette",
+   "struct_off": 2613,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 582
+  },
+  {
+   "idx": 100,
+   "name": "OBJ[0].Size",
+   "struct_off": 2614,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 583
+  },
+  {
+   "idx": 101,
+   "name": "OBJ[1].HPos",
+   "struct_off": 2616,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 584
+  },
+  {
+   "idx": 102,
+   "name": "OBJ[1].VPos",
+   "struct_off": 2618,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 586
+  },
+  {
+   "idx": 103,
+   "name": "OBJ[1].Name",
+   "struct_off": 2620,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 588
+  },
+  {
+   "idx": 104,
+   "name": "OBJ[1].VFlip",
+   "struct_off": 2622,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 590
+  },
+  {
+   "idx": 105,
+   "name": "OBJ[1].HFlip",
+   "struct_off": 2623,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 591
+  },
+  {
+   "idx": 106,
+   "name": "OBJ[1].Priority",
+   "struct_off": 2624,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 592
+  },
+  {
+   "idx": 107,
+   "name": "OBJ[1].Palette",
+   "struct_off": 2625,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 593
+  },
+  {
+   "idx": 108,
+   "name": "OBJ[1].Size",
+   "struct_off": 2626,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 594
+  },
+  {
+   "idx": 109,
+   "name": "OBJ[2].HPos",
+   "struct_off": 2628,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 595
+  },
+  {
+   "idx": 110,
+   "name": "OBJ[2].VPos",
+   "struct_off": 2630,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 597
+  },
+  {
+   "idx": 111,
+   "name": "OBJ[2].Name",
+   "struct_off": 2632,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 599
+  },
+  {
+   "idx": 112,
+   "name": "OBJ[2].VFlip",
+   "struct_off": 2634,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 601
+  },
+  {
+   "idx": 113,
+   "name": "OBJ[2].HFlip",
+   "struct_off": 2635,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 602
+  },
+  {
+   "idx": 114,
+   "name": "OBJ[2].Priority",
+   "struct_off": 2636,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 603
+  },
+  {
+   "idx": 115,
+   "name": "OBJ[2].Palette",
+   "struct_off": 2637,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 604
+  },
+  {
+   "idx": 116,
+   "name": "OBJ[2].Size",
+   "struct_off": 2638,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 605
+  },
+  {
+   "idx": 117,
+   "name": "OBJ[3].HPos",
+   "struct_off": 2640,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 606
+  },
+  {
+   "idx": 118,
+   "name": "OBJ[3].VPos",
+   "struct_off": 2642,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 608
+  },
+  {
+   "idx": 119,
+   "name": "OBJ[3].Name",
+   "struct_off": 2644,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 610
+  },
+  {
+   "idx": 120,
+   "name": "OBJ[3].VFlip",
+   "struct_off": 2646,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 612
+  },
+  {
+   "idx": 121,
+   "name": "OBJ[3].HFlip",
+   "struct_off": 2647,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 613
+  },
+  {
+   "idx": 122,
+   "name": "OBJ[3].Priority",
+   "struct_off": 2648,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 614
+  },
+  {
+   "idx": 123,
+   "name": "OBJ[3].Palette",
+   "struct_off": 2649,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 615
+  },
+  {
+   "idx": 124,
+   "name": "OBJ[3].Size",
+   "struct_off": 2650,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 616
+  },
+  {
+   "idx": 125,
+   "name": "OBJ[4].HPos",
+   "struct_off": 2652,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 617
+  },
+  {
+   "idx": 126,
+   "name": "OBJ[4].VPos",
+   "struct_off": 2654,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 619
+  },
+  {
+   "idx": 127,
+   "name": "OBJ[4].Name",
+   "struct_off": 2656,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 621
+  },
+  {
+   "idx": 128,
+   "name": "OBJ[4].VFlip",
+   "struct_off": 2658,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 623
+  },
+  {
+   "idx": 129,
+   "name": "OBJ[4].HFlip",
+   "struct_off": 2659,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 624
+  },
+  {
+   "idx": 130,
+   "name": "OBJ[4].Priority",
+   "struct_off": 2660,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 625
+  },
+  {
+   "idx": 131,
+   "name": "OBJ[4].Palette",
+   "struct_off": 2661,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 626
+  },
+  {
+   "idx": 132,
+   "name": "OBJ[4].Size",
+   "struct_off": 2662,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 627
+  },
+  {
+   "idx": 133,
+   "name": "OBJ[5].HPos",
+   "struct_off": 2664,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 628
+  },
+  {
+   "idx": 134,
+   "name": "OBJ[5].VPos",
+   "struct_off": 2666,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 630
+  },
+  {
+   "idx": 135,
+   "name": "OBJ[5].Name",
+   "struct_off": 2668,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 632
+  },
+  {
+   "idx": 136,
+   "name": "OBJ[5].VFlip",
+   "struct_off": 2670,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 634
+  },
+  {
+   "idx": 137,
+   "name": "OBJ[5].HFlip",
+   "struct_off": 2671,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 635
+  },
+  {
+   "idx": 138,
+   "name": "OBJ[5].Priority",
+   "struct_off": 2672,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 636
+  },
+  {
+   "idx": 139,
+   "name": "OBJ[5].Palette",
+   "struct_off": 2673,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 637
+  },
+  {
+   "idx": 140,
+   "name": "OBJ[5].Size",
+   "struct_off": 2674,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 638
+  },
+  {
+   "idx": 141,
+   "name": "OBJ[6].HPos",
+   "struct_off": 2676,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 639
+  },
+  {
+   "idx": 142,
+   "name": "OBJ[6].VPos",
+   "struct_off": 2678,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 641
+  },
+  {
+   "idx": 143,
+   "name": "OBJ[6].Name",
+   "struct_off": 2680,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 643
+  },
+  {
+   "idx": 144,
+   "name": "OBJ[6].VFlip",
+   "struct_off": 2682,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 645
+  },
+  {
+   "idx": 145,
+   "name": "OBJ[6].HFlip",
+   "struct_off": 2683,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 646
+  },
+  {
+   "idx": 146,
+   "name": "OBJ[6].Priority",
+   "struct_off": 2684,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 647
+  },
+  {
+   "idx": 147,
+   "name": "OBJ[6].Palette",
+   "struct_off": 2685,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 648
+  },
+  {
+   "idx": 148,
+   "name": "OBJ[6].Size",
+   "struct_off": 2686,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 649
+  },
+  {
+   "idx": 149,
+   "name": "OBJ[7].HPos",
+   "struct_off": 2688,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 650
+  },
+  {
+   "idx": 150,
+   "name": "OBJ[7].VPos",
+   "struct_off": 2690,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 652
+  },
+  {
+   "idx": 151,
+   "name": "OBJ[7].Name",
+   "struct_off": 2692,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 654
+  },
+  {
+   "idx": 152,
+   "name": "OBJ[7].VFlip",
+   "struct_off": 2694,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 656
+  },
+  {
+   "idx": 153,
+   "name": "OBJ[7].HFlip",
+   "struct_off": 2695,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 657
+  },
+  {
+   "idx": 154,
+   "name": "OBJ[7].Priority",
+   "struct_off": 2696,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 658
+  },
+  {
+   "idx": 155,
+   "name": "OBJ[7].Palette",
+   "struct_off": 2697,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 659
+  },
+  {
+   "idx": 156,
+   "name": "OBJ[7].Size",
+   "struct_off": 2698,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 660
+  },
+  {
+   "idx": 157,
+   "name": "OBJ[8].HPos",
+   "struct_off": 2700,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 661
+  },
+  {
+   "idx": 158,
+   "name": "OBJ[8].VPos",
+   "struct_off": 2702,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 663
+  },
+  {
+   "idx": 159,
+   "name": "OBJ[8].Name",
+   "struct_off": 2704,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 665
+  },
+  {
+   "idx": 160,
+   "name": "OBJ[8].VFlip",
+   "struct_off": 2706,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 667
+  },
+  {
+   "idx": 161,
+   "name": "OBJ[8].HFlip",
+   "struct_off": 2707,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 668
+  },
+  {
+   "idx": 162,
+   "name": "OBJ[8].Priority",
+   "struct_off": 2708,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 669
+  },
+  {
+   "idx": 163,
+   "name": "OBJ[8].Palette",
+   "struct_off": 2709,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 670
+  },
+  {
+   "idx": 164,
+   "name": "OBJ[8].Size",
+   "struct_off": 2710,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 671
+  },
+  {
+   "idx": 165,
+   "name": "OBJ[9].HPos",
+   "struct_off": 2712,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 672
+  },
+  {
+   "idx": 166,
+   "name": "OBJ[9].VPos",
+   "struct_off": 2714,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 674
+  },
+  {
+   "idx": 167,
+   "name": "OBJ[9].Name",
+   "struct_off": 2716,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 676
+  },
+  {
+   "idx": 168,
+   "name": "OBJ[9].VFlip",
+   "struct_off": 2718,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 678
+  },
+  {
+   "idx": 169,
+   "name": "OBJ[9].HFlip",
+   "struct_off": 2719,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 679
+  },
+  {
+   "idx": 170,
+   "name": "OBJ[9].Priority",
+   "struct_off": 2720,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 680
+  },
+  {
+   "idx": 171,
+   "name": "OBJ[9].Palette",
+   "struct_off": 2721,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 681
+  },
+  {
+   "idx": 172,
+   "name": "OBJ[9].Size",
+   "struct_off": 2722,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 682
+  },
+  {
+   "idx": 173,
+   "name": "OBJ[10].HPos",
+   "struct_off": 2724,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 683
+  },
+  {
+   "idx": 174,
+   "name": "OBJ[10].VPos",
+   "struct_off": 2726,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 685
+  },
+  {
+   "idx": 175,
+   "name": "OBJ[10].Name",
+   "struct_off": 2728,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 687
+  },
+  {
+   "idx": 176,
+   "name": "OBJ[10].VFlip",
+   "struct_off": 2730,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 689
+  },
+  {
+   "idx": 177,
+   "name": "OBJ[10].HFlip",
+   "struct_off": 2731,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 690
+  },
+  {
+   "idx": 178,
+   "name": "OBJ[10].Priority",
+   "struct_off": 2732,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 691
+  },
+  {
+   "idx": 179,
+   "name": "OBJ[10].Palette",
+   "struct_off": 2733,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 692
+  },
+  {
+   "idx": 180,
+   "name": "OBJ[10].Size",
+   "struct_off": 2734,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 693
+  },
+  {
+   "idx": 181,
+   "name": "OBJ[11].HPos",
+   "struct_off": 2736,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 694
+  },
+  {
+   "idx": 182,
+   "name": "OBJ[11].VPos",
+   "struct_off": 2738,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 696
+  },
+  {
+   "idx": 183,
+   "name": "OBJ[11].Name",
+   "struct_off": 2740,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 698
+  },
+  {
+   "idx": 184,
+   "name": "OBJ[11].VFlip",
+   "struct_off": 2742,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 700
+  },
+  {
+   "idx": 185,
+   "name": "OBJ[11].HFlip",
+   "struct_off": 2743,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 701
+  },
+  {
+   "idx": 186,
+   "name": "OBJ[11].Priority",
+   "struct_off": 2744,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 702
+  },
+  {
+   "idx": 187,
+   "name": "OBJ[11].Palette",
+   "struct_off": 2745,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 703
+  },
+  {
+   "idx": 188,
+   "name": "OBJ[11].Size",
+   "struct_off": 2746,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 704
+  },
+  {
+   "idx": 189,
+   "name": "OBJ[12].HPos",
+   "struct_off": 2748,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 705
+  },
+  {
+   "idx": 190,
+   "name": "OBJ[12].VPos",
+   "struct_off": 2750,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 707
+  },
+  {
+   "idx": 191,
+   "name": "OBJ[12].Name",
+   "struct_off": 2752,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 709
+  },
+  {
+   "idx": 192,
+   "name": "OBJ[12].VFlip",
+   "struct_off": 2754,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 711
+  },
+  {
+   "idx": 193,
+   "name": "OBJ[12].HFlip",
+   "struct_off": 2755,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 712
+  },
+  {
+   "idx": 194,
+   "name": "OBJ[12].Priority",
+   "struct_off": 2756,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 713
+  },
+  {
+   "idx": 195,
+   "name": "OBJ[12].Palette",
+   "struct_off": 2757,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 714
+  },
+  {
+   "idx": 196,
+   "name": "OBJ[12].Size",
+   "struct_off": 2758,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 715
+  },
+  {
+   "idx": 197,
+   "name": "OBJ[13].HPos",
+   "struct_off": 2760,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 716
+  },
+  {
+   "idx": 198,
+   "name": "OBJ[13].VPos",
+   "struct_off": 2762,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 718
+  },
+  {
+   "idx": 199,
+   "name": "OBJ[13].Name",
+   "struct_off": 2764,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 720
+  },
+  {
+   "idx": 200,
+   "name": "OBJ[13].VFlip",
+   "struct_off": 2766,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 722
+  },
+  {
+   "idx": 201,
+   "name": "OBJ[13].HFlip",
+   "struct_off": 2767,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 723
+  },
+  {
+   "idx": 202,
+   "name": "OBJ[13].Priority",
+   "struct_off": 2768,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 724
+  },
+  {
+   "idx": 203,
+   "name": "OBJ[13].Palette",
+   "struct_off": 2769,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 725
+  },
+  {
+   "idx": 204,
+   "name": "OBJ[13].Size",
+   "struct_off": 2770,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 726
+  },
+  {
+   "idx": 205,
+   "name": "OBJ[14].HPos",
+   "struct_off": 2772,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 727
+  },
+  {
+   "idx": 206,
+   "name": "OBJ[14].VPos",
+   "struct_off": 2774,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 729
+  },
+  {
+   "idx": 207,
+   "name": "OBJ[14].Name",
+   "struct_off": 2776,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 731
+  },
+  {
+   "idx": 208,
+   "name": "OBJ[14].VFlip",
+   "struct_off": 2778,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 733
+  },
+  {
+   "idx": 209,
+   "name": "OBJ[14].HFlip",
+   "struct_off": 2779,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 734
+  },
+  {
+   "idx": 210,
+   "name": "OBJ[14].Priority",
+   "struct_off": 2780,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 735
+  },
+  {
+   "idx": 211,
+   "name": "OBJ[14].Palette",
+   "struct_off": 2781,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 736
+  },
+  {
+   "idx": 212,
+   "name": "OBJ[14].Size",
+   "struct_off": 2782,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 737
+  },
+  {
+   "idx": 213,
+   "name": "OBJ[15].HPos",
+   "struct_off": 2784,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 738
+  },
+  {
+   "idx": 214,
+   "name": "OBJ[15].VPos",
+   "struct_off": 2786,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 740
+  },
+  {
+   "idx": 215,
+   "name": "OBJ[15].Name",
+   "struct_off": 2788,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 742
+  },
+  {
+   "idx": 216,
+   "name": "OBJ[15].VFlip",
+   "struct_off": 2790,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 744
+  },
+  {
+   "idx": 217,
+   "name": "OBJ[15].HFlip",
+   "struct_off": 2791,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 745
+  },
+  {
+   "idx": 218,
+   "name": "OBJ[15].Priority",
+   "struct_off": 2792,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 746
+  },
+  {
+   "idx": 219,
+   "name": "OBJ[15].Palette",
+   "struct_off": 2793,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 747
+  },
+  {
+   "idx": 220,
+   "name": "OBJ[15].Size",
+   "struct_off": 2794,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 748
+  },
+  {
+   "idx": 221,
+   "name": "OBJ[16].HPos",
+   "struct_off": 2796,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 749
+  },
+  {
+   "idx": 222,
+   "name": "OBJ[16].VPos",
+   "struct_off": 2798,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 751
+  },
+  {
+   "idx": 223,
+   "name": "OBJ[16].Name",
+   "struct_off": 2800,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 753
+  },
+  {
+   "idx": 224,
+   "name": "OBJ[16].VFlip",
+   "struct_off": 2802,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 755
+  },
+  {
+   "idx": 225,
+   "name": "OBJ[16].HFlip",
+   "struct_off": 2803,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 756
+  },
+  {
+   "idx": 226,
+   "name": "OBJ[16].Priority",
+   "struct_off": 2804,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 757
+  },
+  {
+   "idx": 227,
+   "name": "OBJ[16].Palette",
+   "struct_off": 2805,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 758
+  },
+  {
+   "idx": 228,
+   "name": "OBJ[16].Size",
+   "struct_off": 2806,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 759
+  },
+  {
+   "idx": 229,
+   "name": "OBJ[17].HPos",
+   "struct_off": 2808,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 760
+  },
+  {
+   "idx": 230,
+   "name": "OBJ[17].VPos",
+   "struct_off": 2810,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 762
+  },
+  {
+   "idx": 231,
+   "name": "OBJ[17].Name",
+   "struct_off": 2812,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 764
+  },
+  {
+   "idx": 232,
+   "name": "OBJ[17].VFlip",
+   "struct_off": 2814,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 766
+  },
+  {
+   "idx": 233,
+   "name": "OBJ[17].HFlip",
+   "struct_off": 2815,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 767
+  },
+  {
+   "idx": 234,
+   "name": "OBJ[17].Priority",
+   "struct_off": 2816,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 768
+  },
+  {
+   "idx": 235,
+   "name": "OBJ[17].Palette",
+   "struct_off": 2817,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 769
+  },
+  {
+   "idx": 236,
+   "name": "OBJ[17].Size",
+   "struct_off": 2818,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 770
+  },
+  {
+   "idx": 237,
+   "name": "OBJ[18].HPos",
+   "struct_off": 2820,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 771
+  },
+  {
+   "idx": 238,
+   "name": "OBJ[18].VPos",
+   "struct_off": 2822,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 773
+  },
+  {
+   "idx": 239,
+   "name": "OBJ[18].Name",
+   "struct_off": 2824,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 775
+  },
+  {
+   "idx": 240,
+   "name": "OBJ[18].VFlip",
+   "struct_off": 2826,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 777
+  },
+  {
+   "idx": 241,
+   "name": "OBJ[18].HFlip",
+   "struct_off": 2827,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 778
+  },
+  {
+   "idx": 242,
+   "name": "OBJ[18].Priority",
+   "struct_off": 2828,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 779
+  },
+  {
+   "idx": 243,
+   "name": "OBJ[18].Palette",
+   "struct_off": 2829,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 780
+  },
+  {
+   "idx": 244,
+   "name": "OBJ[18].Size",
+   "struct_off": 2830,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 781
+  },
+  {
+   "idx": 245,
+   "name": "OBJ[19].HPos",
+   "struct_off": 2832,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 782
+  },
+  {
+   "idx": 246,
+   "name": "OBJ[19].VPos",
+   "struct_off": 2834,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 784
+  },
+  {
+   "idx": 247,
+   "name": "OBJ[19].Name",
+   "struct_off": 2836,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 786
+  },
+  {
+   "idx": 248,
+   "name": "OBJ[19].VFlip",
+   "struct_off": 2838,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 788
+  },
+  {
+   "idx": 249,
+   "name": "OBJ[19].HFlip",
+   "struct_off": 2839,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 789
+  },
+  {
+   "idx": 250,
+   "name": "OBJ[19].Priority",
+   "struct_off": 2840,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 790
+  },
+  {
+   "idx": 251,
+   "name": "OBJ[19].Palette",
+   "struct_off": 2841,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 791
+  },
+  {
+   "idx": 252,
+   "name": "OBJ[19].Size",
+   "struct_off": 2842,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 792
+  },
+  {
+   "idx": 253,
+   "name": "OBJ[20].HPos",
+   "struct_off": 2844,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 793
+  },
+  {
+   "idx": 254,
+   "name": "OBJ[20].VPos",
+   "struct_off": 2846,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 795
+  },
+  {
+   "idx": 255,
+   "name": "OBJ[20].Name",
+   "struct_off": 2848,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 797
+  },
+  {
+   "idx": 256,
+   "name": "OBJ[20].VFlip",
+   "struct_off": 2850,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 799
+  },
+  {
+   "idx": 257,
+   "name": "OBJ[20].HFlip",
+   "struct_off": 2851,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 800
+  },
+  {
+   "idx": 258,
+   "name": "OBJ[20].Priority",
+   "struct_off": 2852,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 801
+  },
+  {
+   "idx": 259,
+   "name": "OBJ[20].Palette",
+   "struct_off": 2853,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 802
+  },
+  {
+   "idx": 260,
+   "name": "OBJ[20].Size",
+   "struct_off": 2854,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 803
+  },
+  {
+   "idx": 261,
+   "name": "OBJ[21].HPos",
+   "struct_off": 2856,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 804
+  },
+  {
+   "idx": 262,
+   "name": "OBJ[21].VPos",
+   "struct_off": 2858,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 806
+  },
+  {
+   "idx": 263,
+   "name": "OBJ[21].Name",
+   "struct_off": 2860,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 808
+  },
+  {
+   "idx": 264,
+   "name": "OBJ[21].VFlip",
+   "struct_off": 2862,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 810
+  },
+  {
+   "idx": 265,
+   "name": "OBJ[21].HFlip",
+   "struct_off": 2863,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 811
+  },
+  {
+   "idx": 266,
+   "name": "OBJ[21].Priority",
+   "struct_off": 2864,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 812
+  },
+  {
+   "idx": 267,
+   "name": "OBJ[21].Palette",
+   "struct_off": 2865,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 813
+  },
+  {
+   "idx": 268,
+   "name": "OBJ[21].Size",
+   "struct_off": 2866,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 814
+  },
+  {
+   "idx": 269,
+   "name": "OBJ[22].HPos",
+   "struct_off": 2868,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 815
+  },
+  {
+   "idx": 270,
+   "name": "OBJ[22].VPos",
+   "struct_off": 2870,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 817
+  },
+  {
+   "idx": 271,
+   "name": "OBJ[22].Name",
+   "struct_off": 2872,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 819
+  },
+  {
+   "idx": 272,
+   "name": "OBJ[22].VFlip",
+   "struct_off": 2874,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 821
+  },
+  {
+   "idx": 273,
+   "name": "OBJ[22].HFlip",
+   "struct_off": 2875,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 822
+  },
+  {
+   "idx": 274,
+   "name": "OBJ[22].Priority",
+   "struct_off": 2876,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 823
+  },
+  {
+   "idx": 275,
+   "name": "OBJ[22].Palette",
+   "struct_off": 2877,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 824
+  },
+  {
+   "idx": 276,
+   "name": "OBJ[22].Size",
+   "struct_off": 2878,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 825
+  },
+  {
+   "idx": 277,
+   "name": "OBJ[23].HPos",
+   "struct_off": 2880,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 826
+  },
+  {
+   "idx": 278,
+   "name": "OBJ[23].VPos",
+   "struct_off": 2882,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 828
+  },
+  {
+   "idx": 279,
+   "name": "OBJ[23].Name",
+   "struct_off": 2884,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 830
+  },
+  {
+   "idx": 280,
+   "name": "OBJ[23].VFlip",
+   "struct_off": 2886,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 832
+  },
+  {
+   "idx": 281,
+   "name": "OBJ[23].HFlip",
+   "struct_off": 2887,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 833
+  },
+  {
+   "idx": 282,
+   "name": "OBJ[23].Priority",
+   "struct_off": 2888,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 834
+  },
+  {
+   "idx": 283,
+   "name": "OBJ[23].Palette",
+   "struct_off": 2889,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 835
+  },
+  {
+   "idx": 284,
+   "name": "OBJ[23].Size",
+   "struct_off": 2890,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 836
+  },
+  {
+   "idx": 285,
+   "name": "OBJ[24].HPos",
+   "struct_off": 2892,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 837
+  },
+  {
+   "idx": 286,
+   "name": "OBJ[24].VPos",
+   "struct_off": 2894,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 839
+  },
+  {
+   "idx": 287,
+   "name": "OBJ[24].Name",
+   "struct_off": 2896,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 841
+  },
+  {
+   "idx": 288,
+   "name": "OBJ[24].VFlip",
+   "struct_off": 2898,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 843
+  },
+  {
+   "idx": 289,
+   "name": "OBJ[24].HFlip",
+   "struct_off": 2899,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 844
+  },
+  {
+   "idx": 290,
+   "name": "OBJ[24].Priority",
+   "struct_off": 2900,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 845
+  },
+  {
+   "idx": 291,
+   "name": "OBJ[24].Palette",
+   "struct_off": 2901,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 846
+  },
+  {
+   "idx": 292,
+   "name": "OBJ[24].Size",
+   "struct_off": 2902,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 847
+  },
+  {
+   "idx": 293,
+   "name": "OBJ[25].HPos",
+   "struct_off": 2904,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 848
+  },
+  {
+   "idx": 294,
+   "name": "OBJ[25].VPos",
+   "struct_off": 2906,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 850
+  },
+  {
+   "idx": 295,
+   "name": "OBJ[25].Name",
+   "struct_off": 2908,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 852
+  },
+  {
+   "idx": 296,
+   "name": "OBJ[25].VFlip",
+   "struct_off": 2910,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 854
+  },
+  {
+   "idx": 297,
+   "name": "OBJ[25].HFlip",
+   "struct_off": 2911,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 855
+  },
+  {
+   "idx": 298,
+   "name": "OBJ[25].Priority",
+   "struct_off": 2912,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 856
+  },
+  {
+   "idx": 299,
+   "name": "OBJ[25].Palette",
+   "struct_off": 2913,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 857
+  },
+  {
+   "idx": 300,
+   "name": "OBJ[25].Size",
+   "struct_off": 2914,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 858
+  },
+  {
+   "idx": 301,
+   "name": "OBJ[26].HPos",
+   "struct_off": 2916,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 859
+  },
+  {
+   "idx": 302,
+   "name": "OBJ[26].VPos",
+   "struct_off": 2918,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 861
+  },
+  {
+   "idx": 303,
+   "name": "OBJ[26].Name",
+   "struct_off": 2920,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 863
+  },
+  {
+   "idx": 304,
+   "name": "OBJ[26].VFlip",
+   "struct_off": 2922,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 865
+  },
+  {
+   "idx": 305,
+   "name": "OBJ[26].HFlip",
+   "struct_off": 2923,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 866
+  },
+  {
+   "idx": 306,
+   "name": "OBJ[26].Priority",
+   "struct_off": 2924,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 867
+  },
+  {
+   "idx": 307,
+   "name": "OBJ[26].Palette",
+   "struct_off": 2925,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 868
+  },
+  {
+   "idx": 308,
+   "name": "OBJ[26].Size",
+   "struct_off": 2926,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 869
+  },
+  {
+   "idx": 309,
+   "name": "OBJ[27].HPos",
+   "struct_off": 2928,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 870
+  },
+  {
+   "idx": 310,
+   "name": "OBJ[27].VPos",
+   "struct_off": 2930,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 872
+  },
+  {
+   "idx": 311,
+   "name": "OBJ[27].Name",
+   "struct_off": 2932,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 874
+  },
+  {
+   "idx": 312,
+   "name": "OBJ[27].VFlip",
+   "struct_off": 2934,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 876
+  },
+  {
+   "idx": 313,
+   "name": "OBJ[27].HFlip",
+   "struct_off": 2935,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 877
+  },
+  {
+   "idx": 314,
+   "name": "OBJ[27].Priority",
+   "struct_off": 2936,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 878
+  },
+  {
+   "idx": 315,
+   "name": "OBJ[27].Palette",
+   "struct_off": 2937,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 879
+  },
+  {
+   "idx": 316,
+   "name": "OBJ[27].Size",
+   "struct_off": 2938,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 880
+  },
+  {
+   "idx": 317,
+   "name": "OBJ[28].HPos",
+   "struct_off": 2940,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 881
+  },
+  {
+   "idx": 318,
+   "name": "OBJ[28].VPos",
+   "struct_off": 2942,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 883
+  },
+  {
+   "idx": 319,
+   "name": "OBJ[28].Name",
+   "struct_off": 2944,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 885
+  },
+  {
+   "idx": 320,
+   "name": "OBJ[28].VFlip",
+   "struct_off": 2946,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 887
+  },
+  {
+   "idx": 321,
+   "name": "OBJ[28].HFlip",
+   "struct_off": 2947,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 888
+  },
+  {
+   "idx": 322,
+   "name": "OBJ[28].Priority",
+   "struct_off": 2948,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 889
+  },
+  {
+   "idx": 323,
+   "name": "OBJ[28].Palette",
+   "struct_off": 2949,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 890
+  },
+  {
+   "idx": 324,
+   "name": "OBJ[28].Size",
+   "struct_off": 2950,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 891
+  },
+  {
+   "idx": 325,
+   "name": "OBJ[29].HPos",
+   "struct_off": 2952,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 892
+  },
+  {
+   "idx": 326,
+   "name": "OBJ[29].VPos",
+   "struct_off": 2954,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 894
+  },
+  {
+   "idx": 327,
+   "name": "OBJ[29].Name",
+   "struct_off": 2956,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 896
+  },
+  {
+   "idx": 328,
+   "name": "OBJ[29].VFlip",
+   "struct_off": 2958,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 898
+  },
+  {
+   "idx": 329,
+   "name": "OBJ[29].HFlip",
+   "struct_off": 2959,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 899
+  },
+  {
+   "idx": 330,
+   "name": "OBJ[29].Priority",
+   "struct_off": 2960,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 900
+  },
+  {
+   "idx": 331,
+   "name": "OBJ[29].Palette",
+   "struct_off": 2961,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 901
+  },
+  {
+   "idx": 332,
+   "name": "OBJ[29].Size",
+   "struct_off": 2962,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 902
+  },
+  {
+   "idx": 333,
+   "name": "OBJ[30].HPos",
+   "struct_off": 2964,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 903
+  },
+  {
+   "idx": 334,
+   "name": "OBJ[30].VPos",
+   "struct_off": 2966,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 905
+  },
+  {
+   "idx": 335,
+   "name": "OBJ[30].Name",
+   "struct_off": 2968,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 907
+  },
+  {
+   "idx": 336,
+   "name": "OBJ[30].VFlip",
+   "struct_off": 2970,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 909
+  },
+  {
+   "idx": 337,
+   "name": "OBJ[30].HFlip",
+   "struct_off": 2971,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 910
+  },
+  {
+   "idx": 338,
+   "name": "OBJ[30].Priority",
+   "struct_off": 2972,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 911
+  },
+  {
+   "idx": 339,
+   "name": "OBJ[30].Palette",
+   "struct_off": 2973,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 912
+  },
+  {
+   "idx": 340,
+   "name": "OBJ[30].Size",
+   "struct_off": 2974,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 913
+  },
+  {
+   "idx": 341,
+   "name": "OBJ[31].HPos",
+   "struct_off": 2976,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 914
+  },
+  {
+   "idx": 342,
+   "name": "OBJ[31].VPos",
+   "struct_off": 2978,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 916
+  },
+  {
+   "idx": 343,
+   "name": "OBJ[31].Name",
+   "struct_off": 2980,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 918
+  },
+  {
+   "idx": 344,
+   "name": "OBJ[31].VFlip",
+   "struct_off": 2982,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 920
+  },
+  {
+   "idx": 345,
+   "name": "OBJ[31].HFlip",
+   "struct_off": 2983,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 921
+  },
+  {
+   "idx": 346,
+   "name": "OBJ[31].Priority",
+   "struct_off": 2984,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 922
+  },
+  {
+   "idx": 347,
+   "name": "OBJ[31].Palette",
+   "struct_off": 2985,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 923
+  },
+  {
+   "idx": 348,
+   "name": "OBJ[31].Size",
+   "struct_off": 2986,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 924
+  },
+  {
+   "idx": 349,
+   "name": "OBJ[32].HPos",
+   "struct_off": 2988,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 925
+  },
+  {
+   "idx": 350,
+   "name": "OBJ[32].VPos",
+   "struct_off": 2990,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 927
+  },
+  {
+   "idx": 351,
+   "name": "OBJ[32].Name",
+   "struct_off": 2992,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 929
+  },
+  {
+   "idx": 352,
+   "name": "OBJ[32].VFlip",
+   "struct_off": 2994,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 931
+  },
+  {
+   "idx": 353,
+   "name": "OBJ[32].HFlip",
+   "struct_off": 2995,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 932
+  },
+  {
+   "idx": 354,
+   "name": "OBJ[32].Priority",
+   "struct_off": 2996,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 933
+  },
+  {
+   "idx": 355,
+   "name": "OBJ[32].Palette",
+   "struct_off": 2997,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 934
+  },
+  {
+   "idx": 356,
+   "name": "OBJ[32].Size",
+   "struct_off": 2998,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 935
+  },
+  {
+   "idx": 357,
+   "name": "OBJ[33].HPos",
+   "struct_off": 3000,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 936
+  },
+  {
+   "idx": 358,
+   "name": "OBJ[33].VPos",
+   "struct_off": 3002,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 938
+  },
+  {
+   "idx": 359,
+   "name": "OBJ[33].Name",
+   "struct_off": 3004,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 940
+  },
+  {
+   "idx": 360,
+   "name": "OBJ[33].VFlip",
+   "struct_off": 3006,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 942
+  },
+  {
+   "idx": 361,
+   "name": "OBJ[33].HFlip",
+   "struct_off": 3007,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 943
+  },
+  {
+   "idx": 362,
+   "name": "OBJ[33].Priority",
+   "struct_off": 3008,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 944
+  },
+  {
+   "idx": 363,
+   "name": "OBJ[33].Palette",
+   "struct_off": 3009,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 945
+  },
+  {
+   "idx": 364,
+   "name": "OBJ[33].Size",
+   "struct_off": 3010,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 946
+  },
+  {
+   "idx": 365,
+   "name": "OBJ[34].HPos",
+   "struct_off": 3012,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 947
+  },
+  {
+   "idx": 366,
+   "name": "OBJ[34].VPos",
+   "struct_off": 3014,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 949
+  },
+  {
+   "idx": 367,
+   "name": "OBJ[34].Name",
+   "struct_off": 3016,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 951
+  },
+  {
+   "idx": 368,
+   "name": "OBJ[34].VFlip",
+   "struct_off": 3018,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 953
+  },
+  {
+   "idx": 369,
+   "name": "OBJ[34].HFlip",
+   "struct_off": 3019,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 954
+  },
+  {
+   "idx": 370,
+   "name": "OBJ[34].Priority",
+   "struct_off": 3020,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 955
+  },
+  {
+   "idx": 371,
+   "name": "OBJ[34].Palette",
+   "struct_off": 3021,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 956
+  },
+  {
+   "idx": 372,
+   "name": "OBJ[34].Size",
+   "struct_off": 3022,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 957
+  },
+  {
+   "idx": 373,
+   "name": "OBJ[35].HPos",
+   "struct_off": 3024,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 958
+  },
+  {
+   "idx": 374,
+   "name": "OBJ[35].VPos",
+   "struct_off": 3026,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 960
+  },
+  {
+   "idx": 375,
+   "name": "OBJ[35].Name",
+   "struct_off": 3028,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 962
+  },
+  {
+   "idx": 376,
+   "name": "OBJ[35].VFlip",
+   "struct_off": 3030,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 964
+  },
+  {
+   "idx": 377,
+   "name": "OBJ[35].HFlip",
+   "struct_off": 3031,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 965
+  },
+  {
+   "idx": 378,
+   "name": "OBJ[35].Priority",
+   "struct_off": 3032,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 966
+  },
+  {
+   "idx": 379,
+   "name": "OBJ[35].Palette",
+   "struct_off": 3033,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 967
+  },
+  {
+   "idx": 380,
+   "name": "OBJ[35].Size",
+   "struct_off": 3034,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 968
+  },
+  {
+   "idx": 381,
+   "name": "OBJ[36].HPos",
+   "struct_off": 3036,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 969
+  },
+  {
+   "idx": 382,
+   "name": "OBJ[36].VPos",
+   "struct_off": 3038,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 971
+  },
+  {
+   "idx": 383,
+   "name": "OBJ[36].Name",
+   "struct_off": 3040,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 973
+  },
+  {
+   "idx": 384,
+   "name": "OBJ[36].VFlip",
+   "struct_off": 3042,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 975
+  },
+  {
+   "idx": 385,
+   "name": "OBJ[36].HFlip",
+   "struct_off": 3043,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 976
+  },
+  {
+   "idx": 386,
+   "name": "OBJ[36].Priority",
+   "struct_off": 3044,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 977
+  },
+  {
+   "idx": 387,
+   "name": "OBJ[36].Palette",
+   "struct_off": 3045,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 978
+  },
+  {
+   "idx": 388,
+   "name": "OBJ[36].Size",
+   "struct_off": 3046,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 979
+  },
+  {
+   "idx": 389,
+   "name": "OBJ[37].HPos",
+   "struct_off": 3048,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 980
+  },
+  {
+   "idx": 390,
+   "name": "OBJ[37].VPos",
+   "struct_off": 3050,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 982
+  },
+  {
+   "idx": 391,
+   "name": "OBJ[37].Name",
+   "struct_off": 3052,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 984
+  },
+  {
+   "idx": 392,
+   "name": "OBJ[37].VFlip",
+   "struct_off": 3054,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 986
+  },
+  {
+   "idx": 393,
+   "name": "OBJ[37].HFlip",
+   "struct_off": 3055,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 987
+  },
+  {
+   "idx": 394,
+   "name": "OBJ[37].Priority",
+   "struct_off": 3056,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 988
+  },
+  {
+   "idx": 395,
+   "name": "OBJ[37].Palette",
+   "struct_off": 3057,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 989
+  },
+  {
+   "idx": 396,
+   "name": "OBJ[37].Size",
+   "struct_off": 3058,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 990
+  },
+  {
+   "idx": 397,
+   "name": "OBJ[38].HPos",
+   "struct_off": 3060,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 991
+  },
+  {
+   "idx": 398,
+   "name": "OBJ[38].VPos",
+   "struct_off": 3062,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 993
+  },
+  {
+   "idx": 399,
+   "name": "OBJ[38].Name",
+   "struct_off": 3064,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 995
+  },
+  {
+   "idx": 400,
+   "name": "OBJ[38].VFlip",
+   "struct_off": 3066,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 997
+  },
+  {
+   "idx": 401,
+   "name": "OBJ[38].HFlip",
+   "struct_off": 3067,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 998
+  },
+  {
+   "idx": 402,
+   "name": "OBJ[38].Priority",
+   "struct_off": 3068,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 999
+  },
+  {
+   "idx": 403,
+   "name": "OBJ[38].Palette",
+   "struct_off": 3069,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1000
+  },
+  {
+   "idx": 404,
+   "name": "OBJ[38].Size",
+   "struct_off": 3070,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1001
+  },
+  {
+   "idx": 405,
+   "name": "OBJ[39].HPos",
+   "struct_off": 3072,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1002
+  },
+  {
+   "idx": 406,
+   "name": "OBJ[39].VPos",
+   "struct_off": 3074,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1004
+  },
+  {
+   "idx": 407,
+   "name": "OBJ[39].Name",
+   "struct_off": 3076,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1006
+  },
+  {
+   "idx": 408,
+   "name": "OBJ[39].VFlip",
+   "struct_off": 3078,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1008
+  },
+  {
+   "idx": 409,
+   "name": "OBJ[39].HFlip",
+   "struct_off": 3079,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1009
+  },
+  {
+   "idx": 410,
+   "name": "OBJ[39].Priority",
+   "struct_off": 3080,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1010
+  },
+  {
+   "idx": 411,
+   "name": "OBJ[39].Palette",
+   "struct_off": 3081,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1011
+  },
+  {
+   "idx": 412,
+   "name": "OBJ[39].Size",
+   "struct_off": 3082,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1012
+  },
+  {
+   "idx": 413,
+   "name": "OBJ[40].HPos",
+   "struct_off": 3084,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1013
+  },
+  {
+   "idx": 414,
+   "name": "OBJ[40].VPos",
+   "struct_off": 3086,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1015
+  },
+  {
+   "idx": 415,
+   "name": "OBJ[40].Name",
+   "struct_off": 3088,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1017
+  },
+  {
+   "idx": 416,
+   "name": "OBJ[40].VFlip",
+   "struct_off": 3090,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1019
+  },
+  {
+   "idx": 417,
+   "name": "OBJ[40].HFlip",
+   "struct_off": 3091,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1020
+  },
+  {
+   "idx": 418,
+   "name": "OBJ[40].Priority",
+   "struct_off": 3092,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1021
+  },
+  {
+   "idx": 419,
+   "name": "OBJ[40].Palette",
+   "struct_off": 3093,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1022
+  },
+  {
+   "idx": 420,
+   "name": "OBJ[40].Size",
+   "struct_off": 3094,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1023
+  },
+  {
+   "idx": 421,
+   "name": "OBJ[41].HPos",
+   "struct_off": 3096,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1024
+  },
+  {
+   "idx": 422,
+   "name": "OBJ[41].VPos",
+   "struct_off": 3098,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1026
+  },
+  {
+   "idx": 423,
+   "name": "OBJ[41].Name",
+   "struct_off": 3100,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1028
+  },
+  {
+   "idx": 424,
+   "name": "OBJ[41].VFlip",
+   "struct_off": 3102,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1030
+  },
+  {
+   "idx": 425,
+   "name": "OBJ[41].HFlip",
+   "struct_off": 3103,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1031
+  },
+  {
+   "idx": 426,
+   "name": "OBJ[41].Priority",
+   "struct_off": 3104,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1032
+  },
+  {
+   "idx": 427,
+   "name": "OBJ[41].Palette",
+   "struct_off": 3105,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1033
+  },
+  {
+   "idx": 428,
+   "name": "OBJ[41].Size",
+   "struct_off": 3106,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1034
+  },
+  {
+   "idx": 429,
+   "name": "OBJ[42].HPos",
+   "struct_off": 3108,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1035
+  },
+  {
+   "idx": 430,
+   "name": "OBJ[42].VPos",
+   "struct_off": 3110,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1037
+  },
+  {
+   "idx": 431,
+   "name": "OBJ[42].Name",
+   "struct_off": 3112,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1039
+  },
+  {
+   "idx": 432,
+   "name": "OBJ[42].VFlip",
+   "struct_off": 3114,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1041
+  },
+  {
+   "idx": 433,
+   "name": "OBJ[42].HFlip",
+   "struct_off": 3115,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1042
+  },
+  {
+   "idx": 434,
+   "name": "OBJ[42].Priority",
+   "struct_off": 3116,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1043
+  },
+  {
+   "idx": 435,
+   "name": "OBJ[42].Palette",
+   "struct_off": 3117,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1044
+  },
+  {
+   "idx": 436,
+   "name": "OBJ[42].Size",
+   "struct_off": 3118,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1045
+  },
+  {
+   "idx": 437,
+   "name": "OBJ[43].HPos",
+   "struct_off": 3120,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1046
+  },
+  {
+   "idx": 438,
+   "name": "OBJ[43].VPos",
+   "struct_off": 3122,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1048
+  },
+  {
+   "idx": 439,
+   "name": "OBJ[43].Name",
+   "struct_off": 3124,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1050
+  },
+  {
+   "idx": 440,
+   "name": "OBJ[43].VFlip",
+   "struct_off": 3126,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1052
+  },
+  {
+   "idx": 441,
+   "name": "OBJ[43].HFlip",
+   "struct_off": 3127,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1053
+  },
+  {
+   "idx": 442,
+   "name": "OBJ[43].Priority",
+   "struct_off": 3128,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1054
+  },
+  {
+   "idx": 443,
+   "name": "OBJ[43].Palette",
+   "struct_off": 3129,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1055
+  },
+  {
+   "idx": 444,
+   "name": "OBJ[43].Size",
+   "struct_off": 3130,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1056
+  },
+  {
+   "idx": 445,
+   "name": "OBJ[44].HPos",
+   "struct_off": 3132,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1057
+  },
+  {
+   "idx": 446,
+   "name": "OBJ[44].VPos",
+   "struct_off": 3134,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1059
+  },
+  {
+   "idx": 447,
+   "name": "OBJ[44].Name",
+   "struct_off": 3136,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1061
+  },
+  {
+   "idx": 448,
+   "name": "OBJ[44].VFlip",
+   "struct_off": 3138,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1063
+  },
+  {
+   "idx": 449,
+   "name": "OBJ[44].HFlip",
+   "struct_off": 3139,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1064
+  },
+  {
+   "idx": 450,
+   "name": "OBJ[44].Priority",
+   "struct_off": 3140,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1065
+  },
+  {
+   "idx": 451,
+   "name": "OBJ[44].Palette",
+   "struct_off": 3141,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1066
+  },
+  {
+   "idx": 452,
+   "name": "OBJ[44].Size",
+   "struct_off": 3142,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1067
+  },
+  {
+   "idx": 453,
+   "name": "OBJ[45].HPos",
+   "struct_off": 3144,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1068
+  },
+  {
+   "idx": 454,
+   "name": "OBJ[45].VPos",
+   "struct_off": 3146,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1070
+  },
+  {
+   "idx": 455,
+   "name": "OBJ[45].Name",
+   "struct_off": 3148,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1072
+  },
+  {
+   "idx": 456,
+   "name": "OBJ[45].VFlip",
+   "struct_off": 3150,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1074
+  },
+  {
+   "idx": 457,
+   "name": "OBJ[45].HFlip",
+   "struct_off": 3151,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1075
+  },
+  {
+   "idx": 458,
+   "name": "OBJ[45].Priority",
+   "struct_off": 3152,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1076
+  },
+  {
+   "idx": 459,
+   "name": "OBJ[45].Palette",
+   "struct_off": 3153,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1077
+  },
+  {
+   "idx": 460,
+   "name": "OBJ[45].Size",
+   "struct_off": 3154,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1078
+  },
+  {
+   "idx": 461,
+   "name": "OBJ[46].HPos",
+   "struct_off": 3156,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1079
+  },
+  {
+   "idx": 462,
+   "name": "OBJ[46].VPos",
+   "struct_off": 3158,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1081
+  },
+  {
+   "idx": 463,
+   "name": "OBJ[46].Name",
+   "struct_off": 3160,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1083
+  },
+  {
+   "idx": 464,
+   "name": "OBJ[46].VFlip",
+   "struct_off": 3162,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1085
+  },
+  {
+   "idx": 465,
+   "name": "OBJ[46].HFlip",
+   "struct_off": 3163,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1086
+  },
+  {
+   "idx": 466,
+   "name": "OBJ[46].Priority",
+   "struct_off": 3164,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1087
+  },
+  {
+   "idx": 467,
+   "name": "OBJ[46].Palette",
+   "struct_off": 3165,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1088
+  },
+  {
+   "idx": 468,
+   "name": "OBJ[46].Size",
+   "struct_off": 3166,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1089
+  },
+  {
+   "idx": 469,
+   "name": "OBJ[47].HPos",
+   "struct_off": 3168,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1090
+  },
+  {
+   "idx": 470,
+   "name": "OBJ[47].VPos",
+   "struct_off": 3170,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1092
+  },
+  {
+   "idx": 471,
+   "name": "OBJ[47].Name",
+   "struct_off": 3172,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1094
+  },
+  {
+   "idx": 472,
+   "name": "OBJ[47].VFlip",
+   "struct_off": 3174,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1096
+  },
+  {
+   "idx": 473,
+   "name": "OBJ[47].HFlip",
+   "struct_off": 3175,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1097
+  },
+  {
+   "idx": 474,
+   "name": "OBJ[47].Priority",
+   "struct_off": 3176,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1098
+  },
+  {
+   "idx": 475,
+   "name": "OBJ[47].Palette",
+   "struct_off": 3177,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1099
+  },
+  {
+   "idx": 476,
+   "name": "OBJ[47].Size",
+   "struct_off": 3178,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1100
+  },
+  {
+   "idx": 477,
+   "name": "OBJ[48].HPos",
+   "struct_off": 3180,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1101
+  },
+  {
+   "idx": 478,
+   "name": "OBJ[48].VPos",
+   "struct_off": 3182,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1103
+  },
+  {
+   "idx": 479,
+   "name": "OBJ[48].Name",
+   "struct_off": 3184,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1105
+  },
+  {
+   "idx": 480,
+   "name": "OBJ[48].VFlip",
+   "struct_off": 3186,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1107
+  },
+  {
+   "idx": 481,
+   "name": "OBJ[48].HFlip",
+   "struct_off": 3187,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1108
+  },
+  {
+   "idx": 482,
+   "name": "OBJ[48].Priority",
+   "struct_off": 3188,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1109
+  },
+  {
+   "idx": 483,
+   "name": "OBJ[48].Palette",
+   "struct_off": 3189,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1110
+  },
+  {
+   "idx": 484,
+   "name": "OBJ[48].Size",
+   "struct_off": 3190,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1111
+  },
+  {
+   "idx": 485,
+   "name": "OBJ[49].HPos",
+   "struct_off": 3192,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1112
+  },
+  {
+   "idx": 486,
+   "name": "OBJ[49].VPos",
+   "struct_off": 3194,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1114
+  },
+  {
+   "idx": 487,
+   "name": "OBJ[49].Name",
+   "struct_off": 3196,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1116
+  },
+  {
+   "idx": 488,
+   "name": "OBJ[49].VFlip",
+   "struct_off": 3198,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1118
+  },
+  {
+   "idx": 489,
+   "name": "OBJ[49].HFlip",
+   "struct_off": 3199,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1119
+  },
+  {
+   "idx": 490,
+   "name": "OBJ[49].Priority",
+   "struct_off": 3200,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1120
+  },
+  {
+   "idx": 491,
+   "name": "OBJ[49].Palette",
+   "struct_off": 3201,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1121
+  },
+  {
+   "idx": 492,
+   "name": "OBJ[49].Size",
+   "struct_off": 3202,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1122
+  },
+  {
+   "idx": 493,
+   "name": "OBJ[50].HPos",
+   "struct_off": 3204,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1123
+  },
+  {
+   "idx": 494,
+   "name": "OBJ[50].VPos",
+   "struct_off": 3206,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1125
+  },
+  {
+   "idx": 495,
+   "name": "OBJ[50].Name",
+   "struct_off": 3208,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1127
+  },
+  {
+   "idx": 496,
+   "name": "OBJ[50].VFlip",
+   "struct_off": 3210,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1129
+  },
+  {
+   "idx": 497,
+   "name": "OBJ[50].HFlip",
+   "struct_off": 3211,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1130
+  },
+  {
+   "idx": 498,
+   "name": "OBJ[50].Priority",
+   "struct_off": 3212,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1131
+  },
+  {
+   "idx": 499,
+   "name": "OBJ[50].Palette",
+   "struct_off": 3213,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1132
+  },
+  {
+   "idx": 500,
+   "name": "OBJ[50].Size",
+   "struct_off": 3214,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1133
+  },
+  {
+   "idx": 501,
+   "name": "OBJ[51].HPos",
+   "struct_off": 3216,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1134
+  },
+  {
+   "idx": 502,
+   "name": "OBJ[51].VPos",
+   "struct_off": 3218,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1136
+  },
+  {
+   "idx": 503,
+   "name": "OBJ[51].Name",
+   "struct_off": 3220,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1138
+  },
+  {
+   "idx": 504,
+   "name": "OBJ[51].VFlip",
+   "struct_off": 3222,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1140
+  },
+  {
+   "idx": 505,
+   "name": "OBJ[51].HFlip",
+   "struct_off": 3223,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1141
+  },
+  {
+   "idx": 506,
+   "name": "OBJ[51].Priority",
+   "struct_off": 3224,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1142
+  },
+  {
+   "idx": 507,
+   "name": "OBJ[51].Palette",
+   "struct_off": 3225,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1143
+  },
+  {
+   "idx": 508,
+   "name": "OBJ[51].Size",
+   "struct_off": 3226,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1144
+  },
+  {
+   "idx": 509,
+   "name": "OBJ[52].HPos",
+   "struct_off": 3228,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1145
+  },
+  {
+   "idx": 510,
+   "name": "OBJ[52].VPos",
+   "struct_off": 3230,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1147
+  },
+  {
+   "idx": 511,
+   "name": "OBJ[52].Name",
+   "struct_off": 3232,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1149
+  },
+  {
+   "idx": 512,
+   "name": "OBJ[52].VFlip",
+   "struct_off": 3234,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1151
+  },
+  {
+   "idx": 513,
+   "name": "OBJ[52].HFlip",
+   "struct_off": 3235,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1152
+  },
+  {
+   "idx": 514,
+   "name": "OBJ[52].Priority",
+   "struct_off": 3236,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1153
+  },
+  {
+   "idx": 515,
+   "name": "OBJ[52].Palette",
+   "struct_off": 3237,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1154
+  },
+  {
+   "idx": 516,
+   "name": "OBJ[52].Size",
+   "struct_off": 3238,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1155
+  },
+  {
+   "idx": 517,
+   "name": "OBJ[53].HPos",
+   "struct_off": 3240,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1156
+  },
+  {
+   "idx": 518,
+   "name": "OBJ[53].VPos",
+   "struct_off": 3242,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1158
+  },
+  {
+   "idx": 519,
+   "name": "OBJ[53].Name",
+   "struct_off": 3244,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1160
+  },
+  {
+   "idx": 520,
+   "name": "OBJ[53].VFlip",
+   "struct_off": 3246,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1162
+  },
+  {
+   "idx": 521,
+   "name": "OBJ[53].HFlip",
+   "struct_off": 3247,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1163
+  },
+  {
+   "idx": 522,
+   "name": "OBJ[53].Priority",
+   "struct_off": 3248,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1164
+  },
+  {
+   "idx": 523,
+   "name": "OBJ[53].Palette",
+   "struct_off": 3249,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1165
+  },
+  {
+   "idx": 524,
+   "name": "OBJ[53].Size",
+   "struct_off": 3250,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1166
+  },
+  {
+   "idx": 525,
+   "name": "OBJ[54].HPos",
+   "struct_off": 3252,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1167
+  },
+  {
+   "idx": 526,
+   "name": "OBJ[54].VPos",
+   "struct_off": 3254,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1169
+  },
+  {
+   "idx": 527,
+   "name": "OBJ[54].Name",
+   "struct_off": 3256,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1171
+  },
+  {
+   "idx": 528,
+   "name": "OBJ[54].VFlip",
+   "struct_off": 3258,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1173
+  },
+  {
+   "idx": 529,
+   "name": "OBJ[54].HFlip",
+   "struct_off": 3259,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1174
+  },
+  {
+   "idx": 530,
+   "name": "OBJ[54].Priority",
+   "struct_off": 3260,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1175
+  },
+  {
+   "idx": 531,
+   "name": "OBJ[54].Palette",
+   "struct_off": 3261,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1176
+  },
+  {
+   "idx": 532,
+   "name": "OBJ[54].Size",
+   "struct_off": 3262,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1177
+  },
+  {
+   "idx": 533,
+   "name": "OBJ[55].HPos",
+   "struct_off": 3264,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1178
+  },
+  {
+   "idx": 534,
+   "name": "OBJ[55].VPos",
+   "struct_off": 3266,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1180
+  },
+  {
+   "idx": 535,
+   "name": "OBJ[55].Name",
+   "struct_off": 3268,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1182
+  },
+  {
+   "idx": 536,
+   "name": "OBJ[55].VFlip",
+   "struct_off": 3270,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1184
+  },
+  {
+   "idx": 537,
+   "name": "OBJ[55].HFlip",
+   "struct_off": 3271,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1185
+  },
+  {
+   "idx": 538,
+   "name": "OBJ[55].Priority",
+   "struct_off": 3272,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1186
+  },
+  {
+   "idx": 539,
+   "name": "OBJ[55].Palette",
+   "struct_off": 3273,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1187
+  },
+  {
+   "idx": 540,
+   "name": "OBJ[55].Size",
+   "struct_off": 3274,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1188
+  },
+  {
+   "idx": 541,
+   "name": "OBJ[56].HPos",
+   "struct_off": 3276,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1189
+  },
+  {
+   "idx": 542,
+   "name": "OBJ[56].VPos",
+   "struct_off": 3278,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1191
+  },
+  {
+   "idx": 543,
+   "name": "OBJ[56].Name",
+   "struct_off": 3280,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1193
+  },
+  {
+   "idx": 544,
+   "name": "OBJ[56].VFlip",
+   "struct_off": 3282,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1195
+  },
+  {
+   "idx": 545,
+   "name": "OBJ[56].HFlip",
+   "struct_off": 3283,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1196
+  },
+  {
+   "idx": 546,
+   "name": "OBJ[56].Priority",
+   "struct_off": 3284,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1197
+  },
+  {
+   "idx": 547,
+   "name": "OBJ[56].Palette",
+   "struct_off": 3285,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1198
+  },
+  {
+   "idx": 548,
+   "name": "OBJ[56].Size",
+   "struct_off": 3286,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1199
+  },
+  {
+   "idx": 549,
+   "name": "OBJ[57].HPos",
+   "struct_off": 3288,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1200
+  },
+  {
+   "idx": 550,
+   "name": "OBJ[57].VPos",
+   "struct_off": 3290,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1202
+  },
+  {
+   "idx": 551,
+   "name": "OBJ[57].Name",
+   "struct_off": 3292,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1204
+  },
+  {
+   "idx": 552,
+   "name": "OBJ[57].VFlip",
+   "struct_off": 3294,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1206
+  },
+  {
+   "idx": 553,
+   "name": "OBJ[57].HFlip",
+   "struct_off": 3295,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1207
+  },
+  {
+   "idx": 554,
+   "name": "OBJ[57].Priority",
+   "struct_off": 3296,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1208
+  },
+  {
+   "idx": 555,
+   "name": "OBJ[57].Palette",
+   "struct_off": 3297,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1209
+  },
+  {
+   "idx": 556,
+   "name": "OBJ[57].Size",
+   "struct_off": 3298,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1210
+  },
+  {
+   "idx": 557,
+   "name": "OBJ[58].HPos",
+   "struct_off": 3300,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1211
+  },
+  {
+   "idx": 558,
+   "name": "OBJ[58].VPos",
+   "struct_off": 3302,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1213
+  },
+  {
+   "idx": 559,
+   "name": "OBJ[58].Name",
+   "struct_off": 3304,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1215
+  },
+  {
+   "idx": 560,
+   "name": "OBJ[58].VFlip",
+   "struct_off": 3306,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1217
+  },
+  {
+   "idx": 561,
+   "name": "OBJ[58].HFlip",
+   "struct_off": 3307,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1218
+  },
+  {
+   "idx": 562,
+   "name": "OBJ[58].Priority",
+   "struct_off": 3308,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1219
+  },
+  {
+   "idx": 563,
+   "name": "OBJ[58].Palette",
+   "struct_off": 3309,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1220
+  },
+  {
+   "idx": 564,
+   "name": "OBJ[58].Size",
+   "struct_off": 3310,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1221
+  },
+  {
+   "idx": 565,
+   "name": "OBJ[59].HPos",
+   "struct_off": 3312,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1222
+  },
+  {
+   "idx": 566,
+   "name": "OBJ[59].VPos",
+   "struct_off": 3314,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1224
+  },
+  {
+   "idx": 567,
+   "name": "OBJ[59].Name",
+   "struct_off": 3316,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1226
+  },
+  {
+   "idx": 568,
+   "name": "OBJ[59].VFlip",
+   "struct_off": 3318,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1228
+  },
+  {
+   "idx": 569,
+   "name": "OBJ[59].HFlip",
+   "struct_off": 3319,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1229
+  },
+  {
+   "idx": 570,
+   "name": "OBJ[59].Priority",
+   "struct_off": 3320,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1230
+  },
+  {
+   "idx": 571,
+   "name": "OBJ[59].Palette",
+   "struct_off": 3321,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1231
+  },
+  {
+   "idx": 572,
+   "name": "OBJ[59].Size",
+   "struct_off": 3322,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1232
+  },
+  {
+   "idx": 573,
+   "name": "OBJ[60].HPos",
+   "struct_off": 3324,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1233
+  },
+  {
+   "idx": 574,
+   "name": "OBJ[60].VPos",
+   "struct_off": 3326,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1235
+  },
+  {
+   "idx": 575,
+   "name": "OBJ[60].Name",
+   "struct_off": 3328,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1237
+  },
+  {
+   "idx": 576,
+   "name": "OBJ[60].VFlip",
+   "struct_off": 3330,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1239
+  },
+  {
+   "idx": 577,
+   "name": "OBJ[60].HFlip",
+   "struct_off": 3331,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1240
+  },
+  {
+   "idx": 578,
+   "name": "OBJ[60].Priority",
+   "struct_off": 3332,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1241
+  },
+  {
+   "idx": 579,
+   "name": "OBJ[60].Palette",
+   "struct_off": 3333,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1242
+  },
+  {
+   "idx": 580,
+   "name": "OBJ[60].Size",
+   "struct_off": 3334,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1243
+  },
+  {
+   "idx": 581,
+   "name": "OBJ[61].HPos",
+   "struct_off": 3336,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1244
+  },
+  {
+   "idx": 582,
+   "name": "OBJ[61].VPos",
+   "struct_off": 3338,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1246
+  },
+  {
+   "idx": 583,
+   "name": "OBJ[61].Name",
+   "struct_off": 3340,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1248
+  },
+  {
+   "idx": 584,
+   "name": "OBJ[61].VFlip",
+   "struct_off": 3342,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1250
+  },
+  {
+   "idx": 585,
+   "name": "OBJ[61].HFlip",
+   "struct_off": 3343,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1251
+  },
+  {
+   "idx": 586,
+   "name": "OBJ[61].Priority",
+   "struct_off": 3344,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1252
+  },
+  {
+   "idx": 587,
+   "name": "OBJ[61].Palette",
+   "struct_off": 3345,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1253
+  },
+  {
+   "idx": 588,
+   "name": "OBJ[61].Size",
+   "struct_off": 3346,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1254
+  },
+  {
+   "idx": 589,
+   "name": "OBJ[62].HPos",
+   "struct_off": 3348,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1255
+  },
+  {
+   "idx": 590,
+   "name": "OBJ[62].VPos",
+   "struct_off": 3350,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1257
+  },
+  {
+   "idx": 591,
+   "name": "OBJ[62].Name",
+   "struct_off": 3352,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1259
+  },
+  {
+   "idx": 592,
+   "name": "OBJ[62].VFlip",
+   "struct_off": 3354,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1261
+  },
+  {
+   "idx": 593,
+   "name": "OBJ[62].HFlip",
+   "struct_off": 3355,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1262
+  },
+  {
+   "idx": 594,
+   "name": "OBJ[62].Priority",
+   "struct_off": 3356,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1263
+  },
+  {
+   "idx": 595,
+   "name": "OBJ[62].Palette",
+   "struct_off": 3357,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1264
+  },
+  {
+   "idx": 596,
+   "name": "OBJ[62].Size",
+   "struct_off": 3358,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1265
+  },
+  {
+   "idx": 597,
+   "name": "OBJ[63].HPos",
+   "struct_off": 3360,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1266
+  },
+  {
+   "idx": 598,
+   "name": "OBJ[63].VPos",
+   "struct_off": 3362,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1268
+  },
+  {
+   "idx": 599,
+   "name": "OBJ[63].Name",
+   "struct_off": 3364,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1270
+  },
+  {
+   "idx": 600,
+   "name": "OBJ[63].VFlip",
+   "struct_off": 3366,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1272
+  },
+  {
+   "idx": 601,
+   "name": "OBJ[63].HFlip",
+   "struct_off": 3367,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1273
+  },
+  {
+   "idx": 602,
+   "name": "OBJ[63].Priority",
+   "struct_off": 3368,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1274
+  },
+  {
+   "idx": 603,
+   "name": "OBJ[63].Palette",
+   "struct_off": 3369,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1275
+  },
+  {
+   "idx": 604,
+   "name": "OBJ[63].Size",
+   "struct_off": 3370,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1276
+  },
+  {
+   "idx": 605,
+   "name": "OBJ[64].HPos",
+   "struct_off": 3372,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1277
+  },
+  {
+   "idx": 606,
+   "name": "OBJ[64].VPos",
+   "struct_off": 3374,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1279
+  },
+  {
+   "idx": 607,
+   "name": "OBJ[64].Name",
+   "struct_off": 3376,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1281
+  },
+  {
+   "idx": 608,
+   "name": "OBJ[64].VFlip",
+   "struct_off": 3378,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1283
+  },
+  {
+   "idx": 609,
+   "name": "OBJ[64].HFlip",
+   "struct_off": 3379,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1284
+  },
+  {
+   "idx": 610,
+   "name": "OBJ[64].Priority",
+   "struct_off": 3380,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1285
+  },
+  {
+   "idx": 611,
+   "name": "OBJ[64].Palette",
+   "struct_off": 3381,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1286
+  },
+  {
+   "idx": 612,
+   "name": "OBJ[64].Size",
+   "struct_off": 3382,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1287
+  },
+  {
+   "idx": 613,
+   "name": "OBJ[65].HPos",
+   "struct_off": 3384,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1288
+  },
+  {
+   "idx": 614,
+   "name": "OBJ[65].VPos",
+   "struct_off": 3386,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1290
+  },
+  {
+   "idx": 615,
+   "name": "OBJ[65].Name",
+   "struct_off": 3388,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1292
+  },
+  {
+   "idx": 616,
+   "name": "OBJ[65].VFlip",
+   "struct_off": 3390,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1294
+  },
+  {
+   "idx": 617,
+   "name": "OBJ[65].HFlip",
+   "struct_off": 3391,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1295
+  },
+  {
+   "idx": 618,
+   "name": "OBJ[65].Priority",
+   "struct_off": 3392,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1296
+  },
+  {
+   "idx": 619,
+   "name": "OBJ[65].Palette",
+   "struct_off": 3393,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1297
+  },
+  {
+   "idx": 620,
+   "name": "OBJ[65].Size",
+   "struct_off": 3394,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1298
+  },
+  {
+   "idx": 621,
+   "name": "OBJ[66].HPos",
+   "struct_off": 3396,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1299
+  },
+  {
+   "idx": 622,
+   "name": "OBJ[66].VPos",
+   "struct_off": 3398,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1301
+  },
+  {
+   "idx": 623,
+   "name": "OBJ[66].Name",
+   "struct_off": 3400,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1303
+  },
+  {
+   "idx": 624,
+   "name": "OBJ[66].VFlip",
+   "struct_off": 3402,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1305
+  },
+  {
+   "idx": 625,
+   "name": "OBJ[66].HFlip",
+   "struct_off": 3403,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1306
+  },
+  {
+   "idx": 626,
+   "name": "OBJ[66].Priority",
+   "struct_off": 3404,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1307
+  },
+  {
+   "idx": 627,
+   "name": "OBJ[66].Palette",
+   "struct_off": 3405,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1308
+  },
+  {
+   "idx": 628,
+   "name": "OBJ[66].Size",
+   "struct_off": 3406,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1309
+  },
+  {
+   "idx": 629,
+   "name": "OBJ[67].HPos",
+   "struct_off": 3408,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1310
+  },
+  {
+   "idx": 630,
+   "name": "OBJ[67].VPos",
+   "struct_off": 3410,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1312
+  },
+  {
+   "idx": 631,
+   "name": "OBJ[67].Name",
+   "struct_off": 3412,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1314
+  },
+  {
+   "idx": 632,
+   "name": "OBJ[67].VFlip",
+   "struct_off": 3414,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1316
+  },
+  {
+   "idx": 633,
+   "name": "OBJ[67].HFlip",
+   "struct_off": 3415,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1317
+  },
+  {
+   "idx": 634,
+   "name": "OBJ[67].Priority",
+   "struct_off": 3416,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1318
+  },
+  {
+   "idx": 635,
+   "name": "OBJ[67].Palette",
+   "struct_off": 3417,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1319
+  },
+  {
+   "idx": 636,
+   "name": "OBJ[67].Size",
+   "struct_off": 3418,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1320
+  },
+  {
+   "idx": 637,
+   "name": "OBJ[68].HPos",
+   "struct_off": 3420,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1321
+  },
+  {
+   "idx": 638,
+   "name": "OBJ[68].VPos",
+   "struct_off": 3422,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1323
+  },
+  {
+   "idx": 639,
+   "name": "OBJ[68].Name",
+   "struct_off": 3424,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1325
+  },
+  {
+   "idx": 640,
+   "name": "OBJ[68].VFlip",
+   "struct_off": 3426,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1327
+  },
+  {
+   "idx": 641,
+   "name": "OBJ[68].HFlip",
+   "struct_off": 3427,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1328
+  },
+  {
+   "idx": 642,
+   "name": "OBJ[68].Priority",
+   "struct_off": 3428,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1329
+  },
+  {
+   "idx": 643,
+   "name": "OBJ[68].Palette",
+   "struct_off": 3429,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1330
+  },
+  {
+   "idx": 644,
+   "name": "OBJ[68].Size",
+   "struct_off": 3430,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1331
+  },
+  {
+   "idx": 645,
+   "name": "OBJ[69].HPos",
+   "struct_off": 3432,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1332
+  },
+  {
+   "idx": 646,
+   "name": "OBJ[69].VPos",
+   "struct_off": 3434,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1334
+  },
+  {
+   "idx": 647,
+   "name": "OBJ[69].Name",
+   "struct_off": 3436,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1336
+  },
+  {
+   "idx": 648,
+   "name": "OBJ[69].VFlip",
+   "struct_off": 3438,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1338
+  },
+  {
+   "idx": 649,
+   "name": "OBJ[69].HFlip",
+   "struct_off": 3439,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1339
+  },
+  {
+   "idx": 650,
+   "name": "OBJ[69].Priority",
+   "struct_off": 3440,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1340
+  },
+  {
+   "idx": 651,
+   "name": "OBJ[69].Palette",
+   "struct_off": 3441,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1341
+  },
+  {
+   "idx": 652,
+   "name": "OBJ[69].Size",
+   "struct_off": 3442,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1342
+  },
+  {
+   "idx": 653,
+   "name": "OBJ[70].HPos",
+   "struct_off": 3444,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1343
+  },
+  {
+   "idx": 654,
+   "name": "OBJ[70].VPos",
+   "struct_off": 3446,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1345
+  },
+  {
+   "idx": 655,
+   "name": "OBJ[70].Name",
+   "struct_off": 3448,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1347
+  },
+  {
+   "idx": 656,
+   "name": "OBJ[70].VFlip",
+   "struct_off": 3450,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1349
+  },
+  {
+   "idx": 657,
+   "name": "OBJ[70].HFlip",
+   "struct_off": 3451,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1350
+  },
+  {
+   "idx": 658,
+   "name": "OBJ[70].Priority",
+   "struct_off": 3452,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1351
+  },
+  {
+   "idx": 659,
+   "name": "OBJ[70].Palette",
+   "struct_off": 3453,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1352
+  },
+  {
+   "idx": 660,
+   "name": "OBJ[70].Size",
+   "struct_off": 3454,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1353
+  },
+  {
+   "idx": 661,
+   "name": "OBJ[71].HPos",
+   "struct_off": 3456,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1354
+  },
+  {
+   "idx": 662,
+   "name": "OBJ[71].VPos",
+   "struct_off": 3458,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1356
+  },
+  {
+   "idx": 663,
+   "name": "OBJ[71].Name",
+   "struct_off": 3460,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1358
+  },
+  {
+   "idx": 664,
+   "name": "OBJ[71].VFlip",
+   "struct_off": 3462,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1360
+  },
+  {
+   "idx": 665,
+   "name": "OBJ[71].HFlip",
+   "struct_off": 3463,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1361
+  },
+  {
+   "idx": 666,
+   "name": "OBJ[71].Priority",
+   "struct_off": 3464,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1362
+  },
+  {
+   "idx": 667,
+   "name": "OBJ[71].Palette",
+   "struct_off": 3465,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1363
+  },
+  {
+   "idx": 668,
+   "name": "OBJ[71].Size",
+   "struct_off": 3466,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1364
+  },
+  {
+   "idx": 669,
+   "name": "OBJ[72].HPos",
+   "struct_off": 3468,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1365
+  },
+  {
+   "idx": 670,
+   "name": "OBJ[72].VPos",
+   "struct_off": 3470,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1367
+  },
+  {
+   "idx": 671,
+   "name": "OBJ[72].Name",
+   "struct_off": 3472,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1369
+  },
+  {
+   "idx": 672,
+   "name": "OBJ[72].VFlip",
+   "struct_off": 3474,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1371
+  },
+  {
+   "idx": 673,
+   "name": "OBJ[72].HFlip",
+   "struct_off": 3475,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1372
+  },
+  {
+   "idx": 674,
+   "name": "OBJ[72].Priority",
+   "struct_off": 3476,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1373
+  },
+  {
+   "idx": 675,
+   "name": "OBJ[72].Palette",
+   "struct_off": 3477,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1374
+  },
+  {
+   "idx": 676,
+   "name": "OBJ[72].Size",
+   "struct_off": 3478,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1375
+  },
+  {
+   "idx": 677,
+   "name": "OBJ[73].HPos",
+   "struct_off": 3480,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1376
+  },
+  {
+   "idx": 678,
+   "name": "OBJ[73].VPos",
+   "struct_off": 3482,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1378
+  },
+  {
+   "idx": 679,
+   "name": "OBJ[73].Name",
+   "struct_off": 3484,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1380
+  },
+  {
+   "idx": 680,
+   "name": "OBJ[73].VFlip",
+   "struct_off": 3486,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1382
+  },
+  {
+   "idx": 681,
+   "name": "OBJ[73].HFlip",
+   "struct_off": 3487,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1383
+  },
+  {
+   "idx": 682,
+   "name": "OBJ[73].Priority",
+   "struct_off": 3488,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1384
+  },
+  {
+   "idx": 683,
+   "name": "OBJ[73].Palette",
+   "struct_off": 3489,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1385
+  },
+  {
+   "idx": 684,
+   "name": "OBJ[73].Size",
+   "struct_off": 3490,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1386
+  },
+  {
+   "idx": 685,
+   "name": "OBJ[74].HPos",
+   "struct_off": 3492,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1387
+  },
+  {
+   "idx": 686,
+   "name": "OBJ[74].VPos",
+   "struct_off": 3494,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1389
+  },
+  {
+   "idx": 687,
+   "name": "OBJ[74].Name",
+   "struct_off": 3496,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1391
+  },
+  {
+   "idx": 688,
+   "name": "OBJ[74].VFlip",
+   "struct_off": 3498,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1393
+  },
+  {
+   "idx": 689,
+   "name": "OBJ[74].HFlip",
+   "struct_off": 3499,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1394
+  },
+  {
+   "idx": 690,
+   "name": "OBJ[74].Priority",
+   "struct_off": 3500,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1395
+  },
+  {
+   "idx": 691,
+   "name": "OBJ[74].Palette",
+   "struct_off": 3501,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1396
+  },
+  {
+   "idx": 692,
+   "name": "OBJ[74].Size",
+   "struct_off": 3502,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1397
+  },
+  {
+   "idx": 693,
+   "name": "OBJ[75].HPos",
+   "struct_off": 3504,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1398
+  },
+  {
+   "idx": 694,
+   "name": "OBJ[75].VPos",
+   "struct_off": 3506,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1400
+  },
+  {
+   "idx": 695,
+   "name": "OBJ[75].Name",
+   "struct_off": 3508,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1402
+  },
+  {
+   "idx": 696,
+   "name": "OBJ[75].VFlip",
+   "struct_off": 3510,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1404
+  },
+  {
+   "idx": 697,
+   "name": "OBJ[75].HFlip",
+   "struct_off": 3511,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1405
+  },
+  {
+   "idx": 698,
+   "name": "OBJ[75].Priority",
+   "struct_off": 3512,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1406
+  },
+  {
+   "idx": 699,
+   "name": "OBJ[75].Palette",
+   "struct_off": 3513,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1407
+  },
+  {
+   "idx": 700,
+   "name": "OBJ[75].Size",
+   "struct_off": 3514,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1408
+  },
+  {
+   "idx": 701,
+   "name": "OBJ[76].HPos",
+   "struct_off": 3516,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1409
+  },
+  {
+   "idx": 702,
+   "name": "OBJ[76].VPos",
+   "struct_off": 3518,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1411
+  },
+  {
+   "idx": 703,
+   "name": "OBJ[76].Name",
+   "struct_off": 3520,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1413
+  },
+  {
+   "idx": 704,
+   "name": "OBJ[76].VFlip",
+   "struct_off": 3522,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1415
+  },
+  {
+   "idx": 705,
+   "name": "OBJ[76].HFlip",
+   "struct_off": 3523,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1416
+  },
+  {
+   "idx": 706,
+   "name": "OBJ[76].Priority",
+   "struct_off": 3524,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1417
+  },
+  {
+   "idx": 707,
+   "name": "OBJ[76].Palette",
+   "struct_off": 3525,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1418
+  },
+  {
+   "idx": 708,
+   "name": "OBJ[76].Size",
+   "struct_off": 3526,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1419
+  },
+  {
+   "idx": 709,
+   "name": "OBJ[77].HPos",
+   "struct_off": 3528,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1420
+  },
+  {
+   "idx": 710,
+   "name": "OBJ[77].VPos",
+   "struct_off": 3530,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1422
+  },
+  {
+   "idx": 711,
+   "name": "OBJ[77].Name",
+   "struct_off": 3532,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1424
+  },
+  {
+   "idx": 712,
+   "name": "OBJ[77].VFlip",
+   "struct_off": 3534,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1426
+  },
+  {
+   "idx": 713,
+   "name": "OBJ[77].HFlip",
+   "struct_off": 3535,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1427
+  },
+  {
+   "idx": 714,
+   "name": "OBJ[77].Priority",
+   "struct_off": 3536,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1428
+  },
+  {
+   "idx": 715,
+   "name": "OBJ[77].Palette",
+   "struct_off": 3537,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1429
+  },
+  {
+   "idx": 716,
+   "name": "OBJ[77].Size",
+   "struct_off": 3538,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1430
+  },
+  {
+   "idx": 717,
+   "name": "OBJ[78].HPos",
+   "struct_off": 3540,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1431
+  },
+  {
+   "idx": 718,
+   "name": "OBJ[78].VPos",
+   "struct_off": 3542,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1433
+  },
+  {
+   "idx": 719,
+   "name": "OBJ[78].Name",
+   "struct_off": 3544,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1435
+  },
+  {
+   "idx": 720,
+   "name": "OBJ[78].VFlip",
+   "struct_off": 3546,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1437
+  },
+  {
+   "idx": 721,
+   "name": "OBJ[78].HFlip",
+   "struct_off": 3547,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1438
+  },
+  {
+   "idx": 722,
+   "name": "OBJ[78].Priority",
+   "struct_off": 3548,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1439
+  },
+  {
+   "idx": 723,
+   "name": "OBJ[78].Palette",
+   "struct_off": 3549,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1440
+  },
+  {
+   "idx": 724,
+   "name": "OBJ[78].Size",
+   "struct_off": 3550,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1441
+  },
+  {
+   "idx": 725,
+   "name": "OBJ[79].HPos",
+   "struct_off": 3552,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1442
+  },
+  {
+   "idx": 726,
+   "name": "OBJ[79].VPos",
+   "struct_off": 3554,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1444
+  },
+  {
+   "idx": 727,
+   "name": "OBJ[79].Name",
+   "struct_off": 3556,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1446
+  },
+  {
+   "idx": 728,
+   "name": "OBJ[79].VFlip",
+   "struct_off": 3558,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1448
+  },
+  {
+   "idx": 729,
+   "name": "OBJ[79].HFlip",
+   "struct_off": 3559,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1449
+  },
+  {
+   "idx": 730,
+   "name": "OBJ[79].Priority",
+   "struct_off": 3560,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1450
+  },
+  {
+   "idx": 731,
+   "name": "OBJ[79].Palette",
+   "struct_off": 3561,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1451
+  },
+  {
+   "idx": 732,
+   "name": "OBJ[79].Size",
+   "struct_off": 3562,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1452
+  },
+  {
+   "idx": 733,
+   "name": "OBJ[80].HPos",
+   "struct_off": 3564,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1453
+  },
+  {
+   "idx": 734,
+   "name": "OBJ[80].VPos",
+   "struct_off": 3566,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1455
+  },
+  {
+   "idx": 735,
+   "name": "OBJ[80].Name",
+   "struct_off": 3568,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1457
+  },
+  {
+   "idx": 736,
+   "name": "OBJ[80].VFlip",
+   "struct_off": 3570,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1459
+  },
+  {
+   "idx": 737,
+   "name": "OBJ[80].HFlip",
+   "struct_off": 3571,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1460
+  },
+  {
+   "idx": 738,
+   "name": "OBJ[80].Priority",
+   "struct_off": 3572,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1461
+  },
+  {
+   "idx": 739,
+   "name": "OBJ[80].Palette",
+   "struct_off": 3573,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1462
+  },
+  {
+   "idx": 740,
+   "name": "OBJ[80].Size",
+   "struct_off": 3574,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1463
+  },
+  {
+   "idx": 741,
+   "name": "OBJ[81].HPos",
+   "struct_off": 3576,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1464
+  },
+  {
+   "idx": 742,
+   "name": "OBJ[81].VPos",
+   "struct_off": 3578,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1466
+  },
+  {
+   "idx": 743,
+   "name": "OBJ[81].Name",
+   "struct_off": 3580,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1468
+  },
+  {
+   "idx": 744,
+   "name": "OBJ[81].VFlip",
+   "struct_off": 3582,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1470
+  },
+  {
+   "idx": 745,
+   "name": "OBJ[81].HFlip",
+   "struct_off": 3583,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1471
+  },
+  {
+   "idx": 746,
+   "name": "OBJ[81].Priority",
+   "struct_off": 3584,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1472
+  },
+  {
+   "idx": 747,
+   "name": "OBJ[81].Palette",
+   "struct_off": 3585,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1473
+  },
+  {
+   "idx": 748,
+   "name": "OBJ[81].Size",
+   "struct_off": 3586,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1474
+  },
+  {
+   "idx": 749,
+   "name": "OBJ[82].HPos",
+   "struct_off": 3588,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1475
+  },
+  {
+   "idx": 750,
+   "name": "OBJ[82].VPos",
+   "struct_off": 3590,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1477
+  },
+  {
+   "idx": 751,
+   "name": "OBJ[82].Name",
+   "struct_off": 3592,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1479
+  },
+  {
+   "idx": 752,
+   "name": "OBJ[82].VFlip",
+   "struct_off": 3594,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1481
+  },
+  {
+   "idx": 753,
+   "name": "OBJ[82].HFlip",
+   "struct_off": 3595,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1482
+  },
+  {
+   "idx": 754,
+   "name": "OBJ[82].Priority",
+   "struct_off": 3596,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1483
+  },
+  {
+   "idx": 755,
+   "name": "OBJ[82].Palette",
+   "struct_off": 3597,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1484
+  },
+  {
+   "idx": 756,
+   "name": "OBJ[82].Size",
+   "struct_off": 3598,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1485
+  },
+  {
+   "idx": 757,
+   "name": "OBJ[83].HPos",
+   "struct_off": 3600,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1486
+  },
+  {
+   "idx": 758,
+   "name": "OBJ[83].VPos",
+   "struct_off": 3602,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1488
+  },
+  {
+   "idx": 759,
+   "name": "OBJ[83].Name",
+   "struct_off": 3604,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1490
+  },
+  {
+   "idx": 760,
+   "name": "OBJ[83].VFlip",
+   "struct_off": 3606,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1492
+  },
+  {
+   "idx": 761,
+   "name": "OBJ[83].HFlip",
+   "struct_off": 3607,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1493
+  },
+  {
+   "idx": 762,
+   "name": "OBJ[83].Priority",
+   "struct_off": 3608,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1494
+  },
+  {
+   "idx": 763,
+   "name": "OBJ[83].Palette",
+   "struct_off": 3609,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1495
+  },
+  {
+   "idx": 764,
+   "name": "OBJ[83].Size",
+   "struct_off": 3610,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1496
+  },
+  {
+   "idx": 765,
+   "name": "OBJ[84].HPos",
+   "struct_off": 3612,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1497
+  },
+  {
+   "idx": 766,
+   "name": "OBJ[84].VPos",
+   "struct_off": 3614,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1499
+  },
+  {
+   "idx": 767,
+   "name": "OBJ[84].Name",
+   "struct_off": 3616,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1501
+  },
+  {
+   "idx": 768,
+   "name": "OBJ[84].VFlip",
+   "struct_off": 3618,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1503
+  },
+  {
+   "idx": 769,
+   "name": "OBJ[84].HFlip",
+   "struct_off": 3619,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1504
+  },
+  {
+   "idx": 770,
+   "name": "OBJ[84].Priority",
+   "struct_off": 3620,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1505
+  },
+  {
+   "idx": 771,
+   "name": "OBJ[84].Palette",
+   "struct_off": 3621,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1506
+  },
+  {
+   "idx": 772,
+   "name": "OBJ[84].Size",
+   "struct_off": 3622,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1507
+  },
+  {
+   "idx": 773,
+   "name": "OBJ[85].HPos",
+   "struct_off": 3624,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1508
+  },
+  {
+   "idx": 774,
+   "name": "OBJ[85].VPos",
+   "struct_off": 3626,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1510
+  },
+  {
+   "idx": 775,
+   "name": "OBJ[85].Name",
+   "struct_off": 3628,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1512
+  },
+  {
+   "idx": 776,
+   "name": "OBJ[85].VFlip",
+   "struct_off": 3630,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1514
+  },
+  {
+   "idx": 777,
+   "name": "OBJ[85].HFlip",
+   "struct_off": 3631,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1515
+  },
+  {
+   "idx": 778,
+   "name": "OBJ[85].Priority",
+   "struct_off": 3632,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1516
+  },
+  {
+   "idx": 779,
+   "name": "OBJ[85].Palette",
+   "struct_off": 3633,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1517
+  },
+  {
+   "idx": 780,
+   "name": "OBJ[85].Size",
+   "struct_off": 3634,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1518
+  },
+  {
+   "idx": 781,
+   "name": "OBJ[86].HPos",
+   "struct_off": 3636,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1519
+  },
+  {
+   "idx": 782,
+   "name": "OBJ[86].VPos",
+   "struct_off": 3638,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1521
+  },
+  {
+   "idx": 783,
+   "name": "OBJ[86].Name",
+   "struct_off": 3640,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1523
+  },
+  {
+   "idx": 784,
+   "name": "OBJ[86].VFlip",
+   "struct_off": 3642,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1525
+  },
+  {
+   "idx": 785,
+   "name": "OBJ[86].HFlip",
+   "struct_off": 3643,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1526
+  },
+  {
+   "idx": 786,
+   "name": "OBJ[86].Priority",
+   "struct_off": 3644,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1527
+  },
+  {
+   "idx": 787,
+   "name": "OBJ[86].Palette",
+   "struct_off": 3645,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1528
+  },
+  {
+   "idx": 788,
+   "name": "OBJ[86].Size",
+   "struct_off": 3646,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1529
+  },
+  {
+   "idx": 789,
+   "name": "OBJ[87].HPos",
+   "struct_off": 3648,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1530
+  },
+  {
+   "idx": 790,
+   "name": "OBJ[87].VPos",
+   "struct_off": 3650,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1532
+  },
+  {
+   "idx": 791,
+   "name": "OBJ[87].Name",
+   "struct_off": 3652,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1534
+  },
+  {
+   "idx": 792,
+   "name": "OBJ[87].VFlip",
+   "struct_off": 3654,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1536
+  },
+  {
+   "idx": 793,
+   "name": "OBJ[87].HFlip",
+   "struct_off": 3655,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1537
+  },
+  {
+   "idx": 794,
+   "name": "OBJ[87].Priority",
+   "struct_off": 3656,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1538
+  },
+  {
+   "idx": 795,
+   "name": "OBJ[87].Palette",
+   "struct_off": 3657,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1539
+  },
+  {
+   "idx": 796,
+   "name": "OBJ[87].Size",
+   "struct_off": 3658,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1540
+  },
+  {
+   "idx": 797,
+   "name": "OBJ[88].HPos",
+   "struct_off": 3660,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1541
+  },
+  {
+   "idx": 798,
+   "name": "OBJ[88].VPos",
+   "struct_off": 3662,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1543
+  },
+  {
+   "idx": 799,
+   "name": "OBJ[88].Name",
+   "struct_off": 3664,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1545
+  },
+  {
+   "idx": 800,
+   "name": "OBJ[88].VFlip",
+   "struct_off": 3666,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1547
+  },
+  {
+   "idx": 801,
+   "name": "OBJ[88].HFlip",
+   "struct_off": 3667,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1548
+  },
+  {
+   "idx": 802,
+   "name": "OBJ[88].Priority",
+   "struct_off": 3668,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1549
+  },
+  {
+   "idx": 803,
+   "name": "OBJ[88].Palette",
+   "struct_off": 3669,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1550
+  },
+  {
+   "idx": 804,
+   "name": "OBJ[88].Size",
+   "struct_off": 3670,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1551
+  },
+  {
+   "idx": 805,
+   "name": "OBJ[89].HPos",
+   "struct_off": 3672,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1552
+  },
+  {
+   "idx": 806,
+   "name": "OBJ[89].VPos",
+   "struct_off": 3674,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1554
+  },
+  {
+   "idx": 807,
+   "name": "OBJ[89].Name",
+   "struct_off": 3676,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1556
+  },
+  {
+   "idx": 808,
+   "name": "OBJ[89].VFlip",
+   "struct_off": 3678,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1558
+  },
+  {
+   "idx": 809,
+   "name": "OBJ[89].HFlip",
+   "struct_off": 3679,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1559
+  },
+  {
+   "idx": 810,
+   "name": "OBJ[89].Priority",
+   "struct_off": 3680,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1560
+  },
+  {
+   "idx": 811,
+   "name": "OBJ[89].Palette",
+   "struct_off": 3681,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1561
+  },
+  {
+   "idx": 812,
+   "name": "OBJ[89].Size",
+   "struct_off": 3682,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1562
+  },
+  {
+   "idx": 813,
+   "name": "OBJ[90].HPos",
+   "struct_off": 3684,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1563
+  },
+  {
+   "idx": 814,
+   "name": "OBJ[90].VPos",
+   "struct_off": 3686,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1565
+  },
+  {
+   "idx": 815,
+   "name": "OBJ[90].Name",
+   "struct_off": 3688,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1567
+  },
+  {
+   "idx": 816,
+   "name": "OBJ[90].VFlip",
+   "struct_off": 3690,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1569
+  },
+  {
+   "idx": 817,
+   "name": "OBJ[90].HFlip",
+   "struct_off": 3691,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1570
+  },
+  {
+   "idx": 818,
+   "name": "OBJ[90].Priority",
+   "struct_off": 3692,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1571
+  },
+  {
+   "idx": 819,
+   "name": "OBJ[90].Palette",
+   "struct_off": 3693,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1572
+  },
+  {
+   "idx": 820,
+   "name": "OBJ[90].Size",
+   "struct_off": 3694,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1573
+  },
+  {
+   "idx": 821,
+   "name": "OBJ[91].HPos",
+   "struct_off": 3696,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1574
+  },
+  {
+   "idx": 822,
+   "name": "OBJ[91].VPos",
+   "struct_off": 3698,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1576
+  },
+  {
+   "idx": 823,
+   "name": "OBJ[91].Name",
+   "struct_off": 3700,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1578
+  },
+  {
+   "idx": 824,
+   "name": "OBJ[91].VFlip",
+   "struct_off": 3702,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1580
+  },
+  {
+   "idx": 825,
+   "name": "OBJ[91].HFlip",
+   "struct_off": 3703,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1581
+  },
+  {
+   "idx": 826,
+   "name": "OBJ[91].Priority",
+   "struct_off": 3704,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1582
+  },
+  {
+   "idx": 827,
+   "name": "OBJ[91].Palette",
+   "struct_off": 3705,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1583
+  },
+  {
+   "idx": 828,
+   "name": "OBJ[91].Size",
+   "struct_off": 3706,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1584
+  },
+  {
+   "idx": 829,
+   "name": "OBJ[92].HPos",
+   "struct_off": 3708,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1585
+  },
+  {
+   "idx": 830,
+   "name": "OBJ[92].VPos",
+   "struct_off": 3710,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1587
+  },
+  {
+   "idx": 831,
+   "name": "OBJ[92].Name",
+   "struct_off": 3712,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1589
+  },
+  {
+   "idx": 832,
+   "name": "OBJ[92].VFlip",
+   "struct_off": 3714,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1591
+  },
+  {
+   "idx": 833,
+   "name": "OBJ[92].HFlip",
+   "struct_off": 3715,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1592
+  },
+  {
+   "idx": 834,
+   "name": "OBJ[92].Priority",
+   "struct_off": 3716,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1593
+  },
+  {
+   "idx": 835,
+   "name": "OBJ[92].Palette",
+   "struct_off": 3717,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1594
+  },
+  {
+   "idx": 836,
+   "name": "OBJ[92].Size",
+   "struct_off": 3718,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1595
+  },
+  {
+   "idx": 837,
+   "name": "OBJ[93].HPos",
+   "struct_off": 3720,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1596
+  },
+  {
+   "idx": 838,
+   "name": "OBJ[93].VPos",
+   "struct_off": 3722,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1598
+  },
+  {
+   "idx": 839,
+   "name": "OBJ[93].Name",
+   "struct_off": 3724,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1600
+  },
+  {
+   "idx": 840,
+   "name": "OBJ[93].VFlip",
+   "struct_off": 3726,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1602
+  },
+  {
+   "idx": 841,
+   "name": "OBJ[93].HFlip",
+   "struct_off": 3727,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1603
+  },
+  {
+   "idx": 842,
+   "name": "OBJ[93].Priority",
+   "struct_off": 3728,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1604
+  },
+  {
+   "idx": 843,
+   "name": "OBJ[93].Palette",
+   "struct_off": 3729,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1605
+  },
+  {
+   "idx": 844,
+   "name": "OBJ[93].Size",
+   "struct_off": 3730,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1606
+  },
+  {
+   "idx": 845,
+   "name": "OBJ[94].HPos",
+   "struct_off": 3732,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1607
+  },
+  {
+   "idx": 846,
+   "name": "OBJ[94].VPos",
+   "struct_off": 3734,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1609
+  },
+  {
+   "idx": 847,
+   "name": "OBJ[94].Name",
+   "struct_off": 3736,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1611
+  },
+  {
+   "idx": 848,
+   "name": "OBJ[94].VFlip",
+   "struct_off": 3738,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1613
+  },
+  {
+   "idx": 849,
+   "name": "OBJ[94].HFlip",
+   "struct_off": 3739,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1614
+  },
+  {
+   "idx": 850,
+   "name": "OBJ[94].Priority",
+   "struct_off": 3740,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1615
+  },
+  {
+   "idx": 851,
+   "name": "OBJ[94].Palette",
+   "struct_off": 3741,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1616
+  },
+  {
+   "idx": 852,
+   "name": "OBJ[94].Size",
+   "struct_off": 3742,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1617
+  },
+  {
+   "idx": 853,
+   "name": "OBJ[95].HPos",
+   "struct_off": 3744,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1618
+  },
+  {
+   "idx": 854,
+   "name": "OBJ[95].VPos",
+   "struct_off": 3746,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1620
+  },
+  {
+   "idx": 855,
+   "name": "OBJ[95].Name",
+   "struct_off": 3748,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1622
+  },
+  {
+   "idx": 856,
+   "name": "OBJ[95].VFlip",
+   "struct_off": 3750,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1624
+  },
+  {
+   "idx": 857,
+   "name": "OBJ[95].HFlip",
+   "struct_off": 3751,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1625
+  },
+  {
+   "idx": 858,
+   "name": "OBJ[95].Priority",
+   "struct_off": 3752,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1626
+  },
+  {
+   "idx": 859,
+   "name": "OBJ[95].Palette",
+   "struct_off": 3753,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1627
+  },
+  {
+   "idx": 860,
+   "name": "OBJ[95].Size",
+   "struct_off": 3754,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1628
+  },
+  {
+   "idx": 861,
+   "name": "OBJ[96].HPos",
+   "struct_off": 3756,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1629
+  },
+  {
+   "idx": 862,
+   "name": "OBJ[96].VPos",
+   "struct_off": 3758,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1631
+  },
+  {
+   "idx": 863,
+   "name": "OBJ[96].Name",
+   "struct_off": 3760,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1633
+  },
+  {
+   "idx": 864,
+   "name": "OBJ[96].VFlip",
+   "struct_off": 3762,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1635
+  },
+  {
+   "idx": 865,
+   "name": "OBJ[96].HFlip",
+   "struct_off": 3763,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1636
+  },
+  {
+   "idx": 866,
+   "name": "OBJ[96].Priority",
+   "struct_off": 3764,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1637
+  },
+  {
+   "idx": 867,
+   "name": "OBJ[96].Palette",
+   "struct_off": 3765,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1638
+  },
+  {
+   "idx": 868,
+   "name": "OBJ[96].Size",
+   "struct_off": 3766,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1639
+  },
+  {
+   "idx": 869,
+   "name": "OBJ[97].HPos",
+   "struct_off": 3768,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1640
+  },
+  {
+   "idx": 870,
+   "name": "OBJ[97].VPos",
+   "struct_off": 3770,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1642
+  },
+  {
+   "idx": 871,
+   "name": "OBJ[97].Name",
+   "struct_off": 3772,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1644
+  },
+  {
+   "idx": 872,
+   "name": "OBJ[97].VFlip",
+   "struct_off": 3774,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1646
+  },
+  {
+   "idx": 873,
+   "name": "OBJ[97].HFlip",
+   "struct_off": 3775,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1647
+  },
+  {
+   "idx": 874,
+   "name": "OBJ[97].Priority",
+   "struct_off": 3776,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1648
+  },
+  {
+   "idx": 875,
+   "name": "OBJ[97].Palette",
+   "struct_off": 3777,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1649
+  },
+  {
+   "idx": 876,
+   "name": "OBJ[97].Size",
+   "struct_off": 3778,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1650
+  },
+  {
+   "idx": 877,
+   "name": "OBJ[98].HPos",
+   "struct_off": 3780,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1651
+  },
+  {
+   "idx": 878,
+   "name": "OBJ[98].VPos",
+   "struct_off": 3782,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1653
+  },
+  {
+   "idx": 879,
+   "name": "OBJ[98].Name",
+   "struct_off": 3784,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1655
+  },
+  {
+   "idx": 880,
+   "name": "OBJ[98].VFlip",
+   "struct_off": 3786,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1657
+  },
+  {
+   "idx": 881,
+   "name": "OBJ[98].HFlip",
+   "struct_off": 3787,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1658
+  },
+  {
+   "idx": 882,
+   "name": "OBJ[98].Priority",
+   "struct_off": 3788,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1659
+  },
+  {
+   "idx": 883,
+   "name": "OBJ[98].Palette",
+   "struct_off": 3789,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1660
+  },
+  {
+   "idx": 884,
+   "name": "OBJ[98].Size",
+   "struct_off": 3790,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1661
+  },
+  {
+   "idx": 885,
+   "name": "OBJ[99].HPos",
+   "struct_off": 3792,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1662
+  },
+  {
+   "idx": 886,
+   "name": "OBJ[99].VPos",
+   "struct_off": 3794,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1664
+  },
+  {
+   "idx": 887,
+   "name": "OBJ[99].Name",
+   "struct_off": 3796,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1666
+  },
+  {
+   "idx": 888,
+   "name": "OBJ[99].VFlip",
+   "struct_off": 3798,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1668
+  },
+  {
+   "idx": 889,
+   "name": "OBJ[99].HFlip",
+   "struct_off": 3799,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1669
+  },
+  {
+   "idx": 890,
+   "name": "OBJ[99].Priority",
+   "struct_off": 3800,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1670
+  },
+  {
+   "idx": 891,
+   "name": "OBJ[99].Palette",
+   "struct_off": 3801,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1671
+  },
+  {
+   "idx": 892,
+   "name": "OBJ[99].Size",
+   "struct_off": 3802,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1672
+  },
+  {
+   "idx": 893,
+   "name": "OBJ[100].HPos",
+   "struct_off": 3804,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1673
+  },
+  {
+   "idx": 894,
+   "name": "OBJ[100].VPos",
+   "struct_off": 3806,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1675
+  },
+  {
+   "idx": 895,
+   "name": "OBJ[100].Name",
+   "struct_off": 3808,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1677
+  },
+  {
+   "idx": 896,
+   "name": "OBJ[100].VFlip",
+   "struct_off": 3810,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1679
+  },
+  {
+   "idx": 897,
+   "name": "OBJ[100].HFlip",
+   "struct_off": 3811,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1680
+  },
+  {
+   "idx": 898,
+   "name": "OBJ[100].Priority",
+   "struct_off": 3812,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1681
+  },
+  {
+   "idx": 899,
+   "name": "OBJ[100].Palette",
+   "struct_off": 3813,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1682
+  },
+  {
+   "idx": 900,
+   "name": "OBJ[100].Size",
+   "struct_off": 3814,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1683
+  },
+  {
+   "idx": 901,
+   "name": "OBJ[101].HPos",
+   "struct_off": 3816,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1684
+  },
+  {
+   "idx": 902,
+   "name": "OBJ[101].VPos",
+   "struct_off": 3818,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1686
+  },
+  {
+   "idx": 903,
+   "name": "OBJ[101].Name",
+   "struct_off": 3820,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1688
+  },
+  {
+   "idx": 904,
+   "name": "OBJ[101].VFlip",
+   "struct_off": 3822,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1690
+  },
+  {
+   "idx": 905,
+   "name": "OBJ[101].HFlip",
+   "struct_off": 3823,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1691
+  },
+  {
+   "idx": 906,
+   "name": "OBJ[101].Priority",
+   "struct_off": 3824,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1692
+  },
+  {
+   "idx": 907,
+   "name": "OBJ[101].Palette",
+   "struct_off": 3825,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1693
+  },
+  {
+   "idx": 908,
+   "name": "OBJ[101].Size",
+   "struct_off": 3826,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1694
+  },
+  {
+   "idx": 909,
+   "name": "OBJ[102].HPos",
+   "struct_off": 3828,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1695
+  },
+  {
+   "idx": 910,
+   "name": "OBJ[102].VPos",
+   "struct_off": 3830,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1697
+  },
+  {
+   "idx": 911,
+   "name": "OBJ[102].Name",
+   "struct_off": 3832,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1699
+  },
+  {
+   "idx": 912,
+   "name": "OBJ[102].VFlip",
+   "struct_off": 3834,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1701
+  },
+  {
+   "idx": 913,
+   "name": "OBJ[102].HFlip",
+   "struct_off": 3835,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1702
+  },
+  {
+   "idx": 914,
+   "name": "OBJ[102].Priority",
+   "struct_off": 3836,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1703
+  },
+  {
+   "idx": 915,
+   "name": "OBJ[102].Palette",
+   "struct_off": 3837,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1704
+  },
+  {
+   "idx": 916,
+   "name": "OBJ[102].Size",
+   "struct_off": 3838,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1705
+  },
+  {
+   "idx": 917,
+   "name": "OBJ[103].HPos",
+   "struct_off": 3840,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1706
+  },
+  {
+   "idx": 918,
+   "name": "OBJ[103].VPos",
+   "struct_off": 3842,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1708
+  },
+  {
+   "idx": 919,
+   "name": "OBJ[103].Name",
+   "struct_off": 3844,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1710
+  },
+  {
+   "idx": 920,
+   "name": "OBJ[103].VFlip",
+   "struct_off": 3846,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1712
+  },
+  {
+   "idx": 921,
+   "name": "OBJ[103].HFlip",
+   "struct_off": 3847,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1713
+  },
+  {
+   "idx": 922,
+   "name": "OBJ[103].Priority",
+   "struct_off": 3848,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1714
+  },
+  {
+   "idx": 923,
+   "name": "OBJ[103].Palette",
+   "struct_off": 3849,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1715
+  },
+  {
+   "idx": 924,
+   "name": "OBJ[103].Size",
+   "struct_off": 3850,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1716
+  },
+  {
+   "idx": 925,
+   "name": "OBJ[104].HPos",
+   "struct_off": 3852,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1717
+  },
+  {
+   "idx": 926,
+   "name": "OBJ[104].VPos",
+   "struct_off": 3854,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1719
+  },
+  {
+   "idx": 927,
+   "name": "OBJ[104].Name",
+   "struct_off": 3856,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1721
+  },
+  {
+   "idx": 928,
+   "name": "OBJ[104].VFlip",
+   "struct_off": 3858,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1723
+  },
+  {
+   "idx": 929,
+   "name": "OBJ[104].HFlip",
+   "struct_off": 3859,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1724
+  },
+  {
+   "idx": 930,
+   "name": "OBJ[104].Priority",
+   "struct_off": 3860,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1725
+  },
+  {
+   "idx": 931,
+   "name": "OBJ[104].Palette",
+   "struct_off": 3861,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1726
+  },
+  {
+   "idx": 932,
+   "name": "OBJ[104].Size",
+   "struct_off": 3862,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1727
+  },
+  {
+   "idx": 933,
+   "name": "OBJ[105].HPos",
+   "struct_off": 3864,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1728
+  },
+  {
+   "idx": 934,
+   "name": "OBJ[105].VPos",
+   "struct_off": 3866,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1730
+  },
+  {
+   "idx": 935,
+   "name": "OBJ[105].Name",
+   "struct_off": 3868,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1732
+  },
+  {
+   "idx": 936,
+   "name": "OBJ[105].VFlip",
+   "struct_off": 3870,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1734
+  },
+  {
+   "idx": 937,
+   "name": "OBJ[105].HFlip",
+   "struct_off": 3871,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1735
+  },
+  {
+   "idx": 938,
+   "name": "OBJ[105].Priority",
+   "struct_off": 3872,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1736
+  },
+  {
+   "idx": 939,
+   "name": "OBJ[105].Palette",
+   "struct_off": 3873,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1737
+  },
+  {
+   "idx": 940,
+   "name": "OBJ[105].Size",
+   "struct_off": 3874,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1738
+  },
+  {
+   "idx": 941,
+   "name": "OBJ[106].HPos",
+   "struct_off": 3876,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1739
+  },
+  {
+   "idx": 942,
+   "name": "OBJ[106].VPos",
+   "struct_off": 3878,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1741
+  },
+  {
+   "idx": 943,
+   "name": "OBJ[106].Name",
+   "struct_off": 3880,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1743
+  },
+  {
+   "idx": 944,
+   "name": "OBJ[106].VFlip",
+   "struct_off": 3882,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1745
+  },
+  {
+   "idx": 945,
+   "name": "OBJ[106].HFlip",
+   "struct_off": 3883,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1746
+  },
+  {
+   "idx": 946,
+   "name": "OBJ[106].Priority",
+   "struct_off": 3884,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1747
+  },
+  {
+   "idx": 947,
+   "name": "OBJ[106].Palette",
+   "struct_off": 3885,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1748
+  },
+  {
+   "idx": 948,
+   "name": "OBJ[106].Size",
+   "struct_off": 3886,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1749
+  },
+  {
+   "idx": 949,
+   "name": "OBJ[107].HPos",
+   "struct_off": 3888,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1750
+  },
+  {
+   "idx": 950,
+   "name": "OBJ[107].VPos",
+   "struct_off": 3890,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1752
+  },
+  {
+   "idx": 951,
+   "name": "OBJ[107].Name",
+   "struct_off": 3892,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1754
+  },
+  {
+   "idx": 952,
+   "name": "OBJ[107].VFlip",
+   "struct_off": 3894,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1756
+  },
+  {
+   "idx": 953,
+   "name": "OBJ[107].HFlip",
+   "struct_off": 3895,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1757
+  },
+  {
+   "idx": 954,
+   "name": "OBJ[107].Priority",
+   "struct_off": 3896,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1758
+  },
+  {
+   "idx": 955,
+   "name": "OBJ[107].Palette",
+   "struct_off": 3897,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1759
+  },
+  {
+   "idx": 956,
+   "name": "OBJ[107].Size",
+   "struct_off": 3898,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1760
+  },
+  {
+   "idx": 957,
+   "name": "OBJ[108].HPos",
+   "struct_off": 3900,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1761
+  },
+  {
+   "idx": 958,
+   "name": "OBJ[108].VPos",
+   "struct_off": 3902,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1763
+  },
+  {
+   "idx": 959,
+   "name": "OBJ[108].Name",
+   "struct_off": 3904,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1765
+  },
+  {
+   "idx": 960,
+   "name": "OBJ[108].VFlip",
+   "struct_off": 3906,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1767
+  },
+  {
+   "idx": 961,
+   "name": "OBJ[108].HFlip",
+   "struct_off": 3907,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1768
+  },
+  {
+   "idx": 962,
+   "name": "OBJ[108].Priority",
+   "struct_off": 3908,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1769
+  },
+  {
+   "idx": 963,
+   "name": "OBJ[108].Palette",
+   "struct_off": 3909,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1770
+  },
+  {
+   "idx": 964,
+   "name": "OBJ[108].Size",
+   "struct_off": 3910,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1771
+  },
+  {
+   "idx": 965,
+   "name": "OBJ[109].HPos",
+   "struct_off": 3912,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1772
+  },
+  {
+   "idx": 966,
+   "name": "OBJ[109].VPos",
+   "struct_off": 3914,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1774
+  },
+  {
+   "idx": 967,
+   "name": "OBJ[109].Name",
+   "struct_off": 3916,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1776
+  },
+  {
+   "idx": 968,
+   "name": "OBJ[109].VFlip",
+   "struct_off": 3918,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1778
+  },
+  {
+   "idx": 969,
+   "name": "OBJ[109].HFlip",
+   "struct_off": 3919,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1779
+  },
+  {
+   "idx": 970,
+   "name": "OBJ[109].Priority",
+   "struct_off": 3920,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1780
+  },
+  {
+   "idx": 971,
+   "name": "OBJ[109].Palette",
+   "struct_off": 3921,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1781
+  },
+  {
+   "idx": 972,
+   "name": "OBJ[109].Size",
+   "struct_off": 3922,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1782
+  },
+  {
+   "idx": 973,
+   "name": "OBJ[110].HPos",
+   "struct_off": 3924,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1783
+  },
+  {
+   "idx": 974,
+   "name": "OBJ[110].VPos",
+   "struct_off": 3926,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1785
+  },
+  {
+   "idx": 975,
+   "name": "OBJ[110].Name",
+   "struct_off": 3928,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1787
+  },
+  {
+   "idx": 976,
+   "name": "OBJ[110].VFlip",
+   "struct_off": 3930,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1789
+  },
+  {
+   "idx": 977,
+   "name": "OBJ[110].HFlip",
+   "struct_off": 3931,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1790
+  },
+  {
+   "idx": 978,
+   "name": "OBJ[110].Priority",
+   "struct_off": 3932,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1791
+  },
+  {
+   "idx": 979,
+   "name": "OBJ[110].Palette",
+   "struct_off": 3933,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1792
+  },
+  {
+   "idx": 980,
+   "name": "OBJ[110].Size",
+   "struct_off": 3934,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1793
+  },
+  {
+   "idx": 981,
+   "name": "OBJ[111].HPos",
+   "struct_off": 3936,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1794
+  },
+  {
+   "idx": 982,
+   "name": "OBJ[111].VPos",
+   "struct_off": 3938,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1796
+  },
+  {
+   "idx": 983,
+   "name": "OBJ[111].Name",
+   "struct_off": 3940,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1798
+  },
+  {
+   "idx": 984,
+   "name": "OBJ[111].VFlip",
+   "struct_off": 3942,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1800
+  },
+  {
+   "idx": 985,
+   "name": "OBJ[111].HFlip",
+   "struct_off": 3943,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1801
+  },
+  {
+   "idx": 986,
+   "name": "OBJ[111].Priority",
+   "struct_off": 3944,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1802
+  },
+  {
+   "idx": 987,
+   "name": "OBJ[111].Palette",
+   "struct_off": 3945,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1803
+  },
+  {
+   "idx": 988,
+   "name": "OBJ[111].Size",
+   "struct_off": 3946,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1804
+  },
+  {
+   "idx": 989,
+   "name": "OBJ[112].HPos",
+   "struct_off": 3948,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1805
+  },
+  {
+   "idx": 990,
+   "name": "OBJ[112].VPos",
+   "struct_off": 3950,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1807
+  },
+  {
+   "idx": 991,
+   "name": "OBJ[112].Name",
+   "struct_off": 3952,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1809
+  },
+  {
+   "idx": 992,
+   "name": "OBJ[112].VFlip",
+   "struct_off": 3954,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1811
+  },
+  {
+   "idx": 993,
+   "name": "OBJ[112].HFlip",
+   "struct_off": 3955,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1812
+  },
+  {
+   "idx": 994,
+   "name": "OBJ[112].Priority",
+   "struct_off": 3956,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1813
+  },
+  {
+   "idx": 995,
+   "name": "OBJ[112].Palette",
+   "struct_off": 3957,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1814
+  },
+  {
+   "idx": 996,
+   "name": "OBJ[112].Size",
+   "struct_off": 3958,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1815
+  },
+  {
+   "idx": 997,
+   "name": "OBJ[113].HPos",
+   "struct_off": 3960,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1816
+  },
+  {
+   "idx": 998,
+   "name": "OBJ[113].VPos",
+   "struct_off": 3962,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1818
+  },
+  {
+   "idx": 999,
+   "name": "OBJ[113].Name",
+   "struct_off": 3964,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1820
+  },
+  {
+   "idx": 1000,
+   "name": "OBJ[113].VFlip",
+   "struct_off": 3966,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1822
+  },
+  {
+   "idx": 1001,
+   "name": "OBJ[113].HFlip",
+   "struct_off": 3967,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1823
+  },
+  {
+   "idx": 1002,
+   "name": "OBJ[113].Priority",
+   "struct_off": 3968,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1824
+  },
+  {
+   "idx": 1003,
+   "name": "OBJ[113].Palette",
+   "struct_off": 3969,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1825
+  },
+  {
+   "idx": 1004,
+   "name": "OBJ[113].Size",
+   "struct_off": 3970,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1826
+  },
+  {
+   "idx": 1005,
+   "name": "OBJ[114].HPos",
+   "struct_off": 3972,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1827
+  },
+  {
+   "idx": 1006,
+   "name": "OBJ[114].VPos",
+   "struct_off": 3974,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1829
+  },
+  {
+   "idx": 1007,
+   "name": "OBJ[114].Name",
+   "struct_off": 3976,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1831
+  },
+  {
+   "idx": 1008,
+   "name": "OBJ[114].VFlip",
+   "struct_off": 3978,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1833
+  },
+  {
+   "idx": 1009,
+   "name": "OBJ[114].HFlip",
+   "struct_off": 3979,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1834
+  },
+  {
+   "idx": 1010,
+   "name": "OBJ[114].Priority",
+   "struct_off": 3980,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1835
+  },
+  {
+   "idx": 1011,
+   "name": "OBJ[114].Palette",
+   "struct_off": 3981,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1836
+  },
+  {
+   "idx": 1012,
+   "name": "OBJ[114].Size",
+   "struct_off": 3982,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1837
+  },
+  {
+   "idx": 1013,
+   "name": "OBJ[115].HPos",
+   "struct_off": 3984,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1838
+  },
+  {
+   "idx": 1014,
+   "name": "OBJ[115].VPos",
+   "struct_off": 3986,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1840
+  },
+  {
+   "idx": 1015,
+   "name": "OBJ[115].Name",
+   "struct_off": 3988,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1842
+  },
+  {
+   "idx": 1016,
+   "name": "OBJ[115].VFlip",
+   "struct_off": 3990,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1844
+  },
+  {
+   "idx": 1017,
+   "name": "OBJ[115].HFlip",
+   "struct_off": 3991,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1845
+  },
+  {
+   "idx": 1018,
+   "name": "OBJ[115].Priority",
+   "struct_off": 3992,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1846
+  },
+  {
+   "idx": 1019,
+   "name": "OBJ[115].Palette",
+   "struct_off": 3993,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1847
+  },
+  {
+   "idx": 1020,
+   "name": "OBJ[115].Size",
+   "struct_off": 3994,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1848
+  },
+  {
+   "idx": 1021,
+   "name": "OBJ[116].HPos",
+   "struct_off": 3996,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1849
+  },
+  {
+   "idx": 1022,
+   "name": "OBJ[116].VPos",
+   "struct_off": 3998,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1851
+  },
+  {
+   "idx": 1023,
+   "name": "OBJ[116].Name",
+   "struct_off": 4000,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1853
+  },
+  {
+   "idx": 1024,
+   "name": "OBJ[116].VFlip",
+   "struct_off": 4002,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1855
+  },
+  {
+   "idx": 1025,
+   "name": "OBJ[116].HFlip",
+   "struct_off": 4003,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1856
+  },
+  {
+   "idx": 1026,
+   "name": "OBJ[116].Priority",
+   "struct_off": 4004,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1857
+  },
+  {
+   "idx": 1027,
+   "name": "OBJ[116].Palette",
+   "struct_off": 4005,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1858
+  },
+  {
+   "idx": 1028,
+   "name": "OBJ[116].Size",
+   "struct_off": 4006,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1859
+  },
+  {
+   "idx": 1029,
+   "name": "OBJ[117].HPos",
+   "struct_off": 4008,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1860
+  },
+  {
+   "idx": 1030,
+   "name": "OBJ[117].VPos",
+   "struct_off": 4010,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1862
+  },
+  {
+   "idx": 1031,
+   "name": "OBJ[117].Name",
+   "struct_off": 4012,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1864
+  },
+  {
+   "idx": 1032,
+   "name": "OBJ[117].VFlip",
+   "struct_off": 4014,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1866
+  },
+  {
+   "idx": 1033,
+   "name": "OBJ[117].HFlip",
+   "struct_off": 4015,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1867
+  },
+  {
+   "idx": 1034,
+   "name": "OBJ[117].Priority",
+   "struct_off": 4016,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1868
+  },
+  {
+   "idx": 1035,
+   "name": "OBJ[117].Palette",
+   "struct_off": 4017,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1869
+  },
+  {
+   "idx": 1036,
+   "name": "OBJ[117].Size",
+   "struct_off": 4018,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1870
+  },
+  {
+   "idx": 1037,
+   "name": "OBJ[118].HPos",
+   "struct_off": 4020,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1871
+  },
+  {
+   "idx": 1038,
+   "name": "OBJ[118].VPos",
+   "struct_off": 4022,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1873
+  },
+  {
+   "idx": 1039,
+   "name": "OBJ[118].Name",
+   "struct_off": 4024,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1875
+  },
+  {
+   "idx": 1040,
+   "name": "OBJ[118].VFlip",
+   "struct_off": 4026,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1877
+  },
+  {
+   "idx": 1041,
+   "name": "OBJ[118].HFlip",
+   "struct_off": 4027,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1878
+  },
+  {
+   "idx": 1042,
+   "name": "OBJ[118].Priority",
+   "struct_off": 4028,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1879
+  },
+  {
+   "idx": 1043,
+   "name": "OBJ[118].Palette",
+   "struct_off": 4029,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1880
+  },
+  {
+   "idx": 1044,
+   "name": "OBJ[118].Size",
+   "struct_off": 4030,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1881
+  },
+  {
+   "idx": 1045,
+   "name": "OBJ[119].HPos",
+   "struct_off": 4032,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1882
+  },
+  {
+   "idx": 1046,
+   "name": "OBJ[119].VPos",
+   "struct_off": 4034,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1884
+  },
+  {
+   "idx": 1047,
+   "name": "OBJ[119].Name",
+   "struct_off": 4036,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1886
+  },
+  {
+   "idx": 1048,
+   "name": "OBJ[119].VFlip",
+   "struct_off": 4038,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1888
+  },
+  {
+   "idx": 1049,
+   "name": "OBJ[119].HFlip",
+   "struct_off": 4039,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1889
+  },
+  {
+   "idx": 1050,
+   "name": "OBJ[119].Priority",
+   "struct_off": 4040,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1890
+  },
+  {
+   "idx": 1051,
+   "name": "OBJ[119].Palette",
+   "struct_off": 4041,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1891
+  },
+  {
+   "idx": 1052,
+   "name": "OBJ[119].Size",
+   "struct_off": 4042,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1892
+  },
+  {
+   "idx": 1053,
+   "name": "OBJ[120].HPos",
+   "struct_off": 4044,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1893
+  },
+  {
+   "idx": 1054,
+   "name": "OBJ[120].VPos",
+   "struct_off": 4046,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1895
+  },
+  {
+   "idx": 1055,
+   "name": "OBJ[120].Name",
+   "struct_off": 4048,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1897
+  },
+  {
+   "idx": 1056,
+   "name": "OBJ[120].VFlip",
+   "struct_off": 4050,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1899
+  },
+  {
+   "idx": 1057,
+   "name": "OBJ[120].HFlip",
+   "struct_off": 4051,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1900
+  },
+  {
+   "idx": 1058,
+   "name": "OBJ[120].Priority",
+   "struct_off": 4052,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1901
+  },
+  {
+   "idx": 1059,
+   "name": "OBJ[120].Palette",
+   "struct_off": 4053,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1902
+  },
+  {
+   "idx": 1060,
+   "name": "OBJ[120].Size",
+   "struct_off": 4054,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1903
+  },
+  {
+   "idx": 1061,
+   "name": "OBJ[121].HPos",
+   "struct_off": 4056,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1904
+  },
+  {
+   "idx": 1062,
+   "name": "OBJ[121].VPos",
+   "struct_off": 4058,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1906
+  },
+  {
+   "idx": 1063,
+   "name": "OBJ[121].Name",
+   "struct_off": 4060,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1908
+  },
+  {
+   "idx": 1064,
+   "name": "OBJ[121].VFlip",
+   "struct_off": 4062,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1910
+  },
+  {
+   "idx": 1065,
+   "name": "OBJ[121].HFlip",
+   "struct_off": 4063,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1911
+  },
+  {
+   "idx": 1066,
+   "name": "OBJ[121].Priority",
+   "struct_off": 4064,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1912
+  },
+  {
+   "idx": 1067,
+   "name": "OBJ[121].Palette",
+   "struct_off": 4065,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1913
+  },
+  {
+   "idx": 1068,
+   "name": "OBJ[121].Size",
+   "struct_off": 4066,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1914
+  },
+  {
+   "idx": 1069,
+   "name": "OBJ[122].HPos",
+   "struct_off": 4068,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1915
+  },
+  {
+   "idx": 1070,
+   "name": "OBJ[122].VPos",
+   "struct_off": 4070,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1917
+  },
+  {
+   "idx": 1071,
+   "name": "OBJ[122].Name",
+   "struct_off": 4072,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1919
+  },
+  {
+   "idx": 1072,
+   "name": "OBJ[122].VFlip",
+   "struct_off": 4074,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1921
+  },
+  {
+   "idx": 1073,
+   "name": "OBJ[122].HFlip",
+   "struct_off": 4075,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1922
+  },
+  {
+   "idx": 1074,
+   "name": "OBJ[122].Priority",
+   "struct_off": 4076,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1923
+  },
+  {
+   "idx": 1075,
+   "name": "OBJ[122].Palette",
+   "struct_off": 4077,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1924
+  },
+  {
+   "idx": 1076,
+   "name": "OBJ[122].Size",
+   "struct_off": 4078,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1925
+  },
+  {
+   "idx": 1077,
+   "name": "OBJ[123].HPos",
+   "struct_off": 4080,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1926
+  },
+  {
+   "idx": 1078,
+   "name": "OBJ[123].VPos",
+   "struct_off": 4082,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1928
+  },
+  {
+   "idx": 1079,
+   "name": "OBJ[123].Name",
+   "struct_off": 4084,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1930
+  },
+  {
+   "idx": 1080,
+   "name": "OBJ[123].VFlip",
+   "struct_off": 4086,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1932
+  },
+  {
+   "idx": 1081,
+   "name": "OBJ[123].HFlip",
+   "struct_off": 4087,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1933
+  },
+  {
+   "idx": 1082,
+   "name": "OBJ[123].Priority",
+   "struct_off": 4088,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1934
+  },
+  {
+   "idx": 1083,
+   "name": "OBJ[123].Palette",
+   "struct_off": 4089,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1935
+  },
+  {
+   "idx": 1084,
+   "name": "OBJ[123].Size",
+   "struct_off": 4090,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1936
+  },
+  {
+   "idx": 1085,
+   "name": "OBJ[124].HPos",
+   "struct_off": 4092,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1937
+  },
+  {
+   "idx": 1086,
+   "name": "OBJ[124].VPos",
+   "struct_off": 4094,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1939
+  },
+  {
+   "idx": 1087,
+   "name": "OBJ[124].Name",
+   "struct_off": 4096,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1941
+  },
+  {
+   "idx": 1088,
+   "name": "OBJ[124].VFlip",
+   "struct_off": 4098,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1943
+  },
+  {
+   "idx": 1089,
+   "name": "OBJ[124].HFlip",
+   "struct_off": 4099,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1944
+  },
+  {
+   "idx": 1090,
+   "name": "OBJ[124].Priority",
+   "struct_off": 4100,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1945
+  },
+  {
+   "idx": 1091,
+   "name": "OBJ[124].Palette",
+   "struct_off": 4101,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1946
+  },
+  {
+   "idx": 1092,
+   "name": "OBJ[124].Size",
+   "struct_off": 4102,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1947
+  },
+  {
+   "idx": 1093,
+   "name": "OBJ[125].HPos",
+   "struct_off": 4104,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1948
+  },
+  {
+   "idx": 1094,
+   "name": "OBJ[125].VPos",
+   "struct_off": 4106,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1950
+  },
+  {
+   "idx": 1095,
+   "name": "OBJ[125].Name",
+   "struct_off": 4108,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1952
+  },
+  {
+   "idx": 1096,
+   "name": "OBJ[125].VFlip",
+   "struct_off": 4110,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1954
+  },
+  {
+   "idx": 1097,
+   "name": "OBJ[125].HFlip",
+   "struct_off": 4111,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1955
+  },
+  {
+   "idx": 1098,
+   "name": "OBJ[125].Priority",
+   "struct_off": 4112,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1956
+  },
+  {
+   "idx": 1099,
+   "name": "OBJ[125].Palette",
+   "struct_off": 4113,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1957
+  },
+  {
+   "idx": 1100,
+   "name": "OBJ[125].Size",
+   "struct_off": 4114,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1958
+  },
+  {
+   "idx": 1101,
+   "name": "OBJ[126].HPos",
+   "struct_off": 4116,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1959
+  },
+  {
+   "idx": 1102,
+   "name": "OBJ[126].VPos",
+   "struct_off": 4118,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1961
+  },
+  {
+   "idx": 1103,
+   "name": "OBJ[126].Name",
+   "struct_off": 4120,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1963
+  },
+  {
+   "idx": 1104,
+   "name": "OBJ[126].VFlip",
+   "struct_off": 4122,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1965
+  },
+  {
+   "idx": 1105,
+   "name": "OBJ[126].HFlip",
+   "struct_off": 4123,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1966
+  },
+  {
+   "idx": 1106,
+   "name": "OBJ[126].Priority",
+   "struct_off": 4124,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1967
+  },
+  {
+   "idx": 1107,
+   "name": "OBJ[126].Palette",
+   "struct_off": 4125,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1968
+  },
+  {
+   "idx": 1108,
+   "name": "OBJ[126].Size",
+   "struct_off": 4126,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1969
+  },
+  {
+   "idx": 1109,
+   "name": "OBJ[127].HPos",
+   "struct_off": 4128,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1970
+  },
+  {
+   "idx": 1110,
+   "name": "OBJ[127].VPos",
+   "struct_off": 4130,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1972
+  },
+  {
+   "idx": 1111,
+   "name": "OBJ[127].Name",
+   "struct_off": 4132,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1974
+  },
+  {
+   "idx": 1112,
+   "name": "OBJ[127].VFlip",
+   "struct_off": 4134,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1976
+  },
+  {
+   "idx": 1113,
+   "name": "OBJ[127].HFlip",
+   "struct_off": 4135,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1977
+  },
+  {
+   "idx": 1114,
+   "name": "OBJ[127].Priority",
+   "struct_off": 4136,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1978
+  },
+  {
+   "idx": 1115,
+   "name": "OBJ[127].Palette",
+   "struct_off": 4137,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1979
+  },
+  {
+   "idx": 1116,
+   "name": "OBJ[127].Size",
+   "struct_off": 4138,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1980
+  },
+  {
+   "idx": 1117,
+   "name": "OAMPriorityRotation",
+   "struct_off": 420,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1981
+  },
+  {
+   "idx": 1118,
+   "name": "OAMAddr",
+   "struct_off": 418,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1982
+  },
+  {
+   "idx": 1119,
+   "name": "OAMFlip",
+   "struct_off": 432,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1984
+  },
+  {
+   "idx": 1120,
+   "name": "OAMTileAddress",
+   "struct_off": 430,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1985
+  },
+  {
+   "idx": 1121,
+   "name": "IRQVBeamPos",
+   "struct_off": 422,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1987
+  },
+  {
+   "idx": 1122,
+   "name": "IRQHBeamPos",
+   "struct_off": 424,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1989
+  },
+  {
+   "idx": 1123,
+   "name": "VBeamPosLatched",
+   "struct_off": 426,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1991
+  },
+  {
+   "idx": 1124,
+   "name": "HBeamPosLatched",
+   "struct_off": 428,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1993
+  },
+  {
+   "idx": 1125,
+   "name": "HBeamFlip",
+   "struct_off": 433,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1995
+  },
+  {
+   "idx": 1126,
+   "name": "VBeamFlip",
+   "struct_off": 434,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1996
+  },
+  {
+   "idx": 1127,
+   "name": "HVBeamCounterLatched",
+   "struct_off": 435,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 1997
+  },
+  {
+   "idx": 1128,
+   "name": "MatrixA",
+   "struct_off": 436,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 1998
+  },
+  {
+   "idx": 1129,
+   "name": "MatrixB",
+   "struct_off": 438,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 2000
+  },
+  {
+   "idx": 1130,
+   "name": "MatrixC",
+   "struct_off": 440,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 2002
+  },
+  {
+   "idx": 1131,
+   "name": "MatrixD",
+   "struct_off": 442,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 2004
+  },
+  {
+   "idx": 1132,
+   "name": "CentreX",
+   "struct_off": 444,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 2006
+  },
+  {
+   "idx": 1133,
+   "name": "CentreY",
+   "struct_off": 446,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 2008
+  },
+  {
+   "idx": 1134,
+   "name": "M7HOFS",
+   "struct_off": 448,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 2010
+  },
+  {
+   "idx": 1135,
+   "name": "M7VOFS",
+   "struct_off": 450,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 2012
+  },
+  {
+   "idx": 1136,
+   "name": "CGADD",
+   "struct_off": 452,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2014
+  },
+  {
+   "idx": 1137,
+   "name": "FixedColourRed",
+   "struct_off": 453,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2015
+  },
+  {
+   "idx": 1138,
+   "name": "FixedColourGreen",
+   "struct_off": 454,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2016
+  },
+  {
+   "idx": 1139,
+   "name": "FixedColourBlue",
+   "struct_off": 455,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2017
+  },
+  {
+   "idx": 1140,
+   "name": "SavedOAMAddr",
+   "struct_off": 456,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 2018
+  },
+  {
+   "idx": 1141,
+   "name": "ScreenHeight",
+   "struct_off": 458,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 2020
+  },
+  {
+   "idx": 1142,
+   "name": "WRAM",
+   "struct_off": 460,
+   "size": 4,
+   "type": 0,
+   "serial_size": 4,
+   "serial_off": 2022
+  },
+  {
+   "idx": 1143,
+   "name": "ForcedBlanking",
+   "struct_off": 464,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2026
+  },
+  {
+   "idx": 1144,
+   "name": "OBJThroughMain",
+   "struct_off": 465,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2027
+  },
+  {
+   "idx": 1145,
+   "name": "OBJThroughSub",
+   "struct_off": 466,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2028
+  },
+  {
+   "idx": 1146,
+   "name": "OBJNameSelect",
+   "struct_off": 528,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 2029
+  },
+  {
+   "idx": 1147,
+   "name": "OBJSizeSelect",
+   "struct_off": 467,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2031
+  },
+  {
+   "idx": 1148,
+   "name": "OBJNameBase",
+   "struct_off": 468,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 2032
+  },
+  {
+   "idx": 1149,
+   "name": "OBJAddition",
+   "struct_off": 470,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2034
+  },
+  {
+   "idx": 1150,
+   "name": "OAMReadFlip",
+   "struct_off": 471,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2035
+  },
+  {
+   "idx": 1151,
+   "name": "VTimerEnabled",
+   "struct_off": 472,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2036
+  },
+  {
+   "idx": 1152,
+   "name": "HTimerEnabled",
+   "struct_off": 473,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2037
+  },
+  {
+   "idx": 1153,
+   "name": "HTimerPosition",
+   "struct_off": 474,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 2038
+  },
+  {
+   "idx": 1154,
+   "name": "Mosaic",
+   "struct_off": 476,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2040
+  },
+  {
+   "idx": 1155,
+   "name": "MosaicStart",
+   "struct_off": 477,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2041
+  },
+  {
+   "idx": 1156,
+   "name": "Mode7HFlip",
+   "struct_off": 482,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2042
+  },
+  {
+   "idx": 1157,
+   "name": "Mode7VFlip",
+   "struct_off": 483,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2043
+  },
+  {
+   "idx": 1158,
+   "name": "Mode7Repeat",
+   "struct_off": 484,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2044
+  },
+  {
+   "idx": 1159,
+   "name": "Window1Left",
+   "struct_off": 485,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2045
+  },
+  {
+   "idx": 1160,
+   "name": "Window1Right",
+   "struct_off": 486,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2046
+  },
+  {
+   "idx": 1161,
+   "name": "Window2Left",
+   "struct_off": 487,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2047
+  },
+  {
+   "idx": 1162,
+   "name": "Window2Right",
+   "struct_off": 488,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2048
+  },
+  {
+   "idx": 1163,
+   "name": "ClipCounts[0]",
+   "struct_off": 489,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2049
+  },
+  {
+   "idx": 1164,
+   "name": "ClipWindowOverlapLogic[0]",
+   "struct_off": 495,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2050
+  },
+  {
+   "idx": 1165,
+   "name": "ClipWindow1Enable[0]",
+   "struct_off": 501,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2051
+  },
+  {
+   "idx": 1166,
+   "name": "ClipWindow2Enable[0]",
+   "struct_off": 507,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2052
+  },
+  {
+   "idx": 1167,
+   "name": "ClipWindow1Outside[0]",
+   "struct_off": 513,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2053
+  },
+  {
+   "idx": 1168,
+   "name": "ClipWindow2Outside[0]",
+   "struct_off": 519,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2054
+  },
+  {
+   "idx": 1169,
+   "name": "ClipCounts[1]",
+   "struct_off": 490,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2055
+  },
+  {
+   "idx": 1170,
+   "name": "ClipWindowOverlapLogic[1]",
+   "struct_off": 496,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2056
+  },
+  {
+   "idx": 1171,
+   "name": "ClipWindow1Enable[1]",
+   "struct_off": 502,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2057
+  },
+  {
+   "idx": 1172,
+   "name": "ClipWindow2Enable[1]",
+   "struct_off": 508,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2058
+  },
+  {
+   "idx": 1173,
+   "name": "ClipWindow1Outside[1]",
+   "struct_off": 514,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2059
+  },
+  {
+   "idx": 1174,
+   "name": "ClipWindow2Outside[1]",
+   "struct_off": 520,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2060
+  },
+  {
+   "idx": 1175,
+   "name": "ClipCounts[2]",
+   "struct_off": 491,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2061
+  },
+  {
+   "idx": 1176,
+   "name": "ClipWindowOverlapLogic[2]",
+   "struct_off": 497,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2062
+  },
+  {
+   "idx": 1177,
+   "name": "ClipWindow1Enable[2]",
+   "struct_off": 503,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2063
+  },
+  {
+   "idx": 1178,
+   "name": "ClipWindow2Enable[2]",
+   "struct_off": 509,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2064
+  },
+  {
+   "idx": 1179,
+   "name": "ClipWindow1Outside[2]",
+   "struct_off": 515,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2065
+  },
+  {
+   "idx": 1180,
+   "name": "ClipWindow2Outside[2]",
+   "struct_off": 521,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2066
+  },
+  {
+   "idx": 1181,
+   "name": "ClipCounts[3]",
+   "struct_off": 492,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2067
+  },
+  {
+   "idx": 1182,
+   "name": "ClipWindowOverlapLogic[3]",
+   "struct_off": 498,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2068
+  },
+  {
+   "idx": 1183,
+   "name": "ClipWindow1Enable[3]",
+   "struct_off": 504,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2069
+  },
+  {
+   "idx": 1184,
+   "name": "ClipWindow2Enable[3]",
+   "struct_off": 510,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2070
+  },
+  {
+   "idx": 1185,
+   "name": "ClipWindow1Outside[3]",
+   "struct_off": 516,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2071
+  },
+  {
+   "idx": 1186,
+   "name": "ClipWindow2Outside[3]",
+   "struct_off": 522,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2072
+  },
+  {
+   "idx": 1187,
+   "name": "ClipCounts[4]",
+   "struct_off": 493,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2073
+  },
+  {
+   "idx": 1188,
+   "name": "ClipWindowOverlapLogic[4]",
+   "struct_off": 499,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2074
+  },
+  {
+   "idx": 1189,
+   "name": "ClipWindow1Enable[4]",
+   "struct_off": 505,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2075
+  },
+  {
+   "idx": 1190,
+   "name": "ClipWindow2Enable[4]",
+   "struct_off": 511,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2076
+  },
+  {
+   "idx": 1191,
+   "name": "ClipWindow1Outside[4]",
+   "struct_off": 517,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2077
+  },
+  {
+   "idx": 1192,
+   "name": "ClipWindow2Outside[4]",
+   "struct_off": 523,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2078
+  },
+  {
+   "idx": 1193,
+   "name": "ClipCounts[5]",
+   "struct_off": 494,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2079
+  },
+  {
+   "idx": 1194,
+   "name": "ClipWindowOverlapLogic[5]",
+   "struct_off": 500,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2080
+  },
+  {
+   "idx": 1195,
+   "name": "ClipWindow1Enable[5]",
+   "struct_off": 506,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2081
+  },
+  {
+   "idx": 1196,
+   "name": "ClipWindow2Enable[5]",
+   "struct_off": 512,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2082
+  },
+  {
+   "idx": 1197,
+   "name": "ClipWindow1Outside[5]",
+   "struct_off": 518,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2083
+  },
+  {
+   "idx": 1198,
+   "name": "ClipWindow2Outside[5]",
+   "struct_off": 524,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2084
+  },
+  {
+   "idx": 1199,
+   "name": "RecomputeClipWindows",
+   "struct_off": 525,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2085
+  },
+  {
+   "idx": 1200,
+   "name": "CGFLIPRead",
+   "struct_off": 526,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2086
+  },
+  {
+   "idx": 1201,
+   "name": "Need16x8Mulitply",
+   "struct_off": 530,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2087
+  },
+  {
+   "idx": 1202,
+   "name": "BGMosaic",
+   "struct_off": 478,
+   "size": 4,
+   "type": 1,
+   "serial_size": 4,
+   "serial_off": 2088
+  },
+  {
+   "idx": 1203,
+   "name": "OAMData",
+   "struct_off": 2060,
+   "size": 544,
+   "type": 1,
+   "serial_size": 544,
+   "serial_off": 2092
+  },
+  {
+   "idx": 1204,
+   "name": "Dummy",
+   "struct_off": 538,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2636
+  },
+  {
+   "idx": 1205,
+   "name": "OAMWriteRegister",
+   "struct_off": 532,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 2637
+  },
+  {
+   "idx": 1206,
+   "name": "BGnxOFSbyte",
+   "struct_off": 534,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2639
+  },
+  {
+   "idx": 1207,
+   "name": "M7byte",
+   "struct_off": 535,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2640
+  },
+  {
+   "idx": 1208,
+   "name": "OpenBus1",
+   "struct_off": 536,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2641
+  },
+  {
+   "idx": 1209,
+   "name": "OpenBus2",
+   "struct_off": 537,
+   "size": 1,
+   "type": 0,
+   "serial_size": 1,
+   "serial_off": 2642
+  },
+  {
+   "idx": 1210,
+   "name": "VTimerPosition",
+   "struct_off": 2006,
+   "size": 2,
+   "type": 0,
+   "serial_size": 2,
+   "serial_off": 2643
+  }
+ ]
+}

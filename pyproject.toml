@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sr16-snes9x-save-converter"
+version = "1.0.0"
+description = "Convert save states between SuperRetro16 and snes9x, or extract SRAM files."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+  { name = "MrRexD" },
+]
+keywords = ["snes", "snes9x", "superretro16", "savestate", "converter"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+sr16-to-snes9x = "converter.cli:main"
+saveshift = "converter.cli:main"
+sr16-snes9x-converter = "converter.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["converter*"]
+
+[tool.setuptools.package-data]
+"converter.sr16_to_snes9x.state" = ["freezedata.json"]

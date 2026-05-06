@@ -1,0 +1,80 @@
+# Python caches/builds
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+env/
+ENV/
+
+# Local environment
+.env
+.env.*
+local.properties
+
+# ROMs and game/save-state data
+*.smc
+*.sfc
+*.fig
+*.swc
+*.rom
+*.srm
+*.sav
+*.frz
+*.s[0-9][0-9]
+*.s[0-9][0-9][0-9]
+*.[0-9][0-9][0-9]
+
+# Debug/render/audio artifacts
+debug/
+debug*/
+*.log
+*.txt.log
+*.snd
+*.pcm
+*.wav
+*.rgb565
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+
+# Public web assets
+!web/assets/**/*.png
+!web/assets/**/*.jpg
+!web/assets/**/*.jpeg
+!web/assets/**/*.gif
+!web/assets/**/*.webp
+!web/assets/**/*.ico
+
+# Binaries/proprietary emulator artifacts
+*.exe
+*.dll
+*.so
+*.apk
+*.aab
+*.keystore
+*.jks
+*.p12
+
+# Editor/OS files
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store
+
+# SaveShift web build artifacts
+web/node_modules/
+web/dist/
+web/public/save-converter-python.pybundle
+web/.vite/
+web/uploads/

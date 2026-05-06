@@ -1,0 +1,41 @@
+include README.md
+include LICENSE
+include pyproject.toml
+include MANIFEST.in
+
+recursive-include converter *.py
+recursive-include converter *.json
+recursive-include docs *.md
+
+prune tests
+prune web
+prune .github
+
+global-exclude __pycache__/*
+global-exclude *.py[cod]
+global-exclude *.smc
+global-exclude *.sfc
+global-exclude *.fig
+global-exclude *.swc
+global-exclude *.rom
+global-exclude *.srm
+global-exclude *.sav
+global-exclude *.frz
+global-exclude *.s[0-9][0-9]
+global-exclude *.s[0-9][0-9][0-9]
+global-exclude *.[0-9][0-9][0-9]
+global-exclude *.snd
+global-exclude *.pcm
+global-exclude *.wav
+global-exclude *.rgb565
+global-exclude *.png
+global-exclude *.jpg
+global-exclude *.jpeg
+global-exclude *.gif
+global-exclude *.webp
+global-exclude *.exe
+global-exclude *.dll
+global-exclude *.so
+global-exclude *.apk
+global-exclude *.aab
+global-exclude *.log

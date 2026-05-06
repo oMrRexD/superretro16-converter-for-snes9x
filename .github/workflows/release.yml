@@ -1,0 +1,118 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-release:
+    name: Build release artifacts
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install build dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install build pytest
+
+      - name: Run tests
+        run: python -m pytest tests -q
+
+      - name: Build Python package
+        run: python -m build
+
+      - name: Build CLI-only zip
+        shell: python
+        run: |
+          import os
+          import re
+          import zipfile
+          from pathlib import Path
+
+          tag = os.environ.get("GITHUB_REF_NAME") or "manual"
+          version = tag[1:] if tag.startswith("v") else tag
+          package_root = f"saveshift-cli-{version}"
+          out_dir = Path("dist")
+          out_dir.mkdir(exist_ok=True)
+          out_path = out_dir / f"{package_root}.zip"
+
+          include_roots = [
+              Path("converter"),
+              Path("docs"),
+          ]
+          include_files = [
+              Path("README.md"),
+              Path("LICENSE"),
+              Path("pyproject.toml"),
+              Path("MANIFEST.in"),
+          ]
+          forbidden_parts = {
+              "__pycache__",
+              ".pytest_cache",
+              ".mypy_cache",
+              ".ruff_cache",
+          }
+          forbidden_suffixes = {
+              ".pyc", ".pyo",
+              ".smc", ".sfc", ".fig", ".swc", ".rom",
+              ".srm", ".frz",
+              ".snd", ".pcm", ".wav", ".rgb565",
+              ".png", ".jpg", ".jpeg", ".gif", ".webp",
+              ".exe", ".dll", ".so", ".apk", ".aab",
+              ".zip", ".7z", ".rar", ".log",
+          }
+          forbidden_suffix_patterns = [
+              re.compile(r"\.s\d{2,3}$", re.IGNORECASE),
+              re.compile(r"\.\d{3}$"),
+          ]
+
+          def should_include(path: Path) -> bool:
+              if set(path.parts) & forbidden_parts:
+                  return False
+              suffix = path.suffix.lower()
+              if suffix in forbidden_suffixes:
+                  return False
+              return not any(pattern.fullmatch(suffix) for pattern in forbidden_suffix_patterns)
+
+          with zipfile.ZipFile(out_path, "w", compression=zipfile.ZIP_DEFLATED) as zf:
+              for file_path in include_files:
+                  if file_path.is_file():
+                      zf.write(file_path, f"{package_root}/{file_path.as_posix()}")
+              for root in include_roots:
+                  for file_path in sorted(root.rglob("*")):
+                      if file_path.is_file() and should_include(file_path):
+                          zf.write(file_path, f"{package_root}/{file_path.as_posix()}")
+
+          print(f"wrote {out_path}")
+
+      - name: Upload workflow artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: saveshift-release-artifacts
+          path: |
+            dist/*.whl
+            dist/*.tar.gz
+            dist/saveshift-cli-*.zip
+
+      - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: |
+            dist/*.whl
+            dist/*.tar.gz
+            dist/saveshift-cli-*.zip
