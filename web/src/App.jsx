@@ -106,6 +106,9 @@ const STRINGS = {
     moreItems: 'itens',
     mode: 'Alternar modo claro/escuro',
     theme: 'Trocar tema de cor',
+    themeButton: 'TEMAS',
+    menu: 'Abrir menu',
+    closeMenu: 'Fechar menu',
     resultKeys: {
       file: 'Arquivo',
       type: 'Tipo',
@@ -226,6 +229,9 @@ const STRINGS = {
     moreItems: 'items',
     mode: 'Toggle light/dark mode',
     theme: 'Change color theme',
+    themeButton: 'THEME',
+    menu: 'Open menu',
+    closeMenu: 'Close menu',
     resultKeys: {
       file: 'File',
       type: 'Type',
@@ -665,6 +671,23 @@ function Header({
   onNav,
 }) {
   const navTargets = ['contact', 'donate', 'github'];
+  const [themeMenuOpen, setThemeMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return undefined;
+    function closeOnEscape(event) {
+      if (event.key === 'Escape') setMobileMenuOpen(false);
+    }
+    window.addEventListener('keydown', closeOnEscape);
+    return () => window.removeEventListener('keydown', closeOnEscape);
+  }, [mobileMenuOpen]);
+
+  function handleMobileNav(target) {
+    setMobileMenuOpen(false);
+    onNav(target);
+  }
+
   return (
     <header className="nav">
       <button className="brand" onClick={goHome}>
@@ -674,6 +697,17 @@ function Header({
           <span className="brand-sub">{t.brandSub}</span>
         </span>
       </button>
+      <button
+        className="mobile-menu-button"
+        type="button"
+        onClick={() => setMobileMenuOpen((open) => !open)}
+        aria-label={mobileMenuOpen ? t.closeMenu : t.menu}
+        aria-expanded={mobileMenuOpen}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
       <nav className="nav-links">
         {t.nav.map((item, index) => (
           <button key={item} type="button" onClick={() => onNav(navTargets[index])}>
@@ -682,18 +716,33 @@ function Header({
         ))}
       </nav>
       <div className="nav-tools">
-        <div className="theme-toggle" role="group" aria-label={t.theme} title={t.theme}>
-          {THEMES.map((item) => (
-            <button
-              key={item}
-              type="button"
-              className={`theme-swatch ${item === theme ? 'on' : ''}`}
-              data-swatch={item}
-              onClick={() => setTheme(item)}
-              aria-label={`${t.theme}: ${item}`}
-              aria-pressed={item === theme}
-            />
-          ))}
+        <div className={`theme-picker ${themeMenuOpen ? 'open' : ''}`}>
+          <button
+            className="theme-menu-toggle"
+            type="button"
+            onClick={() => setThemeMenuOpen((open) => !open)}
+            aria-label={t.theme}
+            aria-expanded={themeMenuOpen}
+          >
+            <span className="theme-current" data-swatch={theme} aria-hidden="true" />
+            <span>{t.themeButton}</span>
+          </button>
+          <div className="theme-toggle" role="group" aria-label={t.theme} title={t.theme}>
+            {THEMES.map((item) => (
+              <button
+                key={item}
+                type="button"
+                className={`theme-swatch ${item === theme ? 'on' : ''}`}
+                data-swatch={item}
+                onClick={() => {
+                  setTheme(item);
+                  setThemeMenuOpen(false);
+                }}
+                aria-label={`${t.theme}: ${item}`}
+                aria-pressed={item === theme}
+              />
+            ))}
+          </div>
         </div>
         <button className="lang-toggle" onClick={() => setLang(lang === 'pt' ? 'en' : 'pt')}>
           <span className={lang === 'pt' ? 'on' : ''}>PT</span><span>/</span><span className={lang === 'en' ? 'on' : ''}>EN</span>
@@ -701,6 +750,39 @@ function Header({
         <button className="icon-btn" onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')} aria-label={t.mode} title={t.mode}>
           {mode === 'dark' ? <IconMoon /> : <IconSun />}
         </button>
+      </div>
+      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
+        <div className="mobile-menu-nav">
+          {t.nav.map((item, index) => (
+            <button key={item} type="button" onClick={() => handleMobileNav(navTargets[index])}>
+              {item}
+            </button>
+          ))}
+        </div>
+        <div className="mobile-menu-controls">
+          <button type="button" className="mobile-lang-toggle" onClick={() => setLang(lang === 'pt' ? 'en' : 'pt')}>
+            <span className={lang === 'pt' ? 'on' : ''}>PT</span><span>/</span><span className={lang === 'en' ? 'on' : ''}>EN</span>
+          </button>
+          <button type="button" className="mobile-mode-toggle" onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')} aria-label={t.mode}>
+            {mode === 'dark' ? <IconMoon /> : <IconSun />}
+          </button>
+        </div>
+        <div className="mobile-theme-row" role="group" aria-label={t.theme}>
+          <span>{t.themeButton}</span>
+          <div>
+            {THEMES.map((item) => (
+              <button
+                key={item}
+                type="button"
+                className={`theme-swatch ${item === theme ? 'on' : ''}`}
+                data-swatch={item}
+                onClick={() => setTheme(item)}
+                aria-label={`${t.theme}: ${item}`}
+                aria-pressed={item === theme}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </header>
   );
