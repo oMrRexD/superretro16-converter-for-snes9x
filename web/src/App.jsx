@@ -20,7 +20,7 @@ const THEMES = ['purple', 'cyan', 'phosphor', 'amber', 'hotpink', 'ice', 'crt'];
 const DETECTED_TYPES = new WeakMap();
 const CONTACT_DISCORD = '.2by.';
 const DONATE_URL = 'https://buymeacoffee.com/mrrexd';
-const GITHUB_URL = 'https://github.com/oMrRexD';
+const GITHUB_URL = 'https://github.com/oMrRexD/superretro16-converter-for-snes9x';
 const APP_VERSION = __SAVESHIFT_VERSION__;
 // Keep the native Windows file picker stable: a giant `accept` list with
 // hundreds of slot extensions can make Explorer hang. Real blocking is done
