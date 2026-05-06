@@ -13,9 +13,10 @@ I wanted to revisit those saves on my PC, but SuperRetro16 save states were only
 
 The usual workaround would have been slow: open each state in SuperRetro16, load the game, save normally in-game, extract SRAM, and repeat. I built SaveShift to avoid doing that manually.
 
-This project was developed with AI-assisted engineering and tested over many
-rounds of conversion, emulator comparison, audio debugging, visual debugging,
-and special-chip compatibility work.
+This project was developed through AI-assisted development with Claude Opus 4.7
+and GPT-5.5, with real save states tested over many rounds of conversion,
+emulator comparison, audio debugging, visual debugging, and special-chip
+compatibility work.
 
 ## What it does
 
