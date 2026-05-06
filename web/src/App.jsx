@@ -654,7 +654,7 @@ export default function App() {
 
       {stage === 'idle' && <HowItWorks t={t} />}
       <Footer t={t} />
-      <Analytics />
+      <Analytics mode="production" />
     </div>
   );
 }
