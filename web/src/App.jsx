@@ -35,6 +35,7 @@ const STRINGS = {
     title: ['CONVERTA SEUS', 'SAVE STATES', 'ENTRE EMULADORES'],
     lead: 'Conversor online de save states entre SuperRetro16 (antigo SuperGNES) e Snes9X. Converta um arquivo ou um lote inteiro com processamento local.',
     pills: ['OPEN-SOURCE', 'MÚLTIPLOS SAVES', '100% LOCAL'],
+    offlineReady: 'OFFLINE PRONTO',
     heroFoot: 'Processamento local via Pyodide, com conversão, extração de SRAM e inspeção técnica.',
     catIdle: 'arraste seus saves\naqui, humano!',
     catReady: 'beleza! agora\nescolha a ação',
@@ -159,6 +160,7 @@ const STRINGS = {
     title: ['CONVERT YOUR', 'SAVE STATES', 'BETWEEN EMULATORS'],
     lead: 'Online save-state converter for SuperRetro16 (formerly SuperGNES) and Snes9X. Convert one file or an entire batch with local processing.',
     pills: ['OPEN-SOURCE', 'MULTIPLE SAVES', '100% LOCAL'],
+    offlineReady: 'OFFLINE READY',
     heroFoot: 'Local processing through Pyodide, with conversion, SRAM extraction and technical inspection.',
     catIdle: 'drop your saves\nhere, human!',
     catReady: 'cool! now\npick an action',
@@ -448,6 +450,7 @@ export default function App() {
   const [result, setResult] = useState(null);
   const [download, setDownload] = useState(null);
   const [contactOpen, setContactOpen] = useState(false);
+  const [offlineReady, setOfflineReady] = useState(false);
   const t = STRINGS[lang];
   const fileType = batchType(files);
 
@@ -481,6 +484,20 @@ export default function App() {
   useEffect(() => () => {
     if (download?.url) URL.revokeObjectURL(download.url);
   }, [download]);
+
+  useEffect(() => {
+    if (!('serviceWorker' in navigator)) return undefined;
+    let cancelled = false;
+    const markOfflineReady = () => {
+      if (!cancelled) setOfflineReady(true);
+    };
+    navigator.serviceWorker.ready.then(markOfflineReady).catch(() => {});
+    navigator.serviceWorker.addEventListener('controllerchange', markOfflineReady);
+    return () => {
+      cancelled = true;
+      navigator.serviceWorker.removeEventListener('controllerchange', markOfflineReady);
+    };
+  }, []);
 
   const currentActions = useMemo(
     () => ACTIONS.filter((item) => allowedActions(fileType).includes(item.id)),
@@ -619,6 +636,7 @@ export default function App() {
           fileType={fileType}
           fileWarning={fileWarning}
           catSays={catSays}
+          offlineReady={offlineReady}
           onFiles={setPickedFiles}
           onClear={clearFiles}
         />
@@ -862,7 +880,7 @@ function ContactModal({ t, open, onClose }) {
   );
 }
 
-function Hero({ t, files, fileType, fileWarning, catSays, onFiles, onClear }) {
+function Hero({ t, files, fileType, fileWarning, catSays, offlineReady, onFiles, onClear }) {
   return (
     <section className="hero" id="converter">
       <div className="hero-copy">
@@ -874,6 +892,7 @@ function Hero({ t, files, fileType, fileWarning, catSays, onFiles, onClear }) {
         <p>{t.lead}</p>
         <div className="pills">
           {t.pills.map((pill) => <span key={pill}>{pill}</span>)}
+          {offlineReady && <span>{t.offlineReady}</span>}
         </div>
         <p className="hero-foot">{t.heroFoot}</p>
         <div className="mascot-row">

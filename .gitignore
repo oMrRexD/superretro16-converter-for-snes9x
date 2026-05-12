@@ -78,3 +78,5 @@ web/dist/
 web/public/save-converter-python.pybundle
 web/.vite/
 web/uploads/
+web/public/icons/
+web/public/pyodide/

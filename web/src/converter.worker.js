@@ -1,5 +1,4 @@
-const PYODIDE_VERSION = '0.27.7';
-const PYODIDE_BASE = `https://cdn.jsdelivr.net/pyodide/v${PYODIDE_VERSION}/full/`;
+const PYODIDE_BASE = '/pyodide/';
 const PYTHON_BUNDLE = 'save-converter-python.pybundle';
 const PYTHON_BUNDLE_CACHE_KEY = 'saveshift-python-bundle-v2';
 

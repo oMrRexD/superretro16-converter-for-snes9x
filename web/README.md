@@ -3,6 +3,9 @@
 SaveShift is the browser UI for the SR16/snes9x save-state converter. It is a
 static React/Vite app designed for Vercel. Conversion runs locally in the user's
 browser through Pyodide inside a Web Worker; save states are not uploaded.
+The production build is also a PWA: after the first online visit, the installed
+app can reopen and run conversions offline because Pyodide, the Python bundle,
+fonts, and UI assets are precached by the service worker.
 
 The app accepts SuperRetro16 save states (`.s00` through `.s999`), desktop
 snes9x slot states (`.000` through `.999`), and snes9x EX+ slot states such as
@@ -23,7 +26,8 @@ npm run dev
 ```
 
 `npm run dev` and `npm run build` both generate `public/save-converter-python.pybundle`
-from the repository's `converter/` and `web/python_bridge/` sources. The
+from the repository's `converter/` and `web/python_bridge/` sources, then copy
+the Pyodide runtime and PWA icon assets into `public/` for the local build. The
 snes9x -> SR16 reverse converter lives under `converter.snes9x_to_sr16`, so the
 browser bundle no longer needs a second Python package for that direction.
 
