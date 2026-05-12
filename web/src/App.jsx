@@ -66,6 +66,7 @@ const STRINGS = {
     conversionComplete: 'CONVERSÃO CONCLUÍDA!',
     extractComplete: 'SRAM EXTRAÍDA!',
     infoComplete: 'ANÁLISE COMPLETA!',
+    errorTitle: 'ERRO!',
     failed: 'NÃO FOI POSSÍVEL PROCESSAR',
     success: 'Seu arquivo foi processado com sucesso!',
     successBatch: 'Seus arquivos foram processados com sucesso!',
@@ -189,6 +190,7 @@ const STRINGS = {
     conversionComplete: 'CONVERSION COMPLETE!',
     extractComplete: 'SRAM EXTRACTED!',
     infoComplete: 'ANALYSIS COMPLETE!',
+    errorTitle: 'ERROR!',
     failed: 'COULD NOT PROCESS',
     success: 'Your file was processed successfully!',
     successBatch: 'Your files were processed successfully!',
@@ -562,7 +564,7 @@ export default function App() {
   async function processFiles() {
     if (!files.length) return;
     setStage('processing');
-    setProgress({ label: t.processing, percent: 0 });
+    setProgress({ label: t.progressLabels.read, percent: 0 });
     setResult(null);
     setDownload(null);
     try {
@@ -1070,14 +1072,17 @@ function DoneSection({ t, action, files, result, download, onAgain }) {
   const isInfoAction = resultAction === 'info';
   const isExtractAction = resultAction === 'extract';
   const hasGeneratedOutput = ok && !isInfoAction && Boolean(result?.outputName);
-  const statusTitle = ok ? t.readyDone : t.failed;
+  const statusTitle = ok ? t.readyDone : t.errorTitle;
   const showTechPanel = isInfoAction || isBatch;
   const resultHeadline = ok
     ? (isBatch ? t.doneBatch : (isInfoAction ? t.infoComplete : (isExtractAction ? t.extractComplete : t.conversionComplete)))
     : t.failed;
-  const statusMessage = ok
+  const rawStatusMessage = ok
     ? (isBatch ? t.successBatch : (isInfoAction ? t.infoDone : t.success))
     : result?.error;
+  const statusMessage = [statusTitle, t.resultReady, resultHeadline].includes(rawStatusMessage)
+    ? ''
+    : rawStatusMessage;
   const metaRows = [
     [t.resultKeys.type, typeText],
     [t.resultKeys.action, actionText],
@@ -1096,9 +1101,9 @@ function DoneSection({ t, action, files, result, download, onAgain }) {
             <div className={`result-hero-card ${ok ? 'ok' : 'bad'}`}>
               <div className="result-emblem">{ok ? <IconCheck size={28} /> : <IconX size={28} />}</div>
               <div className="result-title-block">
-                <span>{ok ? t.resultReady : t.failed}</span>
+                <span>{t.resultReady}</span>
                 <h2>{resultHeadline}</h2>
-                <p>{statusMessage}</p>
+                {statusMessage && <p>{statusMessage}</p>}
               </div>
             </div>
 
