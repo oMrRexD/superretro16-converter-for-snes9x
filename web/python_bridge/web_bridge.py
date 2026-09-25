@@ -28,11 +28,21 @@ from converter.common.constants import (
     SR16_SCREEN_WIDTH,
 )
 from converter.common.format.snes9x import SNES9X_HEADER, parse_snes9x, write_chunk
+from converter.common.format.snes9x_gx import (
+    gx_chunks_to_snes9x,
+    is_snes9x_gx_chunks,
+    load_snes9x_chunks,
+    snapshot_version,
+    snes9x_chunks_to_gx,
+)
 from converter.common.format.sr16 import SR16_MAGIC_PREFIX, parse_sr16
 from converter.sr16_to_snes9x.pipeline import build_snes9x, extract_chunks_from_sr16
 
 
 SLOT_EXTENSIONS = {f".{i:03d}" for i in range(1000)}
+# Snes9x GX names states "<ROM name> <slot>.frz" (slots 1-99) or
+# "<ROM name> Auto.frz"; Snes9X EX+ uses "<name>.<slot>.frz" instead.
+GX_NAME_RE = re.compile(r"^(?P<stem>.*?)(?: (?P<slot>\d{1,3}|auto))?\.frz$", re.I)
 
 
 def dispatch_file(action: str, filename: str, input_path: str) -> str:
@@ -52,6 +62,27 @@ def dispatch_bytes(action: str, filename: str, data: bytes) -> dict[str, Any]:
                 "application/octet-stream",
                 _inspect(data, filename),
             )
+        if action == "sr16-to-snes9x-gx":
+            return _file_response(
+                _convert_sr16_to_snes9x_gx(data, filename),
+                _gx_from_sr16_output_name(filename),
+                "application/octet-stream",
+                _inspect(data, filename),
+            )
+        if action == "snes9x-to-snes9x-gx":
+            return _file_response(
+                _convert_snes9x_to_gx(data),
+                _gx_from_snes9x_output_name(filename),
+                "application/octet-stream",
+                _inspect(data, filename),
+            )
+        if action == "snes9x-gx-to-snes9x":
+            return _file_response(
+                _convert_gx_to_snes9x(data),
+                _slot_from_gx_output_name(filename),
+                "application/octet-stream",
+                _inspect(data, filename),
+            )
         if action == "sr16-to-snes9x-explus":
             return _file_response(
                 _strip_snes9x_sho(_convert_sr16_to_snes9x(data, filename)),
@@ -61,14 +92,14 @@ def dispatch_bytes(action: str, filename: str, data: bytes) -> dict[str, Any]:
             )
         if action == "snes9x-to-snes9x-explus":
             return _file_response(
-                _strip_snes9x_sho(data),
+                _strip_snes9x_sho(_desktop_snes9x_bytes(data)),
                 _frz_from_snes9x_output_name(filename),
                 "application/octet-stream",
                 _inspect(data, filename),
             )
         if action == "snes9x-explus-to-snes9x":
             return _file_response(
-                data,
+                _desktop_snes9x_bytes(data),
                 _slot_from_snes9x_output_name(filename),
                 "application/octet-stream",
                 _inspect(data, filename),
@@ -121,7 +152,10 @@ def _file_response(payload: bytes, output_name: str, mime: str,
 
 def _output_info(payload: bytes, output_name: str, mime: str) -> dict[str, Any]:
     lower = output_name.lower()
-    if lower.endswith(".frz"):
+    if _snes9x_gx_slot_from_name(output_name) is not None:
+        out_type = "snes9x-gx"
+        label = "Snes9x GX (Wii) save state"
+    elif lower.endswith(".frz"):
         out_type = "snes9x-explus"
         label = "Snes9X EX+ save state"
     elif _snes9x_slot_from_name(output_name) is not None:
@@ -153,6 +187,35 @@ def _convert_sr16_to_snes9x(data: bytes, filename: str) -> bytes:
     chunks = extract_chunks_from_sr16(sr16)
     plain = build_snes9x(sr16, chunks)
     return gzip.compress(plain, compresslevel=6, mtime=0)
+
+
+def _convert_sr16_to_snes9x_gx(data: bytes, filename: str) -> bytes:
+    sr16 = parse_sr16(data, filename)
+    chunks = extract_chunks_from_sr16(sr16)
+    plain = build_snes9x(sr16, chunks)
+    return gzip.compress(snes9x_chunks_to_gx(parse_snes9x(plain)),
+                         compresslevel=6, mtime=0)
+
+
+def _convert_snes9x_to_gx(data: bytes) -> bytes:
+    if is_snes9x_gx_chunks(parse_snes9x(data)):
+        raise ValueError("This file is already a Snes9x GX (Wii) save state")
+    return gzip.compress(snes9x_chunks_to_gx(load_snes9x_chunks(data)),
+                         compresslevel=6, mtime=0)
+
+
+def _convert_gx_to_snes9x(data: bytes) -> bytes:
+    if not is_snes9x_gx_chunks(parse_snes9x(data)):
+        raise ValueError("This file is not a Snes9x GX (Wii) save state")
+    return gzip.compress(gx_chunks_to_snes9x(load_snes9x_chunks(data)),
+                         compresslevel=6, mtime=0)
+
+
+def _desktop_snes9x_bytes(data: bytes) -> bytes:
+    """Return desktop-loadable snapshot bytes (Wii states are translated)."""
+    if is_snes9x_gx_chunks(parse_snes9x(data)):
+        return _convert_gx_to_snes9x(data)
+    return data
 
 
 def _strip_snes9x_sho(data: bytes) -> bytes:
@@ -240,9 +303,11 @@ def _inspect(data: bytes, filename: str) -> dict[str, Any]:
         if detected == "snes9x":
             chunks = parse_snes9x(data)
             preview = _preview_from_snes9x_chunks(chunks)
+            is_gx = is_snes9x_gx_chunks(chunks)
             return {
-                "type": "snes9x",
-                "label": "Snes9X save state",
+                "type": "snes9x-gx" if is_gx else "snes9x",
+                "label": "Snes9x GX (Wii) save state" if is_gx else "Snes9X save state",
+                "version": snapshot_version(data),
                 "filename": filename,
                 "size": len(data),
                 "crc32": _crc32_hex(data),
@@ -282,7 +347,8 @@ def _detect_type(data: bytes, filename: str) -> str:
         return "sr16"
     if (data.startswith(b"#!s9xsnp:") or data.startswith(b"\x1f\x8b")
             or ext in SLOT_EXTENSIONS
-            or _snes9x_explus_slot_from_name(filename) is not None):
+            or _snes9x_explus_slot_from_name(filename) is not None
+            or _snes9x_gx_slot_from_name(filename) is not None):
         return "snes9x"
     return "unknown"
 
@@ -389,6 +455,8 @@ def _base_name(filename: str) -> str:
     suffix = path.suffix.lower()
     if _snes9x_explus_slot_from_name(name) is not None:
         stem = name.rsplit(".", 2)[0]
+    elif suffix == ".frz" and GX_NAME_RE.match(name):
+        stem = GX_NAME_RE.match(name).group("stem")
     elif _sr16_slot_from_suffix(suffix) is not None or suffix in SLOT_EXTENSIONS:
         stem = path.stem
         if (_sr16_slot_from_suffix(suffix) == 1
@@ -417,7 +485,8 @@ def _frz_output_name(filename: str) -> str:
 def _frz_from_snes9x_output_name(filename: str) -> str:
     slot = _snes9x_slot_from_name(filename)
     if slot is None:
-        slot = 0
+        gx_slot = _snes9x_gx_slot_from_name(filename)
+        slot = max(0, gx_slot - 1) if gx_slot is not None else 0
     width = 2 if slot < 100 else 3
     return f"{_base_name(filename)}.{slot:0{width}d}.frz"
 
@@ -432,10 +501,35 @@ def _slot_from_snes9x_output_name(filename: str) -> str:
 def _sr16_output_name(filename: str) -> str:
     slot = _snes9x_slot_from_name(filename)
     if slot is None:
+        slot = _snes9x_gx_slot_from_name(filename)
+    if slot is None:
         slot = 1
     if slot == 0:
         slot = 1
     return f"{_base_name(filename)}.s{slot:02d}"
+
+
+def _gx_output_name(filename: str, slot: int) -> str:
+    return f"{_base_name(filename)} {max(1, slot)}.frz"
+
+
+def _gx_from_sr16_output_name(filename: str) -> str:
+    # SR16 slots are 1-based like Snes9x GX's numbered slots.
+    slot = _sr16_slot_from_suffix(Path(filename).suffix.lower())
+    if slot == 1:
+        slot = _sr16_parenthetical_slot_hint(filename) or 1
+    return _gx_output_name(filename, slot or 1)
+
+
+def _gx_from_snes9x_output_name(filename: str) -> str:
+    # Snes9x slot .000 is the first slot; GX's first numbered slot is 1.
+    slot = _snes9x_slot_from_name(filename)
+    return _gx_output_name(filename, (slot or 0) + 1)
+
+
+def _slot_from_gx_output_name(filename: str) -> str:
+    slot = _snes9x_gx_slot_from_name(filename)
+    return f"{_base_name(filename)}.{max(0, (slot or 0) - 1):03d}"
 
 
 def _sram_output_name(filename: str) -> str:
@@ -487,6 +581,18 @@ def _snes9x_explus_slot_from_name(filename: str) -> int | None:
         return None
     value = int(parts[1])
     return value if 0 <= value <= 999 else None
+
+
+def _snes9x_gx_slot_from_name(filename: str) -> int | None:
+    """Slot of a Snes9x GX style name: ``Game 3.frz`` -> 3, ``Game Auto.frz`` -> 0."""
+    name = os.path.basename(filename)
+    if _snes9x_explus_slot_from_name(name) is not None:
+        return None
+    match = GX_NAME_RE.match(name)
+    if not match or match.group("slot") is None:
+        return None
+    slot = match.group("slot")
+    return 0 if slot.lower() == "auto" else int(slot)
 
 
 def _snes9x_slot_from_name(filename: str) -> int | None:

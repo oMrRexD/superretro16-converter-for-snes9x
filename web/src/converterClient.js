@@ -186,9 +186,22 @@ export function outputNameForAction(action, inputName, fallback) {
     return `${base}.${String(slot).padStart(3, '0')}`;
   }
   if (action === 'snes9x-to-sr16') {
-    const slot = snes9xSlot(inputName);
+    const slot = snes9xSlot(inputName) ?? gxSlot(inputName);
     const sr16SlotNumber = slot === 0 || slot == null ? 1 : slot;
     return `${base}.s${String(sr16SlotNumber).padStart(2, '0')}`;
+  }
+  // Snes9x GX names states "<ROM name> <slot>.frz" with slots starting at 1.
+  if (action === 'sr16-to-snes9x-gx') {
+    let slot = sr16Slot(inputName);
+    if (slot === 1) slot = sr16ParentheticalSlotHint(inputName) ?? 1;
+    return `${base} ${Math.max(1, slot ?? 1)}.frz`;
+  }
+  if (action === 'snes9x-to-snes9x-gx') {
+    return `${base} ${(snes9xSlot(inputName) ?? 0) + 1}.frz`;
+  }
+  if (action === 'snes9x-gx-to-snes9x') {
+    const slot = Math.max(0, (gxSlot(inputName) ?? 0) - 1);
+    return `${base}.${String(slot).padStart(3, '0')}`;
   }
   if (action === 'extract') return `${base}.srm`;
   if (action === 'info') return `${base}.info.json`;
@@ -207,6 +220,9 @@ function baseName(filename = 'save') {
   }
   if (snes9xSlot(name) != null) {
     return name.replace(/\.[0-9]{1,3}\.frz$/i, '').replace(/\.[^.]+$/, '') || 'save';
+  }
+  if (/\.frz$/i.test(name)) {
+    return name.replace(/(?: ([0-9]{1,3}|auto))?\.frz$/i, '') || 'save';
   }
   const dot = name.lastIndexOf('.');
   return dot > 0 ? name.slice(0, dot) : name;
@@ -240,6 +256,14 @@ function snes9xSlot(filename = '') {
   if (frzMatch) return Number.parseInt(frzMatch[1], 10);
   const match = /\.(\d{3})$/i.exec(filename);
   return match ? Number.parseInt(match[1], 10) : null;
+}
+
+function gxSlot(filename = '') {
+  const name = filename.split(/[\\/]/).pop() || '';
+  if (/\.[0-9]{1,3}\.frz$/i.test(name)) return null;
+  const match = / ([0-9]{1,3}|auto)\.frz$/i.exec(name);
+  if (!match) return null;
+  return match[1].toLowerCase() === 'auto' ? 0 : Number.parseInt(match[1], 10);
 }
 
 function uniqueZipName(name, used) {

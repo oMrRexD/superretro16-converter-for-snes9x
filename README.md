@@ -3,7 +3,7 @@
 
 Use it online: https://saveshift.vercel.app
 
-Convert save states between SuperRetro16 (`.s00`, `.s01`, etc.) and snes9x-compatible slot save states (`.000`, `.001`, etc.), or extract raw SRAM files (`.srm`).
+Convert save states between SuperRetro16 (`.s00`, `.s01`, etc.), snes9x-compatible slot save states (`.000`, `.001`, etc.) and Snes9x GX for Wii/GameCube (`Game 1.frz`), or extract raw SRAM files (`.srm`).
 
 ## Why this exists
 
@@ -26,6 +26,8 @@ SaveShift can:
 - Convert snes9x slot save states back to SuperRetro16 save states.
 - Extract raw SRAM files (`.srm`) from SR16 or snes9x states.
 - Convert snes9x slot states to snes9x EX+ filename style in the web app.
+- Convert to and from Snes9x GX (Wii/GameCube) save states: SR16 -> Wii,
+  snes9x -> Wii, Wii -> snes9x and Wii -> SR16.
 - Inspect save-state sections/chunks for debugging.
 
 ## Status
@@ -33,6 +35,9 @@ SaveShift can:
 - SR16 -> snes9x standalone conversion: working for the current validation set.
 - SR16 -> snes9x template conversion: available for games that need a native snes9x reference state.
 - snes9x -> SR16 conversion: available through the unified CLI and web app.
+- Snes9x GX (Wii/GameCube) conversion in both directions: available through
+  the CLI and web app. Audio state was validated against the Snes9x GX audio
+  core and desktop snes9x; real-hardware reports are welcome.
 - SRAM extraction: working.
 - Web app: available through the Vercel link above once deployed.
 
@@ -79,6 +84,19 @@ Convert a snes9x slot state back to SuperRetro16:
 py -m converter snes9x-to-sr16 "input.000" "output.s01"
 ```
 
+Convert to and from Snes9x GX (Wii/GameCube):
+
+```powershell
+py -m converter sr16-to-snes9x "input.s01" "Chrono Trigger (USA) 1.frz" --gx
+py -m converter snes9x-to-gx "input.000" "Chrono Trigger (USA) 1.frz"
+py -m converter gx-to-snes9x "Chrono Trigger (USA) 1.frz" "output.000"
+py -m converter snes9x-to-sr16 "Chrono Trigger (USA) 1.frz" "output.s01"
+```
+
+Snes9x GX finds states by name: `<ROM file name without extension> <slot>.frz`
+inside its `saves` folder, so name the converted file after the ROM you load on
+the Wii. See [Usage Guide](docs/usage.md#snes9x-gx-wiigamecube) for details.
+
 Extract a raw SRAM file:
 
 ```powershell
@@ -118,7 +136,8 @@ sr16-to-snes9x "input.s01" "output.000"
 
 The main package keeps the two conversion directions separate:
 
-- `converter/common/`: shared constants and SR16/snes9x container helpers.
+- `converter/common/`: shared constants and SR16/snes9x container helpers,
+  including the Snes9x GX audio-state translation (`common/format/snes9x_gx.py`).
 - `converter/sr16_to_snes9x/`: SuperRetro16 to snes9x conversion.
 - `converter/snes9x_to_sr16/`: snes9x to SuperRetro16 conversion.
 - `converter/cli.py`: unified command-line interface.
@@ -147,7 +166,7 @@ Detailed public documentation lives in [`docs/`](docs/README.md):
 ## Legal notes
 
 This project is not affiliated with Neutron Emulation, the Snes9X Team,
-Nintendo, or any game publisher.
+the Snes9x GX developers, Nintendo, or any game publisher.
 
 This repository does not include ROMs, SRAM files,
 SuperRetro16 binaries, snes9x binaries, APKs, or proprietary game assets.

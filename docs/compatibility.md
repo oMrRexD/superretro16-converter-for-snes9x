@@ -1,13 +1,14 @@
 # Compatibility Notes
 
-This converter targets SuperRetro16 save states and snes9x v12 save-state
-streams in both directions. It is not a general save-state converter for every
-SNES emulator.
+This converter targets SuperRetro16 save states, snes9x v12 save-state
+streams and Snes9x GX (Wii/GameCube) v11 save states in both directions. It is
+not a general save-state converter for every SNES emulator.
 
 ## Supported Outputs
 
 - snes9x slot save states (`.000` through `.999`).
 - SuperRetro16 save states (`.s00` through `.s999`).
+- Snes9x GX save states (`<ROM name> <slot>.frz`).
 - `.srm` raw SRAM files.
 
 ## Supported Conversion Modes
@@ -43,6 +44,9 @@ The current implementation handles:
 - PAL/NTSC and ROM-region mismatches can cause bad template results.
 - The converter does not validate whether a ROM matches a save state. It only
   reads save-state files.
+- Snes9x GX input must come from a current Snes9x GX build (snapshot version
+  11). Older builds wrote older snapshot layouts; load and save the state
+  again in a current build before converting.
 
 ## Choosing a Mode
 

@@ -1,10 +1,12 @@
 # Usage Guide
 
-The converter reads SuperRetro16 save states (`.s00`, `.s01`, and similar) and
-snes9x slot states (`.000`, `.001`, and similar). It can write:
+The converter reads SuperRetro16 save states (`.s00`, `.s01`, and similar),
+snes9x slot states (`.000`, `.001`, and similar) and Snes9x GX (Wii/GameCube)
+states (`Game 1.frz`). It can write:
 
 - a snes9x save state (`.000`),
-- a SuperRetro16 save state (`.s01`), or
+- a SuperRetro16 save state (`.s01`),
+- a Snes9x GX save state (`Game 1.frz`), or
 - a raw SRAM file (`.srm`).
 
 snes9x slot save states commonly use numeric extensions: `.000` for slot 0,
@@ -108,6 +110,46 @@ it does not need a ROM or emulator just to generate the SR16 preview image.
 Use `py -m converter snes9x-to-sr16`; the reverse direction is part of the
 main `converter` package.
 
+## Snes9x GX (Wii/GameCube)
+
+Snes9x GX uses the same snapshot container as desktop snes9x, but writes
+version 11 snapshots whose audio (`SND`) chunk comes from the older Blargg
+`snes_spc` APU core. Desktop snes9x 1.63+ uses a different APU state and
+Snes9x GX rejects version 12 files, so these commands translate the audio
+state instead of only renaming the file:
+
+```powershell
+# SuperRetro16 -> Wii
+py -m converter sr16-to-snes9x "input.s01" "Chrono Trigger (USA) 1.frz" --gx
+
+# desktop snes9x -> Wii
+py -m converter snes9x-to-gx "input.000" "Chrono Trigger (USA) 1.frz"
+
+# Wii -> desktop snes9x
+py -m converter gx-to-snes9x "Chrono Trigger (USA) 1.frz" "output.000"
+
+# Wii -> SuperRetro16
+py -m converter snes9x-to-sr16 "Chrono Trigger (USA) 1.frz" "output.s01"
+```
+
+The short form also picks the Wii format when the output looks like a Snes9x
+GX name: `py -m converter "input.s01" "Chrono Trigger (USA) 1.frz"`.
+
+Snes9x GX lists states by file name. Put the `.frz` in the emulator's `saves`
+folder on the SD card or USB drive and name it
+`<ROM file name without extension> <slot>.frz`; for a ROM named
+`Chrono Trigger (USA).sfc`, use `Chrono Trigger (USA) 1.frz`,
+`Chrono Trigger (USA) 2.frz`, and so on. Snes9x GX numbers slots from 1, and
+`<ROM name> Auto.frz` is its automatic slot.
+
+The browser app suggests names with this mapping: SR16 `.s03` becomes slot 3
+(`.s00`/`.s01` become slot 1), snes9x `.000` becomes slot 1, `.001` becomes
+slot 2, and the reverse directions undo the same mapping. Rename the file if
+your ROM file name differs.
+
+Wii and EX+ files both end in `.frz`; the browser app tells them apart by
+content, not by name.
+
 ## Short Auto-Detect Commands
 
 The CLI also accepts a shorter command shape that detects the input format:
@@ -137,8 +179,8 @@ py -m converter extract-sram "input.s01" "output.srm"
 Place the `.srm` next to the ROM using the filename expected by your snes9x
 setup, then load the game normally and use the in-game load screen.
 
-The browser app can also extract SRAM from snes9x and snes9x EX+ save states
-when the snapshot contains a normal `SRA` chunk.
+The browser app can also extract SRAM from snes9x, snes9x EX+ and Snes9x GX
+save states when the snapshot contains a normal `SRA` chunk.
 
 ## Dump Mode
 

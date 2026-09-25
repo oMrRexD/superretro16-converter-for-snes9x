@@ -5,7 +5,7 @@ Orchestrates chunk extraction, state translation, and SR16 blob assembly.
 from __future__ import annotations
 import gzip
 
-from converter.common.format.snes9x import parse_snes9x
+from converter.common.format.snes9x_gx import load_snes9x_chunks
 from converter.common.constants import SRAM_TARGET_SIZE, SR16_RM1_SIZE, SR16_SRAM_SIZE
 
 from .format.sr16_writer import build_sr16_blob
@@ -24,7 +24,7 @@ def snes9x_to_sr16(input_path: str, output_path: str, *,
                     include_ssz: bool = True,
                     include_png: bool = True,
                     dump: bool = False) -> None:
-    """Convert a snes9x v12 .000 save state to an SR16 .s0X file.
+    """Convert a snes9x v12 .000 (or Snes9x GX .frz) save state to an SR16 .s0X file.
 
     Parameters
     ----------
@@ -45,7 +45,9 @@ def snes9x_to_sr16(input_path: str, output_path: str, *,
     with open(input_path, "rb") as f:
         blob = f.read()
 
-    chunks = parse_snes9x(blob)
+    # Snes9x GX (Wii) and pre-1.63 snes9x states use other SND layouts;
+    # normalize them to the snes9x 1.63 layout every builder below expects.
+    chunks = load_snes9x_chunks(blob)
 
     if dump:
         print(f"snes9x save: {input_path}")

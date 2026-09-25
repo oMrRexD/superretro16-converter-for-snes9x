@@ -173,3 +173,101 @@ def test_snes9x_explus_to_regular_slot_name():
     assert result["outputName"] == "chrono.010"
     assert result["outputInfo"]["label"] == "Snes9X save state"
     assert result["outputInfo"]["size"] == len(base64.b64decode(result["dataBase64"]))
+
+
+# ---------------------------------------------------------------------------
+# Snes9x GX (Wii)
+# ---------------------------------------------------------------------------
+
+def _gx_blob(sho: bool = False) -> bytes:
+    from converter.common.constants import SNES_SND_SIZE
+    from converter.common.format import snes9x_gx as gx
+
+    snd = gx.bapu_to_snes_spc_snd(bytes(SNES_SND_SIZE))
+    plain = gx.SNES9X_GX_HEADER + write_chunk("SRA", b"S" * 0x80000) + write_chunk("SND", snd)
+    if sho:
+        plain += write_chunk("SHO", b"preview")
+    return gzip.compress(plain)
+
+
+def _desktop_blob() -> bytes:
+    from converter.common.constants import SNES_SND_SIZE
+
+    return gzip.compress(
+        SNES9X_HEADER
+        + write_chunk("SRA", b"")
+        + write_chunk("SND", bytes(SNES_SND_SIZE))
+        + write_chunk("SHO", b"preview")
+    )
+
+
+def test_gx_names_are_detected_and_mapped():
+    from web.python_bridge.web_bridge import (
+        _gx_from_snes9x_output_name,
+        _gx_from_sr16_output_name,
+        _slot_from_gx_output_name,
+    )
+
+    assert _detect_type(b"not parsed in this unit", "Chrono Trigger (USA) 3.frz") == "snes9x"
+    assert _detect_type(b"not parsed in this unit", "Chrono Trigger (USA) Auto.frz") == "snes9x"
+    assert _sr16_output_name("Chrono Trigger (USA) 3.frz") == "Chrono Trigger (USA).s03"
+    assert _sr16_output_name("Chrono Trigger (USA) Auto.frz") == "Chrono Trigger (USA).s01"
+    assert _slot_from_gx_output_name("Chrono Trigger (USA) 3.frz") == "Chrono Trigger (USA).002"
+    assert _slot_from_gx_output_name("Chrono Trigger (USA) Auto.frz") == "Chrono Trigger (USA).000"
+    assert _gx_from_snes9x_output_name("chrono.000") == "chrono 1.frz"
+    assert _gx_from_snes9x_output_name("chrono.04.frz") == "chrono 5.frz"
+    assert _gx_from_sr16_output_name("chrono.s00") == "chrono 1.frz"
+    assert _gx_from_sr16_output_name("chrono.s01") == "chrono 1.frz"
+    assert _gx_from_sr16_output_name("chrono.s07") == "chrono 7.frz"
+    assert _gx_from_sr16_output_name("Chrono(3).s01") == "Chrono 3.frz"
+
+
+def test_info_reports_snes9x_gx_type():
+    result = dispatch_bytes("info", "Chrono Trigger (USA) 3.frz", _gx_blob())
+
+    assert result["ok"] is True
+    assert result["info"]["type"] == "snes9x-gx"
+    assert result["info"]["version"] == 11
+
+
+def test_gx_to_snes9x_translates_snd_and_names_slot():
+    result = dispatch_bytes("snes9x-gx-to-snes9x", "Chrono Trigger (USA) 3.frz", _gx_blob())
+
+    assert result["ok"] is True
+    assert result["outputName"] == "Chrono Trigger (USA).002"
+    assert result["outputInfo"]["label"] == "Snes9X save state"
+    payload = gzip.decompress(base64.b64decode(result["dataBase64"]))
+    assert payload.startswith(b"#!s9xsnp:0012\n")
+    assert len(parse_snes9x(payload)["SND"]) == 66560
+
+
+def test_snes9x_to_gx_translates_snd_and_names_slot():
+    result = dispatch_bytes("snes9x-to-snes9x-gx", "chrono.000", _desktop_blob())
+
+    assert result["ok"] is True
+    assert result["outputName"] == "chrono 1.frz"
+    assert result["outputInfo"]["type"] == "snes9x-gx"
+    payload = gzip.decompress(base64.b64decode(result["dataBase64"]))
+    assert payload.startswith(b"#!s9xsnp:0011\n")
+    chunks = parse_snes9x(payload)
+    assert list(chunks) == ["SRA", "SND"]
+    assert len(chunks["SRA"]) == 0x80000
+    assert len(chunks["SND"]) == 69640
+
+
+def test_snes9x_to_gx_rejects_a_gx_input():
+    result = dispatch_bytes("snes9x-to-snes9x-gx", "chrono 1.frz", _gx_blob())
+
+    assert result["ok"] is False
+    assert "already a Snes9x GX" in result["error"]
+
+
+def test_explus_rename_of_gx_state_translates_it():
+    result = dispatch_bytes("snes9x-to-snes9x-explus", "Chrono Trigger (USA) 3.frz",
+                            _gx_blob(sho=True))
+
+    assert result["ok"] is True
+    assert result["outputName"] == "Chrono Trigger (USA).02.frz"
+    chunks = parse_snes9x(base64.b64decode(result["dataBase64"]))
+    assert len(chunks["SND"]) == 66560
+    assert "SHO" not in chunks

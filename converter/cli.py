@@ -2,7 +2,10 @@
 
 Preferred commands:
     py -m converter sr16-to-snes9x <input.s0X> <output.000>
-    py -m converter snes9x-to-sr16 <input.000> <output.s0X>
+    py -m converter sr16-to-snes9x <input.s0X> <output.frz> --gx
+    py -m converter snes9x-to-sr16 <input.000|input.frz> <output.s0X>
+    py -m converter snes9x-to-gx <input.000> <output.frz>
+    py -m converter gx-to-snes9x <input.frz> <output.000>
     py -m converter extract-sram <input.s0X|input.000> <output.srm>
     py -m converter dump <input.s0X|input.000>
 
@@ -20,11 +23,16 @@ import sys
 from pathlib import Path
 
 from .common.format.snes9x import parse_snes9x
+from .common.format.snes9x_gx import (
+    gx_chunks_to_snes9x, is_snes9x_gx_chunks, load_snes9x_chunks,
+    snapshot_version, snes9x_chunks_to_gx,
+)
 from .common.format.sr16 import SR16_MAGIC_PREFIX, parse_sr16
 from .sr16_to_snes9x.pipeline import build_snes9x, extract_chunks_from_sr16
 
 
-_COMMANDS = {"sr16-to-snes9x", "snes9x-to-sr16", "extract-sram", "dump"}
+_COMMANDS = {"sr16-to-snes9x", "snes9x-to-sr16", "snes9x-to-gx", "gx-to-snes9x",
+             "extract-sram", "dump"}
 
 
 def _read(path: str) -> bytes:
@@ -80,7 +88,7 @@ def _convert_sr16_to_snes9x(args) -> None:
     )
 
     if args.template:
-        template = parse_snes9x(_read(args.template))
+        template = load_snes9x_chunks(_read(args.template))
         flags = []
         if args.template_reg:
             flags.append("REG")
@@ -103,6 +111,9 @@ def _convert_sr16_to_snes9x(args) -> None:
         use_template_reg=args.template_reg,
         use_template_ram=args.template_ram,
     )
+    if getattr(args, "gx", False):
+        plain = snes9x_chunks_to_gx(parse_snes9x(plain))
+        print("target: Snes9x GX (Wii/GameCube)")
     _write_snes9x(args.output, plain)
     print(f"wrote {args.output}  (uncompressed {len(plain)} bytes)")
 
@@ -112,6 +123,24 @@ def _cmd_extract_sram(args) -> None:
     sram = _extract_sram(data, args.input)
     _write(args.output, sram)
     print(f"wrote {args.output}  ({len(sram)} bytes, SRAM battery save)")
+
+
+def _cmd_snes9x_to_gx(args) -> None:
+    data = _read(args.input)
+    if is_snes9x_gx_chunks(parse_snes9x(data)):
+        raise ValueError("input is already a Snes9x GX save state")
+    plain = snes9x_chunks_to_gx(load_snes9x_chunks(data))
+    _write_snes9x(args.output, plain)
+    print(f"wrote {args.output}  (Snes9x GX, uncompressed {len(plain)} bytes)")
+
+
+def _cmd_gx_to_snes9x(args) -> None:
+    data = _read(args.input)
+    if not is_snes9x_gx_chunks(parse_snes9x(data)):
+        raise ValueError("input is not a Snes9x GX save state")
+    plain = gx_chunks_to_snes9x(load_snes9x_chunks(data))
+    _write_snes9x(args.output, plain)
+    print(f"wrote {args.output}  (snes9x v12, uncompressed {len(plain)} bytes)")
 
 
 def _cmd_snes9x_to_sr16(args) -> None:
@@ -147,7 +176,8 @@ def _dump_sr16(data: bytes, filename: str, *, lenient: bool) -> None:
 
 def _dump_snes9x(data: bytes, filename: str) -> None:
     chunks = parse_snes9x(data)
-    print(f"snes9x save: {filename}")
+    flavor = "Snes9x GX" if is_snes9x_gx_chunks(chunks) else "snes9x"
+    print(f"{flavor} save: {filename}  (version {snapshot_version(data)})")
     print(f"  chunks: {len(chunks)}")
     for code, payload in chunks.items():
         print(f"  {code}  size={len(payload):7d}")
@@ -171,6 +201,15 @@ def _is_sr16_slot_path(path: str) -> bool:
     )
 
 
+def _is_snes9x_gx_output_path(path: str) -> bool:
+    """``Game 1.frz`` / ``Game Auto.frz`` (GX) but not ``Game.00.frz`` (EX+)."""
+    name = Path(path).name.lower()
+    if not name.endswith(".frz"):
+        return False
+    stem = name[:-4]
+    return not (Path(stem).suffix[1:].isdigit())
+
+
 def _looks_like_snes9x_state(data: bytes) -> bool:
     try:
         parse_snes9x(data)
@@ -190,6 +229,8 @@ def _add_forward_options(parser: argparse.ArgumentParser) -> None:
                         help="accept SR16 saves where the trailing section is truncated")
     parser.add_argument("--vram-dma", choices=["off", "safe", "all"], default="off",
                         help="experimental armed VRAM DMA pre-exec mode")
+    parser.add_argument("--gx", action="store_true",
+                        help="write a Snes9x GX (Wii/GameCube) .frz state instead of snes9x 1.6x")
 
 
 def _build_parser() -> argparse.ArgumentParser:
@@ -223,6 +264,22 @@ def _build_parser() -> argparse.ArgumentParser:
     reverse.add_argument("--dump", action="store_true",
                          help="dump snes9x chunk info instead of converting")
     reverse.set_defaults(func=_cmd_snes9x_to_sr16)
+
+    to_gx = sub.add_parser(
+        "snes9x-to-gx",
+        help="convert a desktop snes9x state to a Snes9x GX (Wii/GameCube) state",
+    )
+    to_gx.add_argument("input")
+    to_gx.add_argument("output")
+    to_gx.set_defaults(func=_cmd_snes9x_to_gx)
+
+    from_gx = sub.add_parser(
+        "gx-to-snes9x",
+        help="convert a Snes9x GX (Wii/GameCube) state to a desktop snes9x state",
+    )
+    from_gx.add_argument("input")
+    from_gx.add_argument("output")
+    from_gx.set_defaults(func=_cmd_gx_to_snes9x)
 
     sram = sub.add_parser(
         "extract-sram",
@@ -273,6 +330,8 @@ def _auto_main(argv: list[str]) -> None:
 
     data = _read(args.input)
     if data.startswith(SR16_MAGIC_PREFIX):
+        if _is_snes9x_gx_output_path(args.output):
+            args.gx = True
         _convert_sr16_to_snes9x(args)
         return
 

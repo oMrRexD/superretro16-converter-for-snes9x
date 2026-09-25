@@ -8,11 +8,13 @@ app can reopen and run conversions offline because Pyodide, the Python bundle,
 fonts, and UI assets are precached by the service worker.
 
 The app accepts SuperRetro16 save states (`.s00` through `.s999`), desktop
-snes9x slot states (`.000` through `.999`), and snes9x EX+ slot states such as
-`.00.frz`, `.01.frz`, and `.10.frz`. Users can drop one file or a batch of
-files; batch conversion returns a local ZIP. Raw `.srm`/`.sav` files are not
-accepted as inputs, but SRAM can still be extracted from SR16, snes9x, and
-snes9x EX+ save states.
+snes9x slot states (`.000` through `.999`), snes9x EX+ slot states such as
+`.00.frz`, `.01.frz`, and `.10.frz`, and Snes9x GX (Wii/GameCube) states such
+as `Game 1.frz`. EX+ and Snes9x GX both use `.frz`, so the app tells them apart
+by content (the Snes9x GX audio chunk has a different size) before offering
+actions. Users can drop one file or a batch of files; batch conversion returns
+a local ZIP. Raw `.srm`/`.sav` files are not accepted as inputs, but SRAM can
+still be extracted from SR16, snes9x, snes9x EX+, and Snes9x GX save states.
 
 For single-file results, the UI shows the save's embedded screenshot when
 present: SR16 `PNG` sections and snes9x/EX+ `SHO` chunks are decoded locally in

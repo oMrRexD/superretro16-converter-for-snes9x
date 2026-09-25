@@ -33,7 +33,7 @@ const STRINGS = {
     nav: ['CONTATO', 'DOAR', 'GITHUB'],
     brandSub: 'CONVERSOR SR16 SNES9X',
     title: ['CONVERTA SEUS', 'SAVE STATES', 'ENTRE EMULADORES'],
-    lead: 'Conversor online de save states entre SuperRetro16 (antigo SuperGNES) e Snes9X. Converta um arquivo ou um lote inteiro com processamento local.',
+    lead: 'Conversor online de save states entre SuperRetro16 (antigo SuperGNES), Snes9X e Snes9x GX (Wii). Converta um arquivo ou um lote inteiro com processamento local.',
     pills: ['OPEN-SOURCE', 'MÚLTIPLOS SAVES', '100% LOCAL'],
     offlineReady: 'OFFLINE PRONTO',
     heroFoot: 'Processamento local via Pyodide, com conversão, extração de SRAM e inspeção técnica.',
@@ -43,7 +43,7 @@ const STRINGS = {
     catDone: 'tcharaa!\nfica de boa',
     dropTitle: 'ARRASTE SEUS SAVE STATES AQUI',
     dropSub: 'ou clique para selecionar um ou vários arquivos',
-    dropFormats: '.s00-.s999  .000-.999  .00.frz',
+    dropFormats: '.s00-.s999  .000-.999  .frz',
     privacy: '',
     loaded: 'ARQUIVO CARREGADO',
     loadedMany: 'ARQUIVOS CARREGADOS',
@@ -122,6 +122,7 @@ const STRINGS = {
     outputOptions: {
       snes9x: ['Snes9X (.000)', 'Formato padrão do Snes9X.'],
       explus: ['Snes9X EX+ (.00.frz)', 'Formato usado no Snes9X EX+.'],
+      gx: ['Snes9x GX / Wii (.frz)', 'Formato do Snes9x GX (Wii e GameCube).'],
     },
     progressLabels: {
       read: 'Lendo arquivo...',
@@ -143,12 +144,15 @@ const STRINGS = {
       zipConvertedName: 'saves-convertidos.zip',
     },
     actions: {
-      'sr16-to-snes9x': ['CONVERSOR', 'SR16 → Snes9X / EX+', 'Converte save state do SuperRetro16 para slot state Snes9X.'],
+      'sr16-to-snes9x': ['CONVERSOR', 'SR16 → Snes9X / EX+ / Wii', 'Converte save state do SuperRetro16 para Snes9X, Snes9X EX+ ou Snes9x GX (Wii).'],
+      'sr16-to-snes9x-gx': ['CONVERSOR', 'SR16 → Snes9x GX (Wii)', 'Converte para save state do Snes9x GX do Wii (.frz).'],
       'sr16-to-snes9x-explus': ['CONVERSOR', 'SR16 → Snes9X EX+', 'Converte para save state Snes9X EX+ (.00.frz).'],
       'snes9x-to-sr16': ['CONVERSOR', 'Snes9X → SR16', 'Converte slot state Snes9X para SuperRetro16.'],
       'snes9x-to-snes9x-explus': ['RENOMEAR', 'Snes9X → Snes9X EX+', 'Renomeia o slot state Snes9X para o padrão Snes9X EX+ (.frz).'],
       'snes9x-explus-to-snes9x': ['RENOMEAR', 'Snes9X EX+ → Snes9X', 'Renomeia o slot state Snes9X EX+ para o padrão Snes9X (.000).'],
-      extract: ['EXTRAIR SRAM', '', 'Extrai a SRAM de save states SR16, Snes9X ou Snes9X EX+.'],
+      'snes9x-to-snes9x-gx': ['CONVERSOR', 'Snes9X → Snes9x GX (Wii)', 'Converte o slot state Snes9X ou EX+ para o Snes9x GX do Wii (.frz).'],
+      'snes9x-gx-to-snes9x': ['CONVERSOR', 'Snes9x GX (Wii) → Snes9X', 'Converte o save state do Snes9x GX do Wii para slot state Snes9X (.000).'],
+      extract: ['EXTRAIR SRAM', '', 'Extrai a SRAM de save states SR16, Snes9X, Snes9X EX+ ou Snes9x GX (Wii).'],
       info: ['VER INFORMAÇÕES', '', 'Mostra chunks, seções, CRC32 e detalhes do arquivo.'],
     },
   },
@@ -158,7 +162,7 @@ const STRINGS = {
     nav: ['CONTACT', 'DONATE', 'GITHUB'],
     brandSub: 'SR16 SNES9X CONVERTER',
     title: ['CONVERT YOUR', 'SAVE STATES', 'BETWEEN EMULATORS'],
-    lead: 'Online save-state converter for SuperRetro16 (formerly SuperGNES) and Snes9X. Convert one file or an entire batch with local processing.',
+    lead: 'Online save-state converter for SuperRetro16 (formerly SuperGNES), Snes9X and Snes9x GX (Wii). Convert one file or an entire batch with local processing.',
     pills: ['OPEN-SOURCE', 'MULTIPLE SAVES', '100% LOCAL'],
     offlineReady: 'OFFLINE READY',
     heroFoot: 'Local processing through Pyodide, with conversion, SRAM extraction and technical inspection.',
@@ -168,7 +172,7 @@ const STRINGS = {
     catDone: 'ta-daa!\nyou\'re good',
     dropTitle: 'DROP YOUR SAVE STATES HERE',
     dropSub: 'or click to select one or many files',
-    dropFormats: '.s00-.s999  .000-.999  .00.frz',
+    dropFormats: '.s00-.s999  .000-.999  .frz',
     privacy: '',
     loaded: 'FILE LOADED',
     loadedMany: 'FILES LOADED',
@@ -247,6 +251,7 @@ const STRINGS = {
     outputOptions: {
       snes9x: ['Snes9X (.000)', 'Standard Snes9X format.'],
       explus: ['Snes9X EX+ (.00.frz)', 'Format used by Snes9X EX+.'],
+      gx: ['Snes9x GX / Wii (.frz)', 'Format used by Snes9x GX (Wii and GameCube).'],
     },
     progressLabels: {
       read: 'Reading file...',
@@ -268,12 +273,15 @@ const STRINGS = {
       zipConvertedName: 'converted-saves.zip',
     },
     actions: {
-      'sr16-to-snes9x': ['CONVERT', 'SR16 → Snes9X / EX+', 'Convert a SuperRetro16 save state to a Snes9X slot state.'],
+      'sr16-to-snes9x': ['CONVERT', 'SR16 → Snes9X / EX+ / Wii', 'Convert a SuperRetro16 save state to Snes9X, Snes9X EX+ or Snes9x GX (Wii).'],
+      'sr16-to-snes9x-gx': ['CONVERT', 'SR16 → Snes9x GX (Wii)', 'Convert to a Snes9x GX (Wii) save state (.frz).'],
       'sr16-to-snes9x-explus': ['CONVERT', 'SR16 → Snes9X EX+', 'Convert to a Snes9X EX+ save state (.00.frz).'],
       'snes9x-to-sr16': ['CONVERT', 'Snes9X → SR16', 'Convert a Snes9X slot state to SuperRetro16.'],
       'snes9x-to-snes9x-explus': ['RENAME', 'Snes9X → Snes9X EX+', 'Rename a Snes9X slot state to the Snes9X EX+ (.frz) naming style.'],
       'snes9x-explus-to-snes9x': ['RENAME', 'Snes9X EX+ → Snes9X', 'Rename a Snes9X EX+ slot state to the Snes9X (.000) naming style.'],
-      extract: ['EXTRACT SRAM', '', 'Extract SRAM from SR16, Snes9X or Snes9X EX+ save states.'],
+      'snes9x-to-snes9x-gx': ['CONVERT', 'Snes9X → Snes9x GX (Wii)', 'Convert a Snes9X or EX+ slot state to Snes9x GX on the Wii (.frz).'],
+      'snes9x-gx-to-snes9x': ['CONVERT', 'Snes9x GX (Wii) → Snes9X', 'Convert a Snes9x GX (Wii) save state to a Snes9X slot state (.000).'],
+      extract: ['EXTRACT SRAM', '', 'Extract SRAM from SR16, Snes9X, Snes9X EX+ or Snes9x GX (Wii) save states.'],
       info: ['VIEW INFO', '', 'Show chunks, sections, CRC32 and file details.'],
     },
   },
@@ -284,6 +292,8 @@ const ACTIONS = [
   { id: 'snes9x-to-sr16', icon: <IconCartArrow dir="left" /> },
   { id: 'snes9x-to-snes9x-explus', icon: <IconCartArrow dir="right" /> },
   { id: 'snes9x-explus-to-snes9x', icon: <IconCartArrow dir="left" /> },
+  { id: 'snes9x-to-snes9x-gx', icon: <IconCartArrow dir="right" /> },
+  { id: 'snes9x-gx-to-snes9x', icon: <IconCartArrow dir="left" /> },
   { id: 'extract', icon: <IconChip size={48} /> },
   { id: 'info', icon: <IconDoc size={48} /> },
 ];
@@ -296,21 +306,25 @@ function quickType(file) {
   if (/\.(s\d{1,3})$/.test(lower)) return 'sr16';
   if (/\.[0-9]{3}$/.test(lower)) return 'snes9x';
   if (/\.[0-9]{1,3}\.frz$/.test(lower)) return 'snes9x-explus';
+  if (/ ([0-9]{1,3}|auto)\.frz$/.test(lower)) return 'snes9x-gx';
   return 'unknown';
 }
 
 async function detectFileType(file) {
   const typeFromName = quickType(file);
-  if (typeFromName !== 'unknown') return typeFromName;
+  // Snes9X EX+ and Snes9x GX (Wii) both use .frz, so those are told apart by
+  // content; other slot names are trusted as before.
+  const isFrz = /\.frz$/i.test(file?.name || '');
+  if (typeFromName !== 'unknown' && !isFrz) return typeFromName;
 
   const head = new Uint8Array(await file.slice(0, 32).arrayBuffer());
   if (startsWithAscii(head, '@sgnes@')) return 'sr16';
-  if (startsWithAscii(head, '#!s9xsnp:')) return 'snes9x';
 
-  if (head[0] === 0x1f && head[1] === 0x8b && await gzipLooksLikeSnes9x(file)) {
-    return 'snes9x';
-  }
-  return 'unknown';
+  const flavor = await sniffSnes9xFlavor(file, head);
+  if (flavor === 'snes9x-gx') return 'snes9x-gx';
+  if (flavor === 'snes9x') return typeFromName === 'snes9x-explus' ? 'snes9x-explus' : 'snes9x';
+  if (flavor === 'no-api') return typeFromName;
+  return typeFromName === 'snes9x-explus' ? 'snes9x-explus' : 'unknown';
 }
 
 function startsWithAscii(bytes, text) {
@@ -321,33 +335,72 @@ function startsWithAscii(bytes, text) {
   return true;
 }
 
-async function gzipLooksLikeSnes9x(file) {
-  if (typeof DecompressionStream === 'undefined') return false;
+// Snes9x GX keeps the old Blargg snes_spc APU state (SPC_SAVE_STATE_BLOCK_SIZE),
+// desktop Snes9X/EX+ use a 66560-byte SND chunk.
+const GX_SND_SIZE = 68 * 1024 + 8;
+
+// Walk the snapshot chunk headers up to SND without buffering the whole file.
+// Returns 'snes9x', 'snes9x-gx', null (not a snapshot) or 'no-api'.
+async function sniffSnes9xFlavor(file, head) {
+  const gzipped = head[0] === 0x1f && head[1] === 0x8b;
+  if (!gzipped && !startsWithAscii(head, '#!s9xsnp:')) return null;
+  if (gzipped && typeof DecompressionStream === 'undefined') return 'no-api';
+  let reader;
   try {
-    const reader = file.stream().pipeThrough(new DecompressionStream('gzip')).getReader();
-    const chunks = [];
-    let total = 0;
-    while (total < 16) {
-      const { value, done } = await reader.read();
-      if (done) break;
-      const slice = value.subarray(0, Math.min(value.length, 16 - total));
-      chunks.push(slice);
-      total += slice.length;
+    let stream = file.stream();
+    if (gzipped) stream = stream.pipeThrough(new DecompressionStream('gzip'));
+    reader = stream.getReader();
+    let buf = new Uint8Array(0);
+    const fill = async (count) => {
+      while (buf.length < count) {
+        const { value, done } = await reader.read();
+        if (done) return false;
+        const next = new Uint8Array(buf.length + value.length);
+        next.set(buf);
+        next.set(value, buf.length);
+        buf = next;
+      }
+      return true;
+    };
+    const skip = async (count) => {
+      let left = count;
+      while (left > 0) {
+        if (!buf.length) {
+          const { value, done } = await reader.read();
+          if (done) return false;
+          buf = value;
+        }
+        const step = Math.min(left, buf.length);
+        buf = buf.subarray(step);
+        left -= step;
+      }
+      return true;
+    };
+
+    if (!(await fill(14)) || !startsWithAscii(buf, '#!s9xsnp:')) return null;
+    const newline = buf.indexOf(0x0a);
+    if (newline < 0) return null;
+    buf = buf.subarray(newline + 1);
+    for (let index = 0; index < 64; index += 1) {
+      if (!(await fill(11)) || buf[3] !== 0x3a) return 'snes9x';
+      const name = String.fromCharCode(buf[0], buf[1], buf[2]);
+      const size = buf[4] === 0x2d
+        ? ((buf[6] << 24) | (buf[7] << 16) | (buf[8] << 8) | buf[9]) >>> 0
+        : Number.parseInt(String.fromCharCode(...buf.subarray(4, 10)), 10);
+      if (!Number.isFinite(size)) return 'snes9x';
+      if (name === 'SND') return size === GX_SND_SIZE ? 'snes9x-gx' : 'snes9x';
+      buf = buf.subarray(11);
+      if (!(await skip(size))) return 'snes9x';
     }
+    return 'snes9x';
+  } catch (_error) {
+    return null;
+  } finally {
     try {
-      await reader.cancel();
+      await reader?.cancel();
     } catch (_error) {
       // Best-effort stream cleanup only.
     }
-    const out = new Uint8Array(total);
-    let offset = 0;
-    for (const chunk of chunks) {
-      out.set(chunk, offset);
-      offset += chunk.length;
-    }
-    return startsWithAscii(out, '#!s9xsnp:');
-  } catch (_error) {
-    return false;
   }
 }
 
@@ -362,8 +415,9 @@ function batchType(files) {
 
 function allowedActions(type) {
   if (type === 'sr16') return ['sr16-to-snes9x', 'extract', 'info'];
-  if (type === 'snes9x') return ['snes9x-to-sr16', 'snes9x-to-snes9x-explus', 'extract', 'info'];
-  if (type === 'snes9x-explus') return ['snes9x-explus-to-snes9x', 'snes9x-to-sr16', 'extract', 'info'];
+  if (type === 'snes9x') return ['snes9x-to-sr16', 'snes9x-to-snes9x-explus', 'snes9x-to-snes9x-gx', 'extract', 'info'];
+  if (type === 'snes9x-explus') return ['snes9x-explus-to-snes9x', 'snes9x-to-sr16', 'snes9x-to-snes9x-gx', 'extract', 'info'];
+  if (type === 'snes9x-gx') return ['snes9x-gx-to-snes9x', 'snes9x-to-sr16', 'extract', 'info'];
   if (type === 'mixed') return ['info'];
   return ['info'];
 }
@@ -378,6 +432,7 @@ function typeLabel(type, t) {
   if (type === 'sr16') return 'SuperRetro16';
   if (type === 'snes9x') return 'Snes9X';
   if (type === 'snes9x-explus') return 'Snes9X EX+';
+  if (type === 'snes9x-gx') return 'Snes9x GX (Wii)';
   if (type === 'mixed') return t.mixed;
   return t.unknown;
 }
@@ -415,6 +470,7 @@ function defaultConvertAction(type) {
   if (type === 'sr16') return 'sr16-to-snes9x';
   if (type === 'snes9x') return 'snes9x-to-sr16';
   if (type === 'snes9x-explus') return 'snes9x-explus-to-snes9x';
+  if (type === 'snes9x-gx') return 'snes9x-gx-to-snes9x';
   return 'info';
 }
 
@@ -526,7 +582,7 @@ export default function App() {
     const supported = [];
     const rejected = [];
     for (const item of checked) {
-      if (item.type === 'sr16' || item.type === 'snes9x' || item.type === 'snes9x-explus') {
+      if (['sr16', 'snes9x', 'snes9x-explus', 'snes9x-gx'].includes(item.type)) {
         DETECTED_TYPES.set(item.file, item.type);
         supported.push(item.file);
       } else {
@@ -585,9 +641,13 @@ export default function App() {
     setResult(null);
     setDownload(null);
     try {
+      const sr16Targets = {
+        explus: 'sr16-to-snes9x-explus',
+        gx: 'sr16-to-snes9x-gx',
+      };
       const effectiveAction = (
-        action === 'sr16-to-snes9x' && sr16Output === 'explus'
-          ? 'sr16-to-snes9x-explus'
+        action === 'sr16-to-snes9x' && sr16Targets[sr16Output]
+          ? sr16Targets[sr16Output]
           : action
       );
       const response = await runBatchConversion(effectiveAction, files, setProgress, t.progressLabels);
